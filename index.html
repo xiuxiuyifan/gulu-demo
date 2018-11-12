@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>轱辘</title>
+	<link rel="stylesheet" href="./reset.css">
+	<style>
+		:root{
+			--button-height: 32px;
+			--font-size: 14px;
+			--button-bg: white;
+			--button-active-bg: #eee;
+			--border-radius: 4px;
+			--color: #333;
+			--border-color: #999;
+			--border-color-hover: #666;
+		}
+	</style>
+	<style>
+		.g-button{
+			height: var(--button-height);
+			background-color: var(--button-bg);
+			font-size: var(--font-size);
+			border-radius: var(--border-radius);
+			border-color: var(--border-color);
+			margin: 200px;
+			padding: 0 1em;
+		}
+		.g-button:hover{
+			background-color: var(--button-active-bg);
+		}
+		.g-button:focus{
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<g-button></g-button>
+	</div>
+	<script src="./node_modules/vue/dist/vue.min.js"></script>
+	<script src="./button.js"></script>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data() {
+				return{
+					msg: 'hello word'
+				}
+			}
+		});
+	</script>
+</body>
+</html>
