@@ -18,39 +18,11 @@
 			--border-color-hover: #666;
 		}
 	</style>
-	<style>
-		.g-button{
-			height: var(--button-height);
-			background-color: var(--button-bg);
-			font-size: var(--font-size);
-			border-radius: var(--border-radius);
-			border-color: var(--border-color);
-			margin: 200px;
-			padding: 0 1em;
-		}
-		.g-button:hover{
-			background-color: var(--button-active-bg);
-		}
-		.g-button:focus{
-			outline: none;
-		}
-	</style>
 </head>
 <body>
 	<div id="app">
 		<g-button></g-button>
 	</div>
-	<script src="./node_modules/vue/dist/vue.min.js"></script>
-	<script src="./button.js"></script>
-	<script>
-		var vm = new Vue({
-			el: '#app',
-			data() {
-				return{
-					msg: 'hello word'
-				}
-			}
-		});
-	</script>
+	<script src="./src/app.js"></script>
 </body>
 </html>
