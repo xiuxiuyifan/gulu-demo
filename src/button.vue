@@ -1,5 +1,5 @@
 <template>
-    <button class="g-button" :class="`i-${position} `" v-if="icon" @click="c">
+    <button class="g-button" :class="`i-${position}`" v-if="icon" @click="c">
         <g-icon :icon="icon" :lodding="lodding" :class="{rotate:lodding}"></g-icon>
         <span class="g-word"><slot></slot></span>
         <div>{{lodding}}</div>
@@ -57,21 +57,26 @@
         padding: 0 1em;
         border: 1px solid var(--border-color);
         box-sizing: border-box;
+
         & .g-word {
             font-size: 14px;
         }
+
         &:hover {
             background-color: var(--button-active-bg);
             border: 1px solid #409eff;
             cursor: pointer;
         }
+
         &:focus {
             outline: none;
             border: 1px solid #409eff;
         }
+
         & .rotate {
             animation: lodding 1s linear infinite;
         }
+
         @keyframes lodding {
             0% {
                 transform: rotate(0);
