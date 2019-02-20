@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>轱辘</title>
     <link rel="stylesheet" href="./reset.css">
-    <script src="//at.alicdn.com/t/font_729974_a0ye6l4jy2q.js"></script>
+    <script src="//at.alicdn.com/t/font_729974_6smp6kfwab2.js"></script>
     <style>
         :root {
             --button-height: 32px;
@@ -26,7 +26,15 @@
     <g-button icon="help">点赞</g-button>
     <g-button>您好</g-button>
     <g-icon icon="help"></g-icon>
-    <g-button icon="lodding" :lodding="lodding1" @click="lodding1 = !lodding1" position="right">加载中</g-button>
+    <g-button icon="setting" :lodding="lodding1" @click="lodding1 = !lodding1" position="right">加载中</g-button>
+    <g-button icon="right" position="right">右边</g-button>
+    <g-button icon="left">向左</g-button>
+
+    <g-button-group>
+        <g-button icon="left">上一页</g-button>
+        <g-button>中间</g-button>
+        <g-button icon="right" position="right">下一页</g-button>
+    </g-button-group>
 </div>
 <script src="./src/app.js"></script>
 </body>
