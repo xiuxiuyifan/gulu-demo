@@ -8,8 +8,10 @@
     </button>
 </template>
 <script>
+	import Vue from 'vue';
 	import Icon from './icon';
 
+	Vue.component('g-icon', Icon);
 	export default {
 		name: 'g-button',
 		props: {
@@ -67,11 +69,10 @@
         display: inline-flex;
         align-items: center;
         vertical-align: middle;
-        line-height: var(--button-height);
         background-color: var(--button-bg);
         font-size: var(--font-size);
         border-radius: var(--border-radius);
-        padding: 0 1em;
+        padding: 0.5em 1em;
         border: 1px solid var(--border-color);
         box-sizing: border-box;
 
