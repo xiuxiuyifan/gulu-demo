@@ -1,0 +1,11 @@
+language: node_js # 使用node_js进行测试
+node_js: # node_js版本号
+  - "8"
+  - "9"
+  - "10"
+addons: # 插件
+  chrome: stable # 谷歌浏览器稳定版
+sudo: required
+before_script:
+  - "sudo chown root /opt/google/chrome/chrome-sandbox"
+  - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"

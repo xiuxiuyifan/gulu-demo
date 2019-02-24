@@ -1,7 +1,7 @@
 const expect = chai.expect;
 import Vue from 'vue';
 import Button from '../src/button';
-
+import sinon from 'sinon'
 Vue.config.productionTip = false;
 Vue.config.devtools = false;
 describe('Button', () => {
@@ -80,12 +80,15 @@ describe('Button', () => {
 				position: 'right',
 			},
 		}).$mount(div);
-		let callback = () => {
-			console.log('点击时间的函数执行了');
-		};
+		// let callback = () => {
+		// 	// console.log('点击时间的函数执行了');
+		// };
+		let callback = sinon.fake();
 		//现在我期待 order的位置是2
+		
 		vm.$on('click', callback);
 		vm.$el.click();
+		expect(callback).to.have.been.called
 		vm.$el.remove();
 		vm.$destroy();
 	});
