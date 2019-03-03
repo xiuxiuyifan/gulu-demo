@@ -18,7 +18,8 @@
 
         > .g-button {
             border-radius: 0;
-            &:not(:first-child){
+
+            &:not(:first-child) {
                 margin-left: -1px;
             }
 
@@ -31,7 +32,8 @@
                 border-top-right-radius: var(--border-radius);
                 border-bottom-right-radius: var(--border-radius);
             }
-            &:hover{
+
+            &:hover {
                 position: relative;
                 z-index: 1;
             }

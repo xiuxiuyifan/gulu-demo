@@ -5,8 +5,10 @@
 </template>
 
 <script>
+	import './svg';
+
 	export default {
-		name: 'icon',
+		name: 'g-icon',
 		props: {
 			icon: {
 				type: String,

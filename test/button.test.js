@@ -1,7 +1,8 @@
 const expect = chai.expect;
 import Vue from 'vue';
 import Button from '../src/button';
-import sinon from 'sinon'
+import sinon from 'sinon';
+
 Vue.config.productionTip = false;
 Vue.config.devtools = false;
 describe('Button', () => {
@@ -88,8 +89,22 @@ describe('Button', () => {
 		
 		vm.$on('click', callback);
 		vm.$el.click();
-		expect(callback).to.have.been.called
+		expect(callback).to.have.been.called;
 		vm.$el.remove();
 		vm.$destroy();
+	});
+	
+	it('测试repples存在的情况下涟漪效果存在', () => {
+		let div = document.createElement('div');
+		let Contructor = Vue.extend(Button);
+		document.body.appendChild(div);
+		let vm = new Contructor({
+			propsData: {
+				repples: true,
+			},
+		}).$mount(div);
+		let classNameList = vm.$el.className.split(' ');
+		let result = classNameList.includes('repples');
+		expect(result).to.eq(true);
 	});
 });

@@ -2,20 +2,36 @@ import Vue from 'vue';
 import Button from './button';
 import Icon from './icon';
 import GButtonGroup from './g-button-group';
+import Ginput from './g-input';
 
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
 Vue.component('g-button-group', GButtonGroup);
+Vue.component('g-input', Ginput);
+
 new Vue({
 	el: '#app',
 	data() {
 		return {
 			lodding1: false,
+			err: false,
+			message: 'hello wold',
 		};
 	},
 	methods: {
-		aaa() {
-			this.$emit('bbb', {a: 100});
+		xxx() {
+			console.log(999);
+		},
+		checkUserName(value) {
+			console.log(value.toString().length);
+			if (value.toString().length >= 10) {
+				return false;
+			} else {
+				return true;
+			}
+		},
+		changeErr(val) {
+			this.err = val;
 		},
 	},
 });

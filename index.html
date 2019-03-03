@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>轱辘</title>
     <link rel="stylesheet" href="./reset.css">
-    <script src="//at.alicdn.com/t/font_729974_6smp6kfwab2.js"></script>
     <style>
         :root {
             --button-height: 32px;
@@ -18,26 +17,58 @@
             --border-color: #999;
             --border-color-hover: #666;
         }
+
+        #app {
+            padding-left: 20px;
+        }
+
+        .ib {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .typetitle {
+            font-size: 25px;
+            font-weight: 400;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
 <div id="app">
-    <g-button icon="setting">设置</g-button>
-    <g-button icon="help">点赞</g-button>
-    <g-button>您好</g-button>
-    <g-icon icon="help"></g-icon>
-    <g-button icon="setting" :lodding="lodding1" @click="lodding1 = !lodding1" position="right">加载中</g-button>
-    <g-button icon="right" position="right">右边</g-button>
-    <g-button icon="left">向左</g-button>
-
-    <g-button-group>
-        <g-button icon="left">上一页</g-button>
-        <g-button>中间</g-button>
-        <g-button icon="right" position="right">下一页</g-button>
-    </g-button-group>
+    <div class="typetitle">button组件展示</div>
+    <div id="g-button">
+        <g-button icon="setting">设置</g-button>
+        <g-button icon="help">点赞</g-button>
+        <g-button>您好</g-button>
+        <g-icon icon="help"></g-icon>
+        <g-button icon="setting" :repples="true" :lodding="lodding1" @click="lodding1 = !lodding1" position="right">
+            加载中
+        </g-button>
+        <g-button icon="right" position="right">右边</g-button>
+        <g-button icon="left">向左</g-button>
+        <g-button-group>
+            <g-button icon="left">上一页</g-button>
+            <g-button>中间</g-button>
+            <g-button icon="right" position="right">下一页</g-button>
+        </g-button-group>
+        <g-button icon="setting" :repples="true">设置</g-button>
+    </div>
+    <div class="typetitle">input组件展示</div>
+    <div id="g-input">
+        <g-input placeholder="请输入你的名字"></g-input>
+        <g-input placeholder="我是只读的" :readonly="true"></g-input>
+        <g-input placeholder="我是禁止输入的" :disabled="true"></g-input>
+        <g-input placeholder="请输入密码" type="password"></g-input>
+        <g-input v-on:computederr="changeErr" placeholder="我是出入错误之后的提示" :err="err" v-model="message"
+                 :rule="[{target:'blur',msg:'账户名称不能少于10位数字',validate:this.checkUserName}]"></g-input>
+    </div>
 </div>
 <div id="test"></div>
 <script src="./src/app.js"></script>
+<script type="text/javascript">
+
+</script>
 </body>
 </html>
 

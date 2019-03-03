@@ -8,20 +8,20 @@
     </button>
 </template>
 <script>
-	import Vue from 'vue';
 	import Icon from './icon';
-
-	Vue.component('g-icon', Icon);
 	export default {
 		name: 'g-button',
 		props: {
+			//icon的名字
 			icon: {
 				type: String,
 			},
+			//是否lodding
 			lodding: {
 				type: Boolean,
 				default: false,
 			},
+			//icon 的位置
 			position: {
 				type: String,
 				default: 'left', //校验只能是left或者right
@@ -34,9 +34,18 @@
 					}
 				},
 			},
+			repples: {
+				type: Boolean,
+				default: false,
+			},
 		},
-		component: {
+		components: {
 			'g-icon': Icon,
+		},
+		mounted() {
+			if (this.repples) {
+				this.$el.classList.add('repples');
+			}
 		},
 		methods: {},
 	};
@@ -76,8 +85,45 @@
         border: 1px solid var(--border-color);
         box-sizing: border-box;
 
+        &.repples {
+            overflow: hidden;
+            position: relative;
+            transition: background-color 0.3s linear, border 0.3s linear;
+            text-align: center;
+            white-space: nowrap;
+            cursor: pointer;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.87);
+        }
+
+        &.repples:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            background-image: radial-gradient(circle, #000 10%, rgba(0, 0, 0, 0) 10.01%);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            transform: scale(10);
+            opacity: 0;
+            transition: transform 0.5s, opacity 1s;
+        }
+
+        &.repples:active:after {
+            transform: scale(0);
+            opacity: 0.2;
+            transition: 0s;
+        }
+
+
         & .g-word {
             font-size: 14px;
+            position: relative;
+            z-index: 1000;
         }
 
         &:hover {
