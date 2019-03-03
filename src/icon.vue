@@ -1,5 +1,5 @@
 <template>
-    <svg aria-hidden="true" class="g-icon" v-if="icon">
+    <svg aria-hidden="true" class="g-icon" v-if="icon" @click="ccc">
         <use :xlink:href=`#i-${icon}`></use>
     </svg>
 </template>
@@ -12,6 +12,11 @@
 		props: {
 			icon: {
 				type: String,
+			},
+		},
+		methods: {
+			ccc() {
+				this.$emit('click');
 			},
 		},
 	};

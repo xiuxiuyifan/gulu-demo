@@ -19,7 +19,7 @@
         }
 
         #app {
-            padding-left: 20px;
+            padding: 20px;
         }
 
         .ib {
@@ -60,9 +60,44 @@
         <g-input placeholder="我是只读的" :readonly="true"></g-input>
         <g-input placeholder="我是禁止输入的" :disabled="true"></g-input>
         <g-input placeholder="请输入密码" type="password"></g-input>
-        <g-input v-on:computederr="changeErr" placeholder="我是出入错误之后的提示" :err="err" v-model="message"
+        <g-input v-on:computederr="changeErr" v-on:ccc="vvv" placeholder="请设置不小于10位的账户名" :err="err" v-model="message"
                  :rule="[{target:'blur',msg:'账户名称不能少于10位数字',validate:this.checkUserName}]"></g-input>
     </div>
+    <div class="typetitle">栅格布局组件</div>
+    <g-row>
+        <g-col span="12"></g-col>
+        <g-col span="12"></g-col>
+    </g-row>
+
+    <g-row>
+        <g-col span="6"></g-col>
+        <g-col span="6"></g-col>
+        <g-col span="6"></g-col>
+        <g-col span="6"></g-col>
+    </g-row>
+
+    <g-row>
+        <g-col span="4"></g-col>
+        <g-col span="4"></g-col>
+        <g-col span="4"></g-col>
+        <g-col span="4"></g-col>
+        <g-col span="4"></g-col>
+        <g-col span="4"></g-col>
+    </g-row>
+
+    <g-row>
+        <g-col span="8"></g-col>
+        <g-col span="8"></g-col>
+        <g-col span="8"></g-col>
+    </g-row>
+
+    <g-row>
+        <g-col span="9"></g-col>
+        <g-col span="1"></g-col>
+        <g-col span="2"></g-col>
+        <g-col span="12"></g-col>
+    </g-row>
+
 </div>
 <div id="test"></div>
 <script src="./src/app.js"></script>

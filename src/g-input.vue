@@ -10,11 +10,11 @@
                    @focus="watchfocus()"
                    @input="$emit('input',$event.target.value)"
                    class="input">
-            <g-icon :class="{fillerr:err}" class="blurafter" icon="del" v-if="err"></g-icon>
+            <g-icon :class="{fillerr:err}" class="blurafter" @click="clearValue()" icon="del" v-if="err"></g-icon>
         </div>
         <div v-if="err">
             <g-icon :class="{fillerr:err}" icon="error"></g-icon>
-            <span :class="{worderr:err}" class="ib">请检查你的输入信息</span>
+            <span :class="{worderr:err}" class="ib">{{this.rule[0].msg}}</span>
         </div>
     </div>
 </template>
@@ -80,6 +80,10 @@
 			},
 			watchfocus() {
 
+			},
+			clearValue() {
+				console.log(this.value);
+				this.$emit('ccc', '');
 			},
 		},
 		mounted() {
@@ -149,6 +153,7 @@
 
         .fillerr {
             fill: #f04134;
+            cursor: pointer;
         }
 
         .worderr {

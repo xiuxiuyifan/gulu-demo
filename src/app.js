@@ -3,12 +3,15 @@ import Button from './button';
 import Icon from './icon';
 import GButtonGroup from './g-button-group';
 import Ginput from './g-input';
+import Grow from './g-row';
+import Gcol from './g-col';
 
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
 Vue.component('g-button-group', GButtonGroup);
 Vue.component('g-input', Ginput);
-
+Vue.component('g-row', Grow);
+Vue.component('g-col', Gcol);
 new Vue({
 	el: '#app',
 	data() {
@@ -32,6 +35,9 @@ new Vue({
 		},
 		changeErr(val) {
 			this.err = val;
+		},
+		vvv(val) {
+			this.message = val;
 		},
 	},
 });
