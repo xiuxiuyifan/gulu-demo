@@ -1,5 +1,5 @@
 <template>
-    <div class="g-row">
+    <div :style="rowstyle" class="g-row">
         <slot></slot>
     </div>
 </template>
@@ -9,6 +9,33 @@
 
 	export default {
 		name: 'g-row',
+		props: {
+			gutter: {
+				type: [Number, String],
+			},
+		},
+		created() {
+			console.log('父组件创建了');
+		},
+		computed: {
+			rowstyle: function() {
+				let {gutter} = this;
+				return {
+					marginLeft: -gutter / 2 + 'px',
+					marginRight: -gutter / 2 + 'px',
+				};
+			},
+		},
+		mounted() {
+			console.log('父组件加入');
+			console.log(this.gutter);
+			console.log(this.$children);
+			this.$children.forEach((vm) => {
+				vm.gutter = this.gutter;
+				console.log(vm.gutter);
+			});
+			console.log(this.$children[0].gutter);
+		},
 	};
 </script>
 

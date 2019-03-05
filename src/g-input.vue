@@ -1,7 +1,7 @@
 <template>
     <div class="g-input">
         <div class="g-input-content">
-            <input :class="{'disabled':disabled,'error':xxx}" :disabled="disabled"
+            <input :class="{'disabled':disabled,'error':err}" :disabled="disabled"
                    :placeholder="placeholder" :readonly="readonly"
                    :rule="rule"
                    :type="type"
@@ -60,11 +60,7 @@
 		data() {
 			return {};
 		},
-		computed: {
-			xxx: function() {
-				return this.err;
-			},
-		},
+		computed: {},
 		components: {
 			'g-icon': Icon,
 		},
@@ -87,7 +83,6 @@
 			},
 		},
 		mounted() {
-			console.log(this.err);
 		},
 	};
 </script>
