@@ -32,6 +32,11 @@
             font-weight: 400;
             margin: 20px 0;
         }
+
+        .col-border {
+            border: 1px solid rebeccapurple;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -65,10 +70,18 @@
     </div>
     <div class="typetitle">栅格布局组件</div>
     <g-row gutter="20">
-        <g-col span="6">1</g-col>
-        <g-col span="6">2</g-col>
-        <g-col span="6">2</g-col>
-        <g-col span="6">2</g-col>
+        <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">
+            <div class="col-border">1</div>
+        </g-col>
+        <g-col span="6">
+            <div class="col-border">1</div>
+        </g-col>
+        <g-col span="6">
+            <div class="col-border">1</div>
+        </g-col>
+        <g-col span="6">
+            <div class="col-border">1</div>
+        </g-col>
     </g-row>
 
     <!--<g-row gutter="20">-->

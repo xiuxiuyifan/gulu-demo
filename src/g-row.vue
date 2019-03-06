@@ -27,14 +27,9 @@
 			},
 		},
 		mounted() {
-			console.log('父组件加入');
-			console.log(this.gutter);
-			console.log(this.$children);
 			this.$children.forEach((vm) => {
 				vm.gutter = this.gutter;
-				console.log(vm.gutter);
 			});
-			console.log(this.$children[0].gutter);
 		},
 	};
 </script>
