@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/g-aside.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/g-container.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/g-footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/g-header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/g-main.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/g-toast.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gulu-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gulu-demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-col.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-col.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/g-container.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-container.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/g-row.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-row.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/icon.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/svg.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,17 +28,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/g-container.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1025">
-              <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+            <state relative-caret-position="322">
+              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/g-header.vue">
+        <entry file="file://$PROJECT_DIR$/src/g-row.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" selection-start-line="15" selection-end-line="16" />
+            <state relative-caret-position="388">
+              <caret line="19" column="101" selection-start-line="19" selection-start-column="101" selection-end-line="19" selection-end-column="101" />
             </state>
           </provider>
         </entry>
@@ -65,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/g-aside.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+            <state relative-caret-position="598">
+              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#g-icon#0;n#div#0;n#div#0;n#transition#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -89,20 +85,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="113" column="3" selection-start-line="113" selection-start-column="3" selection-end-line="122" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#g-container#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="514">
+              <caret line="128" column="41" selection-start-line="128" selection-start-column="41" selection-end-line="128" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/svg.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/g-toast.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1163">
-              <caret column="21132" selection-start-column="21132" selection-end-column="21132" />
+            <state relative-caret-position="161">
+              <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#g-icon#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="39" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="39" />
+            <state relative-caret-position="-2">
+              <caret line="127" selection-start-line="127" selection-end-line="127" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -120,10 +116,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/button.vue">
+        <entry file="file://$PROJECT_DIR$/src/plugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2461">
-              <caret line="107" column="45" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="45" />
+            <state relative-caret-position="504">
+              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -133,8 +129,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -149,6 +145,7 @@
       <find>clearValue</find>
       <find>12</find>
       <find>style=&quot;height: 100%;border:1px solid rebeccapurple;&quot;</find>
+      <find>includes</find>
     </findStrings>
     <replaceStrings>
       <replace>el</replace>
@@ -157,6 +154,10 @@
       <replace />
       <replace>class=&quot;col-border&quot;</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\code\gulu-demo\src</dir>
+      <dir>C:\Users\code\gulu-demo</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -171,24 +172,26 @@
         <option value="$PROJECT_DIR$/src/g-button-group.vue" />
         <option value="$PROJECT_DIR$/src/reset.css" />
         <option value="$PROJECT_DIR$/reset.css" />
-        <option value="$PROJECT_DIR$/src/button.vue" />
         <option value="$PROJECT_DIR$/test/button.test.js" />
         <option value="$PROJECT_DIR$/vaildate/check_form.js" />
         <option value="$PROJECT_DIR$/src/row.vue" />
         <option value="$PROJECT_DIR$/src/col.vue" />
         <option value="$PROJECT_DIR$/src/g-input.vue" />
-        <option value="$PROJECT_DIR$/src/g-row.vue" />
         <option value="$PROJECT_DIR$/src/g-col.vue" />
         <option value="$PROJECT_DIR$/src/g-layout.vue" />
-        <option value="$PROJECT_DIR$/src/app.js" />
         <option value="$PROJECT_DIR$/src/g-header.vue" />
         <option value="$PROJECT_DIR$/src/g-main.vue" />
         <option value="$PROJECT_DIR$/src/g-footer.vue" />
-        <option value="$PROJECT_DIR$/src/g-container.vue" />
         <option value="$PROJECT_DIR$/src/svg.js" />
         <option value="$PROJECT_DIR$/src/icon.vue" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/g-aside.vue" />
+        <option value="$PROJECT_DIR$/src/g-container.vue" />
+        <option value="$PROJECT_DIR$/src/g-row.vue" />
+        <option value="$PROJECT_DIR$/src/button.vue" />
+        <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/plugin.js" />
+        <option value="$PROJECT_DIR$/src/g-toast.vue" />
       </list>
     </option>
   </component>
@@ -316,7 +319,8 @@
       <workItem from="1551869341664" duration="10819000" />
       <workItem from="1552103621416" duration="5414000" />
       <workItem from="1552119942661" duration="4876000" />
-      <workItem from="1552180508582" duration="10006000" />
+      <workItem from="1552180508582" duration="10096000" />
+      <workItem from="1552208905820" duration="16029000" />
     </task>
     <task id="LOCAL-00001" summary="给lodding添加动效">
       <created>1545233737787</created>
@@ -388,14 +392,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551885153687</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="新增container默认布局组件实现简单的动画">
+      <created>1552202546407</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1552202546407</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175529000" />
+    <option name="totallyTimeSpent" value="191648000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1456" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="npm" order="0" side_tool="true" />
@@ -417,7 +428,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.13421474" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="3" visible="true" weight="0.18265086" />
       <window_info anchor="right" id="Nativescript Palette" order="4" />
     </layout>
     <layout-to-restore>
@@ -454,7 +465,8 @@
     <MESSAGE value="添加input组件" />
     <MESSAGE value="添加栅格布局组件g-row 和 g-col" />
     <MESSAGE value="添加响应式功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加响应式功能" />
+    <MESSAGE value="新增container默认布局组件实现简单的动画" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增container默认布局组件实现简单的动画" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -541,30 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/g-row.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/button.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2461">
-          <caret line="107" column="45" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/g-input.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1163">
@@ -576,13 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
           <caret line="147" column="34" selection-start-line="147" selection-start-column="34" selection-end-line="147" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/g-main.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -600,10 +581,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/g-main.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g-aside.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#g-icon#0;n#div#0;n#div#0;n#transition#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/caniuse-db/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="253">
+            <caret line="7" column="102" selection-start-line="7" selection-start-column="102" selection-end-line="7" selection-end-column="102" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/g-container.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1025">
-          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+        <state relative-caret-position="322">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g-row.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="19" column="101" selection-start-line="19" selection-start-column="101" selection-end-line="19" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/button.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="1" column="34" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -614,6 +636,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="128" column="41" selection-start-line="128" selection-start-column="41" selection-end-line="128" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/icon.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -621,22 +650,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="113" column="3" selection-start-line="113" selection-start-column="3" selection-end-line="122" selection-end-column="18" />
+        <state relative-caret-position="-2">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
           <folding>
-            <element signature="n#style#0;n#g-container#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/g-aside.vue">
+    <entry file="file://$PROJECT_DIR$/src/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        <state relative-caret-position="504">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g-toast.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
           <folding>
-            <element signature="n#style#0;n#g-icon#0;n#div#0;n#div#0;n#transition#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#g-icon#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

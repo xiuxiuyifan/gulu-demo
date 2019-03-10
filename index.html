@@ -42,24 +42,24 @@
 </head>
 <body>
 <div id="app">
-    <!--<div class="typetitle">button组件展示</div>-->
-    <!--<div id="g-button">-->
-    <!--<g-button icon="setting">设置</g-button>-->
-    <!--<g-button icon="help">点赞</g-button>-->
-    <!--<g-button>您好</g-button>-->
-    <!--<g-icon icon="help"></g-icon>-->
-    <!--<g-button icon="setting" :repples="true" :lodding="lodding1" @click="lodding1 = !lodding1" position="right">-->
-    <!--加载中-->
-    <!--</g-button>-->
-    <!--<g-button icon="right" position="right">右边</g-button>-->
-    <!--<g-button icon="left">向左</g-button>-->
-    <!--<g-button-group>-->
-    <!--<g-button icon="left">上一页</g-button>-->
-    <!--<g-button>中间</g-button>-->
-    <!--<g-button icon="right" position="right">下一页</g-button>-->
-    <!--</g-button-group>-->
-    <!--<g-button icon="setting" :repples="true">设置</g-button>-->
-    <!--</div>-->
+    <div class="typetitle">button组件展示</div>
+    <div id="g-button">
+        <g-button icon="setting">设置</g-button>
+        <g-button icon="help">点赞</g-button>
+        <g-button>您好</g-button>
+        <g-icon icon="help"></g-icon>
+        <g-button icon="setting" :repples="true" :lodding="lodding1" @click="lodding1 = !lodding1" position="right">
+            加载中
+        </g-button>
+        <g-button icon="right" position="right">右边</g-button>
+        <g-button icon="left">向左</g-button>
+        <g-button-group>
+            <g-button icon="left">上一页</g-button>
+            <g-button>中间</g-button>
+            <g-button icon="right" position="right">下一页</g-button>
+        </g-button-group>
+        <g-button icon="setting" :repples="true">设置</g-button>
+    </div>
     <!--<div class="typetitle">input组件展示</div>-->
     <!--<div id="g-input">-->
     <!--<g-input placeholder="请输入你的名字"></g-input>-->
@@ -111,17 +111,22 @@
     <!--</g-container>-->
 
     <!--3-->
-    <g-container position="verticale" style="height: 100vh;">
-        <g-container>
-            <g-aside>aside</g-aside>
-            <g-container position="verticale">
-                <g-header>header</g-header>
-                <g-main>main</g-main>
-                <g-footer>footer</g-footer>
-            </g-container>
-        </g-container>
-    </g-container>
-
+    <!--如果想让右边出现滚动请自行添加css属性
+        overflow-y: scroll;
+        display: block;
+    -->
+    <!--<g-container position="verticale" style="height: 100vh;">-->
+    <!--<g-container>-->
+    <!--<g-aside>aside</g-aside>-->
+    <!--<g-container position="verticale" style=" overflow-y: scroll;display: block;">-->
+    <!--<g-header>header</g-header>-->
+    <!--<g-main>main</g-main>-->
+    <!--<g-footer>footer</g-footer>-->
+    <!--</g-container>-->
+    <!--</g-container>-->
+    <!--</g-container> -->
+    <div class="typetitle">toast组件功能展示</div>
+    <g-button @click="activateToast()">成功</g-button>
 </div>
 <div id="test"></div>
 <script src="./src/app.js"></script>

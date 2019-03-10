@@ -18,7 +18,7 @@
 				validator: function(value) {
 					console.log(value);
 					let whiteList = ['start', 'center', 'flex-end', 'space-between', 'space-around'];
-					if (whiteList.includes(value)) {
+					if (whiteList.indexOf(value) >= 0) {
 						return value;
 					} else {
 						console.error('你的algin 参数有问题请查看文档');

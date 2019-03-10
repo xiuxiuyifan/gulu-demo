@@ -12,7 +12,7 @@
 				type: String,
 				validator: function(value) {
 					let arr = ['level', 'verticale'];
-					if (arr.includes(value)) {
+					if (arr.indexOf(value) >= 0) {
 						return value;
 					} else {
 						console.error('你输入的必须是 level or verticale');

@@ -10,7 +10,9 @@ import Gheader from './g-header';
 import Gmain from './g-main';
 import Gfooter from './g-footer';
 import Gaside from './g-aside';
+import plugin from './plugin';
 
+Vue.use(plugin);
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
 Vue.component('g-button-group', GButtonGroup);
@@ -51,6 +53,11 @@ new Vue({
 		vvv(val) {
 			this.message = val;
 		},
+		activateToast() {
+			this.$toast();
+		},
+	},
+	mounted() {
 	},
 });
 
