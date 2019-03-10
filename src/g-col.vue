@@ -25,6 +25,7 @@
 		computed: {
 			colclass: function() {
 				let {span, offset, xs, sm, md, lg, xl, xxl} = this;
+				console.log(this);
 				return [
 					// span && `col_span${span}`,
 					// offset && `col_offset${offset}`,
@@ -79,10 +80,8 @@
 			},
 		},
 		created() {
-			console.log('子组件创建了');
 		},
 		mounted() {
-			console.log('子组件加入');
 			console.log(this.gutter);
 		},
 	};

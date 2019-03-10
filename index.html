@@ -19,7 +19,7 @@
         }
 
         #app {
-            padding: 20px;
+            /*padding: 20px;*/
         }
 
         .ib {
@@ -36,89 +36,95 @@
         .col-border {
             border: 1px solid rebeccapurple;
             height: 100%;
+            background: #c0c4cc;
         }
     </style>
 </head>
 <body>
 <div id="app">
-    <div class="typetitle">button组件展示</div>
-    <div id="g-button">
-        <g-button icon="setting">设置</g-button>
-        <g-button icon="help">点赞</g-button>
-        <g-button>您好</g-button>
-        <g-icon icon="help"></g-icon>
-        <g-button icon="setting" :repples="true" :lodding="lodding1" @click="lodding1 = !lodding1" position="right">
-            加载中
-        </g-button>
-        <g-button icon="right" position="right">右边</g-button>
-        <g-button icon="left">向左</g-button>
-        <g-button-group>
-            <g-button icon="left">上一页</g-button>
-            <g-button>中间</g-button>
-            <g-button icon="right" position="right">下一页</g-button>
-        </g-button-group>
-        <g-button icon="setting" :repples="true">设置</g-button>
-    </div>
-    <div class="typetitle">input组件展示</div>
-    <div id="g-input">
-        <g-input placeholder="请输入你的名字"></g-input>
-        <g-input placeholder="我是只读的" :readonly="true"></g-input>
-        <g-input placeholder="我是禁止输入的" :disabled="true"></g-input>
-        <g-input placeholder="请输入密码" type="password"></g-input>
-        <g-input v-on:computederr="changeErr" v-on:ccc="vvv" placeholder="请设置不小于10位的账户名" :err="err" v-model="message"
-                 :rule="[{target:'blur',msg:'账户名称不能少于10位数字',validate:this.checkUserName}]"></g-input>
-    </div>
-    <div class="typetitle">栅格布局组件</div>
-    <g-row gutter="20">
-        <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">
-            <div class="col-border">1</div>
-        </g-col>
-        <g-col span="6">
-            <div class="col-border">1</div>
-        </g-col>
-        <g-col span="6">
-            <div class="col-border">1</div>
-        </g-col>
-        <g-col span="6">
-            <div class="col-border">1</div>
-        </g-col>
-    </g-row>
-
-    <!--<g-row gutter="20">-->
-    <!--<g-col span="6"></g-col>-->
-    <!--<g-col span="5" offset="1"></g-col>-->
-    <!--<g-col span="6"></g-col>-->
-    <!--<g-col span="6"></g-col>-->
+    <!--<div class="typetitle">button组件展示</div>-->
+    <!--<div id="g-button">-->
+    <!--<g-button icon="setting">设置</g-button>-->
+    <!--<g-button icon="help">点赞</g-button>-->
+    <!--<g-button>您好</g-button>-->
+    <!--<g-icon icon="help"></g-icon>-->
+    <!--<g-button icon="setting" :repples="true" :lodding="lodding1" @click="lodding1 = !lodding1" position="right">-->
+    <!--加载中-->
+    <!--</g-button>-->
+    <!--<g-button icon="right" position="right">右边</g-button>-->
+    <!--<g-button icon="left">向左</g-button>-->
+    <!--<g-button-group>-->
+    <!--<g-button icon="left">上一页</g-button>-->
+    <!--<g-button>中间</g-button>-->
+    <!--<g-button icon="right" position="right">下一页</g-button>-->
+    <!--</g-button-group>-->
+    <!--<g-button icon="setting" :repples="true">设置</g-button>-->
+    <!--</div>-->
+    <!--<div class="typetitle">input组件展示</div>-->
+    <!--<div id="g-input">-->
+    <!--<g-input placeholder="请输入你的名字"></g-input>-->
+    <!--<g-input placeholder="我是只读的" :readonly="true"></g-input>-->
+    <!--<g-input placeholder="我是禁止输入的" :disabled="true"></g-input>-->
+    <!--<g-input placeholder="请输入密码" type="password"></g-input>-->
+    <!--<g-input v-on:computederr="changeErr" v-on:ccc="vvv" placeholder="请设置不小于10位的账户名" :err="err" v-model="message"-->
+    <!--:rule="[{target:'blur',msg:'账户名称不能少于10位数字',validate:this.checkUserName}]"></g-input>-->
+    <!--</div>-->
+    <!--<div class="typetitle">栅格布局组件</div>-->
+    <!--<g-row gutter="20" align="start">-->
+    <!--<g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+    <!--<div class="col-border">1</div>-->
+    <!--</g-col>-->
+    <!--<g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+    <!--<div class="col-border">1</div>-->
+    <!--</g-col>-->
+    <!--<g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+    <!--<div class="col-border">1</div>-->
+    <!--</g-col>-->
+    <!--<g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+    <!--<div class="col-border">1</div>-->
+    <!--</g-col>-->
+    <!--<g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+    <!--<div class="col-border">1</div>-->
+    <!--</g-col>-->
+    <!--<g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+    <!--<div class="col-border">1</div>-->
+    <!--</g-col>-->
     <!--</g-row>-->
+    <!--<div class="typetitle">container快速布局</div>-->
+    <!--1-->
+    <!--<g-container position="verticale" style="height: 100vh;">-->
+    <!--<g-header>header</g-header>-->
+    <!--<g-main>main</g-main>-->
+    <!--<g-footer>footer</g-footer>-->
+    <!--</g-container>-->
 
-    <!--<g-row>-->
-    <!--<g-col span="4"></g-col>-->
-    <!--<g-col span="3" offset="1"></g-col>-->
-    <!--<g-col span="4"></g-col>-->
-    <!--<g-col span="4"></g-col>-->
-    <!--<g-col span="4"></g-col>-->
-    <!--<g-col span="4"></g-col>-->
-    <!--</g-row>-->
+    <!--2-->
+    <!--<g-container position="verticale" style="height: 100vh;">-->
+    <!--<g-header>header</g-header>-->
+    <!--<g-container>-->
+    <!--<g-aside>aside</g-aside>-->
+    <!--<g-container position="verticale">-->
+    <!--<g-main>main</g-main>-->
+    <!--<g-footer>footer</g-footer>-->
+    <!--</g-container>-->
+    <!--</g-container>-->
+    <!--</g-container>-->
 
-    <!--<g-row>-->
-    <!--<g-col span="6" offset="2"></g-col>-->
-    <!--<g-col span="8"></g-col>-->
-    <!--<g-col span="8"></g-col>-->
-    <!--</g-row>-->
-
-    <!--<g-row>-->
-    <!--<g-col span="7" offset="2"></g-col>-->
-    <!--<g-col span="1"></g-col>-->
-    <!--<g-col span="2"></g-col>-->
-    <!--<g-col span="10" offset="2"></g-col>-->
-    </g-row>
+    <!--3-->
+    <g-container position="verticale" style="height: 100vh;">
+        <g-container>
+            <g-aside>aside</g-aside>
+            <g-container position="verticale">
+                <g-header>header</g-header>
+                <g-main>main</g-main>
+                <g-footer>footer</g-footer>
+            </g-container>
+        </g-container>
+    </g-container>
 
 </div>
 <div id="test"></div>
 <script src="./src/app.js"></script>
-<script type="text/javascript">
-
-</script>
 </body>
 </html>
 

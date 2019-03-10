@@ -13,17 +13,39 @@
 			gutter: {
 				type: [Number, String],
 			},
+			align: {
+				type: String,
+				validator: function(value) {
+					console.log(value);
+					let whiteList = ['start', 'center', 'flex-end', 'space-between', 'space-around'];
+					if (whiteList.includes(value)) {
+						return value;
+					} else {
+						console.error('你的algin 参数有问题请查看文档');
+					}
+				},
+			},
+		},
+		data() {
+			return {
+				alignStyle: {},
+			};
 		},
 		created() {
-			console.log('父组件创建了');
 		},
 		computed: {
 			rowstyle: function() {
 				let {gutter} = this;
-				return {
+				let obj = {
 					marginLeft: -gutter / 2 + 'px',
 					marginRight: -gutter / 2 + 'px',
 				};
+				if (this.align) {
+					obj.display = 'flex';
+					obj.justifyContent = this.align;
+					obj.flexWrap = 'wrap';
+				}
+				return obj;
 			},
 		},
 		mounted() {
