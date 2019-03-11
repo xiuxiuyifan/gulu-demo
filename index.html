@@ -126,7 +126,11 @@
     <!--</g-container>-->
     <!--</g-container> -->
     <div class="typetitle">toast组件功能展示</div>
-    <g-button @click="activateToast()">成功</g-button>
+    <g-button @click="activateToast('top')">上边</g-button>
+    <g-button @click="activateToast('right')">右边</g-button>
+    <g-button @click="activateToast('bottom')">下边</g-button>
+    <g-button @click="activateToast('left')">左边</g-button>
+    <g-button @click="activateToast('middle')">中间</g-button>
 </div>
 <div id="test"></div>
 <script src="./src/app.js"></script>

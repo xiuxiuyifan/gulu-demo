@@ -53,8 +53,19 @@ new Vue({
 		vvv(val) {
 			this.message = val;
 		},
-		activateToast() {
-			this.$toast();
+		activateToast(location) {
+			this.$toast({
+				message: '恭喜您,这是一套成功的消息',
+				btnMsg: '知道了',
+				// closeTimer:3,
+				position: location,
+				// autoClose: false,
+				showClose: false,
+				callBack: function(value) {
+					console.log(value);
+					console.log('我是关闭之后的代码');
+				},
+			});
 		},
 	},
 	mounted() {

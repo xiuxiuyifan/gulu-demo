@@ -1,5 +1,6 @@
 import Gtoast from './g-toast';
 
+let toast;   //记录当前页面是否存在toast
 export default {
 	install(Vue, methodOptions) {
 		// 1. 添加全局方法或属性
@@ -27,12 +28,18 @@ export default {
 			console.log('我是插件里面的东西');
 			let constructor = Vue.extend(Gtoast);
 			let vm = new constructor({
-				propsData: {
-					message: '恭喜您,这是一套成功的消息',
-				},
+				propsData: options,
+			});
+			vm.$on('close', (value) => {
+				toast = null;
 			});
 			vm.$mount();
-			document.body.appendChild(vm.$el);
+			if (toast) {
+				console.log(toast);
+				// toast.remove()
+			} else {
+				toast = document.body.appendChild(vm.$el);
+			}
 			console.log(vm);
 		};
 	},
