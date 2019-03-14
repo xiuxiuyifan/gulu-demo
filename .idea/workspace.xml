@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -331,7 +331,7 @@
       <workItem from="1552304625010" duration="9135000" />
       <workItem from="1552391824815" duration="2350000" />
       <workItem from="1552479864421" duration="11295000" />
-      <workItem from="1552563886606" duration="2257000" />
+      <workItem from="1552563886606" duration="2348000" />
     </task>
     <task id="LOCAL-00001" summary="给lodding添加动效">
       <created>1545233737787</created>
@@ -431,11 +431,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552571791563</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="添加tab组建的五个文件，并且写了简单的样式">
+      <created>1552572234350</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1552572234350</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216839000" />
+    <option name="totallyTimeSpent" value="216930000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -493,6 +500,8 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="给lodding添加动效" />
     <MESSAGE value="添加自动化单元测试" />
     <MESSAGE value="重命名.travis.yml" />
@@ -504,7 +513,6 @@
     <MESSAGE value="完善 toast组件的propsData  将api 变成this.$toast({})的形式保证页面值出现一个toast(有Bug后续优化)" />
     <MESSAGE value="添加tab组建的五个文件，并且写了简单的样式" />
     <option name="LAST_COMMIT_MESSAGE" value="添加tab组建的五个文件，并且写了简单的样式" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
@@ -757,7 +765,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
         </state>
       </provider>
     </entry>
