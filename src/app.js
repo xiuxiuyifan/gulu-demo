@@ -11,6 +11,11 @@ import Gmain from './g-main';
 import Gfooter from './g-footer';
 import Gaside from './g-aside';
 import plugin from './plugin';
+import Gtab from './g-tab';
+import GtabHeader from './g-tab-header';
+import GtabContent from './g-tab-content';
+import GtabHeaderItem from './tab-header-item';
+import GtabContentItem from './tab-content-item';
 
 Vue.use(plugin);
 Vue.component('g-button', Button);
@@ -25,14 +30,27 @@ Vue.component('g-container', Gcontainer);
 Vue.component('g-header', Gheader);
 Vue.component('g-main', Gmain);
 Vue.component('g-footer', Gfooter);
-Vue.component('g-aside', Gaside);
+Vue.component('g-aside', Gaside);   //侧边栏
+
+/*tab*/
+Vue.component('g-tab', Gtab);
+Vue.component('g-tab-header', GtabHeader);
+Vue.component('tab-header-item', GtabHeaderItem);
+Vue.component('g-tab-content', GtabContent);
+Vue.component('tab-content-item', GtabContentItem);
 new Vue({
 	el: '#app',
+	watch: {
+		selectedTab: function(newValue, oldValue) {
+			console.log(newValue);
+		},
+	},
 	data() {
 		return {
 			lodding1: false,
 			err: false,
 			message: 'hello wold',
+			selectedTab: 0,
 		};
 	},
 	methods: {
