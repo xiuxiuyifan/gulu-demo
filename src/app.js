@@ -42,7 +42,7 @@ new Vue({
 	el: '#app',
 	watch: {
 		selectedTab: function(newValue, oldValue) {
-			console.log(newValue);
+			console.log('我被子组件里面的东西改变了' + newValue);
 		},
 	},
 	data() {
@@ -50,10 +50,14 @@ new Vue({
 			lodding1: false,
 			err: false,
 			message: 'hello wold',
-			selectedTab: 0,
+			selectedTab: '1',
 		};
 	},
 	methods: {
+		ccc(value) {
+			console.log('我被触发了');
+			this.selectedTab = value;
+		},
 		xxx() {
 			console.log(999);
 		},
@@ -71,6 +75,7 @@ new Vue({
 		vvv(val) {
 			this.message = val;
 		},
+		/*   toast组件*/
 		activateToast(location) {
 			this.$toast({
 				message: '恭喜您,这是一套成功的消息',
@@ -84,6 +89,15 @@ new Vue({
 					console.log('我是关闭之后的代码');
 				},
 			});
+		},
+		
+		/*tab组件*/
+		tabBeforChange(event) {
+			console.log('我被调用了');
+			return true;
+		},
+		mmm() {
+			console.log();
 		},
 	},
 	mounted() {

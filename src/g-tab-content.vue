@@ -7,6 +7,13 @@
 <script>
 	export default {
 		name: 'g-tab-content',
+		mounted() {
+			console.log(this.$parent.position);
+			if (this.$parent.position === 'bottom') {
+				this.$emit('ccc');
+			}
+			console.log('g-tab-content挂载完成了');
+		},
 	};
 </script>
 
