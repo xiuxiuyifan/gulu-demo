@@ -1,7 +1,7 @@
 <template>
     <div :class="`tab-position-${tabHeaderPosition}`" class="g-tab-header">
         <div class="acitve-bar" ref="activebar"></div>
-        <div class="tab-header-button">
+        <div class="tab-header-button" ref="headerbtns" v-if="isshowbtns">
             <slot name="button"></slot>
         </div>
         <slot></slot>
@@ -16,10 +16,11 @@
 		inject: ['tabEventBus'],
 		data() {
 			return {
-				activeCourrent: null,
+				activeCourrent: this.$parent.selected,
 				labelArr: [],
 				widthArr: [],
 				heightArr: [],
+				isshowbtns: true,
 			};
 		},
 		computed: {
@@ -28,8 +29,51 @@
 			},
 		},
 		created() {
+			//监听父组件的position
+			// this.tabEventBus.$on('update:position', (value) => {
+			//
+			// 	this.changeStyle(value)
+			// });
 			this.tabEventBus.$on('update:label', (value) => {
-				console.log(this.tabHeaderPosition);
+				if(value.positioned){
+					this.widthArr = [];
+					this.heightArr = [];
+					//就先隐藏activebar等过度时间到了再显示出来
+					this.$refs.activebar.style = '';
+					this.$refs.activebar.style.display = 'none';
+					if(value.positioned === 'bottom'){
+						this.tabEventBus.$emit('contentMounted',this.$el)
+                    }
+					clearTimeout(timer);
+					let timer = setTimeout(()=>{
+						this.$refs.activebar.style.display = 'block';
+					},300)
+					this.$nextTick(()=>{
+						this.computedBar();
+						this.changeStyle(value.selected);
+					})
+				}else {
+					this.changeStyle(value.selected);
+				}
+			});
+		},
+		mounted() {
+			/*bar的移动*/
+			this.computedBar()
+			if (this.$refs.headerbtns.childNodes.length <= 0) {
+				this.isshowbtns = false;
+			}
+			if(this.tabHeaderPosition==='left' || this.tabHeaderPosition ==='right'){
+				this.isshowbtns = false;
+			}
+			// /*position*/
+			// //检测父组件是否有position
+			// if(this.$parent.position){
+			//
+			// }
+		},
+		methods: {
+			changeStyle(value) {
 				let index;
 				this.activeCourrent = value;
 				//接受到label变了  就执行active-bar运动的动画
@@ -43,22 +87,16 @@
 					'px'})`;
 					this.$refs.activebar.style.height = this.heightArr[index] + 'px';
 				}
-			});
-		},
-		mounted() {
-			/*bar的移动*/
-			this.$children.forEach((item, index) => {
-				if (item.$options.name === 'tab-header-item') {
-					this.widthArr.push(parseInt(getComputedStyle(item.$el).width));
-					this.heightArr.push(parseInt(getComputedStyle(item.$el).height));
-					this.labelArr.push(item.label);
-				}
-			});
-			// /*position*/
-			// //检测父组件是否有position
-			// if(this.$parent.position){
-			//
-			// }
+			},
+            computedBar(){
+				this.$children.forEach((item, index) => {
+					if (item.$options.name === 'tab-header-item') {
+						this.widthArr.push(parseInt(getComputedStyle(item.$el).width));
+						this.heightArr.push(parseInt(getComputedStyle(item.$el).height));
+						this.labelArr.push(item.label);
+					}
+				});
+            }
 		},
 	};
 </script>
@@ -85,8 +123,8 @@
         .acitve-bar {
             position: absolute;
             background: #409eff;
-            transition: transform .3s cubic-bezier(.645, .045, .355, 1);
             z-index: 10;
+            transition: transform .3s cubic-bezier(.645, .045, .355, 1);
         }
 
         &.tab-position-top {
@@ -126,7 +164,6 @@
                 top: 0;
                 right: 0;
                 width: 2px;
-                height: 20px;
             }
         }
 
@@ -143,7 +180,6 @@
                 top: 0;
                 left: 0;
                 width: 2px;
-                height: 20px;
             }
 
             &:after {

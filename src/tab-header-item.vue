@@ -27,14 +27,13 @@
 		},
 		created() {
 			this.tabEventBus.$on('update:label', (value) => {
-				this.active = this.label === value;
+				this.active = this.label === value.selected;
 			});
 		},
 		methods: {
 			changeTab(event) {
 				if (this.$parent.$parent.beforChange()) {
-					this.tabEventBus.$emit('update:label', this.label);
-
+					this.tabEventBus.$emit('update:label', {selected:this.label});
 				}
 				// this.$emit('update:title', this.name);
 			},

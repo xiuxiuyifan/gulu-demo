@@ -50,7 +50,8 @@ new Vue({
 			lodding1: false,
 			err: false,
 			message: 'hello wold',
-			selectedTab: '1',
+			selectedTab: '0',
+			tabPosition: 'left'
 		};
 	},
 	methods: {
@@ -73,7 +74,9 @@ new Vue({
 			this.err = val;
 		},
 		vvv(val) {
+			console.log('清空错误消息');
 			this.message = val;
+			this.err = false;
 		},
 		/*   toast组件*/
 		activateToast(location) {
@@ -93,12 +96,19 @@ new Vue({
 		
 		/*tab组件*/
 		tabBeforChange(event) {
-			console.log('我被调用了');
 			return true;
 		},
 		mmm() {
 			console.log();
 		},
+		tabChangePosition(dir){
+			// let constructor = Vue.extend(Gtab);
+			// let vm = new constructor({
+			// 	position: dir
+			// })
+			// vm.$mount("#app")
+			this.tabPosition = dir;
+		}
 	},
 	mounted() {
 	},

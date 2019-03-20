@@ -25,7 +25,7 @@
 		},
 		created() {
 			this.tabEventBus.$on('update:label', (value) => {
-				this.active = this.label === value;
+				this.active = this.label === value.selected;
 			});
 		},
 	};
