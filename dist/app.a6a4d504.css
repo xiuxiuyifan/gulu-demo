@@ -1390,3 +1390,19 @@
 .tab-content-item[data-v-e06c69] {
   font-size: 14px;
 }
+.g-popover[data-v-b8cade] {
+  position: relative;
+}
+.g-popover .contentWrapper[data-v-b8cade] {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1em;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  word-break: break-all;
+  border: 1px solid #ebeef5;
+  background: #ffffff;
+  min-width: 150px;
+  margin-bottom: 12px;
+}

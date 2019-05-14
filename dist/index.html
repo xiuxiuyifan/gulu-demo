@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>轱辘</title>
-    <link rel="stylesheet" href="/dist/reset.302ca0b1.css">
+    <link rel="stylesheet" href="/reset.302ca0b1.css">
+    <link rel="stylesheet" href="/common.5482dea7.css">
     <style>:root {
             --button-height: 32px;
             --font-size: 14px;
@@ -45,154 +46,162 @@
             padding: 24px;
             margin-bottom: 20px;
         }</style>
-<script src="/dist/reset.302ca0b1.js"></script><link rel="stylesheet" href="/dist/app.a6a4d504.css"></head>
+<script src="/reset.302ca0b1.js"></script><script src="/common.5482dea7.js"></script><link rel="stylesheet" href="/app.a6a4d504.css"></head>
 <body>
 <div id="app">
-    <div class="typetitle">button组件展示</div>
-    <div id="g-button">
-    <g-button icon="setting">设置</g-button>
-    <g-button icon="help">点赞</g-button>
-    <g-button>您好</g-button>
-    <g-icon icon="help"></g-icon>
-    <g-button icon="setting" :repples="true" :lodding="lodding1" @click="lodding1 = !lodding1" position="right">
-    加载中
-    </g-button>
-    <g-button icon="right" position="right">右边</g-button>
-    <g-button icon="left">向左</g-button>
-    <g-button-group>
-    <g-button icon="left">上一页</g-button>
-    <g-button>中间</g-button>
-    <g-button icon="right" position="right">下一页</g-button>
-    </g-button-group>
-    <g-button icon="setting" :repples="true">设置</g-button>
-    </div>
-    <div class="typetitle">input组件展示</div>
-    <div id="g-input">
-    <g-input placeholder="请输入你的名字"></g-input>
-    <g-input placeholder="我是只读的" :readonly="true"></g-input>
-    <g-input placeholder="我是禁止输入的" :disabled="true"></g-input>
-    <g-input placeholder="请输入密码" type="password"></g-input>
-    <g-input v-on:computederr="changeErr" v-on:ccc="vvv" placeholder="请设置不小于10位的账户名" :err="err" v-model="message" :rule="[{target:'blur',msg:'账户名称不能少于10位数字',validate:this.checkUserName}]"></g-input>
-    </div>
-    <div class="typetitle">栅格布局组件</div>
-    <g-row gutter="20" align="start">
-    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">
-    <div class="col-border">1</div>
-    </g-col>
-    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">
-    <div class="col-border">1</div>
-    </g-col>
-    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">
-    <div class="col-border">1</div>
-    </g-col>
-    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">
-    <div class="col-border">1</div>
-    </g-col>
-    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">
-    <div class="col-border">1</div>
-    </g-col>
-    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">
-    <div class="col-border">1</div>
-    </g-col>
-    </g-row>
-    <div class="typetitle">container快速布局</div>
-    <!--1-->
-    <div class="show-gulu-demo">
-        <g-container position="verticale" style="height: 100vh;">
-            <g-header>header</g-header>
-            <g-main>main</g-main>
-            <g-footer>footer</g-footer>
-        </g-container>
-    </div>
+<!--    <div class="typetitle">button组件展示</div>-->
+<!--    <div id="g-button">-->
+<!--    <g-button icon="setting">设置</g-button>-->
+<!--    <g-button icon="help">点赞</g-button>-->
+<!--    <g-button>您好</g-button>-->
+<!--    <g-icon icon="help"></g-icon>-->
+<!--    <g-button icon="setting" :repples="true" :lodding="lodding1" @click="lodding1 = !lodding1" position="right">-->
+<!--    加载中-->
+<!--    </g-button>-->
+<!--    <g-button icon="right" position="right">右边</g-button>-->
+<!--    <g-button icon="left">向左</g-button>-->
+<!--    <g-button-group>-->
+<!--    <g-button icon="left">上一页</g-button>-->
+<!--    <g-button>中间</g-button>-->
+<!--    <g-button icon="right" position="right">下一页</g-button>-->
+<!--    </g-button-group>-->
+<!--    <g-button icon="setting" :repples="true">设置</g-button>-->
+<!--    </div>-->
+<!--    <div class="typetitle">input组件展示</div>-->
+<!--    <div id="g-input">-->
+<!--    <g-input placeholder="请输入你的名字"></g-input>-->
+<!--    <g-input placeholder="我是只读的" :readonly="true"></g-input>-->
+<!--    <g-input placeholder="我是禁止输入的" :disabled="true"></g-input>-->
+<!--    <g-input placeholder="请输入密码" type="password"></g-input>-->
+<!--    <g-input v-on:computederr="changeErr" v-on:ccc="vvv" placeholder="请设置不小于10位的账户名" :err="err" v-model="message"-->
+<!--    :rule="[{target:'blur',msg:'账户名称不能少于10位数字',validate:this.checkUserName}]"></g-input>-->
+<!--    </div>-->
+<!--    <div class="typetitle">栅格布局组件</div>-->
+<!--    <g-row gutter="20" align="start">-->
+<!--    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+<!--    <div class="col-border">1</div>-->
+<!--    </g-col>-->
+<!--    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+<!--    <div class="col-border">1</div>-->
+<!--    </g-col>-->
+<!--    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+<!--    <div class="col-border">1</div>-->
+<!--    </g-col>-->
+<!--    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+<!--    <div class="col-border">1</div>-->
+<!--    </g-col>-->
+<!--    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+<!--    <div class="col-border">1</div>-->
+<!--    </g-col>-->
+<!--    <g-col span="6" xs="24" sm="20" md="16" lg="12" xl="8" xxl="4">-->
+<!--    <div class="col-border">1</div>-->
+<!--    </g-col>-->
+<!--    </g-row>-->
+<!--    <div class="typetitle">container快速布局</div>-->
+<!--    &lt;!&ndash;1&ndash;&gt;-->
+<!--    <div class="show-gulu-demo">-->
+<!--        <g-container position="verticale" style="height: 100vh;">-->
+<!--            <g-header>header</g-header>-->
+<!--            <g-main>main</g-main>-->
+<!--            <g-footer>footer</g-footer>-->
+<!--        </g-container>-->
+<!--    </div>-->
 
 
-    <!--2-->
-    <div class="show-gulu-demo">
-        <g-container position="verticale" style="height: 100vh;">
-            <g-header>header</g-header>
-            <g-container>
-                <g-aside>aside</g-aside>
-                <g-container position="verticale">
-                    <g-main>main</g-main>
-                    <g-footer>footer</g-footer>
-                </g-container>
-            </g-container>
-        </g-container>
-    </div>
+<!--    &lt;!&ndash;2&ndash;&gt;-->
+<!--    <div class="show-gulu-demo">-->
+<!--        <g-container position="verticale" style="height: 100vh;">-->
+<!--            <g-header>header</g-header>-->
+<!--            <g-container>-->
+<!--                <g-aside>aside</g-aside>-->
+<!--                <g-container position="verticale">-->
+<!--                    <g-main>main</g-main>-->
+<!--                    <g-footer>footer</g-footer>-->
+<!--                </g-container>-->
+<!--            </g-container>-->
+<!--        </g-container>-->
+<!--    </div>-->
 
 
-    <!--3-->
-    <!--如果想让右边出现滚动请自行添加css属性-->
-        <!--overflow-y: scroll;-->
-        <!--display: block;-->
-   <div class="show-gulu-demo">
-       <g-container position="verticale" style="height: 100vh;">
-           <g-container>
-               <g-aside>aside</g-aside>
-               <g-container position="verticale" style=" overflow-y: scroll;display: block;">
-                   <g-header>header</g-header>
-                   <g-main>main</g-main>
-                   <g-footer>footer</g-footer>
-               </g-container>
-           </g-container>
-       </g-container>
-   </div>
+<!--    &lt;!&ndash;3&ndash;&gt;-->
+<!--    &lt;!&ndash;如果想让右边出现滚动请自行添加css属性&ndash;&gt;-->
+<!--        &lt;!&ndash;overflow-y: scroll;&ndash;&gt;-->
+<!--        &lt;!&ndash;display: block;&ndash;&gt;-->
+<!--   <div class="show-gulu-demo">-->
+<!--       <g-container position="verticale" style="height: 100vh;">-->
+<!--           <g-container>-->
+<!--               <g-aside>aside</g-aside>-->
+<!--               <g-container position="verticale" style=" overflow-y: scroll;display: block;">-->
+<!--                   <g-header>header</g-header>-->
+<!--                   <g-main>main</g-main>-->
+<!--                   <g-footer>footer</g-footer>-->
+<!--               </g-container>-->
+<!--           </g-container>-->
+<!--       </g-container>-->
+<!--   </div>-->
 
-    <div class="typetitle">toast组件功能展示</div>
-    <div class="show-gulu-demo">
-        <g-button @click="activateToast('top')">上边</g-button>
-        <g-button @click="activateToast('right')">右边</g-button>
-        <g-button @click="activateToast('bottom')">下边</g-button>
-        <g-button @click="activateToast('left')">左边</g-button>
-        <g-button @click="activateToast('middle')">中间</g-button>
-    </div>
+<!--    <div class="typetitle">toast组件功能展示</div>-->
+<!--    <div class="show-gulu-demo">-->
+<!--        <g-button @click="activateToast('top')">上边</g-button>-->
+<!--        <g-button @click="activateToast('right')">右边</g-button>-->
+<!--        <g-button @click="activateToast('bottom')">下边</g-button>-->
+<!--        <g-button @click="activateToast('left')">左边</g-button>-->
+<!--        <g-button @click="activateToast('middle')">中间</g-button>-->
+<!--    </div>-->
 
 
+<!--    <div class="typetitle">tabs组件功能展示</div>-->
+<!--    <div class="show-gulu-demo">-->
+<!--        <g-tab :selected="selectedTab" :befor-change="tabBeforChange" position="left">-->
+<!--            &lt;!&ndash;<g-tab selected="selectedTab" v-on:update:name="ccc">&ndash;&gt;-->
+<!--            <g-tab-header>-->
+<!--            &lt;!&ndash;<template v-slot:button>&ndash;&gt;-->
+<!--            <g-button icon="setting" slot="button">设置</g-button>-->
+<!--            &lt;!&ndash;</template>&ndash;&gt;-->
+<!--            <tab-header-item label="0">美女</tab-header-item>-->
+<!--            <tab-header-item label="1">视频</tab-header-item>-->
+<!--            <tab-header-item label="2">影视</tab-header-item>-->
+<!--            </g-tab-header>-->
+<!--            <g-tab-content>-->
+<!--            <tab-content-item label="0">美女的相关信息</tab-content-item>-->
+<!--            <tab-content-item label="1">现在是新闻播放时间</tab-content-item>-->
+<!--            <tab-content-item label="2">绿皮书获得奥斯卡金奖</tab-content-item>-->
+<!--            </g-tab-content>-->
+<!--        </g-tab>-->
+
+<!--    </div>-->
+<!--    <div class="show-gulu-demo">-->
+<!--        <g-button @click="tabChangePosition('top')">上</g-button>-->
+<!--        <g-button @click="tabChangePosition('right')">右</g-button>-->
+<!--        <g-button @click="tabChangePosition('bottom')">下</g-button>-->
+<!--        <g-button @click="tabChangePosition('left')">左</g-button>-->
+<!--        <g-tab :selected="selectedTab" :befor-change="tabBeforChange" :position="tabPosition">-->
+<!--            <g-tab-header>-->
+<!--                &lt;!&ndash;<template v-slot:button>&ndash;&gt;-->
+<!--                &lt;!&ndash;</template>&ndash;&gt;-->
+<!--                &lt;!&ndash;<g-button slot="button">添加</g-button>&ndash;&gt;-->
+<!--                &lt;!&ndash;<g-button slot="button">添加</g-button>&ndash;&gt;-->
+<!--                <tab-header-item label="0">美女</tab-header-item>-->
+<!--                <tab-header-item label="1">视频频道</tab-header-item>-->
+<!--                <tab-header-item label="2">影视大凤凰科技</tab-header-item>-->
+<!--            </g-tab-header>-->
+<!--            <g-tab-content>-->
+<!--                <tab-content-item label="0">美女的相关信息</tab-content-item>-->
+<!--                <tab-content-item label="1">现在是新闻播放时间</tab-content-item>-->
+<!--                <tab-content-item label="2">绿皮书获得奥斯卡金奖</tab-content-item>-->
+<!--            </g-tab-content>-->
+<!--        </g-tab>-->
+<!--    </div>-->
     <div class="typetitle">tabs组件功能展示</div>
     <div class="show-gulu-demo">
-        <g-tab :selected="selectedTab" :befor-change="tabBeforChange" position="left">
-            <!--<g-tab selected="selectedTab" v-on:update:name="ccc">-->
-            <g-tab-header>
-            <!--<template v-slot:button>-->
-            <g-button icon="setting" slot="button">设置</g-button>
-            <!--</template>-->
-            <tab-header-item label="0">美女</tab-header-item>
-            <tab-header-item label="1">视频</tab-header-item>
-            <tab-header-item label="2">影视</tab-header-item>
-            </g-tab-header>
-            <g-tab-content>
-            <tab-content-item label="0">美女的相关信息</tab-content-item>
-            <tab-content-item label="1">现在是新闻播放时间</tab-content-item>
-            <tab-content-item label="2">绿皮书获得奥斯卡金奖</tab-content-item>
-            </g-tab-content>
-        </g-tab>
-
-    </div>
-    <div class="show-gulu-demo">
-        <g-button @click="tabChangePosition('top')">上</g-button>
-        <g-button @click="tabChangePosition('right')">右</g-button>
-        <g-button @click="tabChangePosition('bottom')">下</g-button>
-        <g-button @click="tabChangePosition('left')">左</g-button>
-        <g-tab :selected="selectedTab" :befor-change="tabBeforChange" :position="tabPosition">
-            <g-tab-header>
-                <!--<template v-slot:button>-->
-                <!--</template>-->
-                <!--<g-button slot="button">添加</g-button>-->
-                <!--<g-button slot="button">添加</g-button>-->
-                <tab-header-item label="0">美女</tab-header-item>
-                <tab-header-item label="1">视频频道</tab-header-item>
-                <tab-header-item label="2">影视大凤凰科技</tab-header-item>
-            </g-tab-header>
-            <g-tab-content>
-                <tab-content-item label="0">美女的相关信息</tab-content-item>
-                <tab-content-item label="1">现在是新闻播放时间</tab-content-item>
-                <tab-content-item label="2">绿皮书获得奥斯卡金奖</tab-content-item>
-            </g-tab-content>
-        </g-tab>
+        <g-popover>
+            <g-button slot="button">点我</g-button>
+            <div slot="content">我是popover的内容</div>
+        </g-popover>
     </div>
 </div>
 <div id="test"></div>
-<script src="/dist/app.a6a4d504.js"></script>
+<script src="/app.a6a4d504.js"></script>
 </body>
 </html>
 

@@ -21429,6 +21429,120 @@ render._withStripped = true
       
       }
     })();
+},{"_css_loader":"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/conponents/g-popover.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  name: 'g-popover',
+  data: function data() {
+    return {
+      isShow: false
+    };
+  },
+  mounted: function mounted() {},
+  methods: {
+    clickBtn: function clickBtn() {
+      var _this = this;
+
+      this.isShow = !this.isShow;
+      console.log('我是button的事件'); //只在 contentWrapper 出来之后给document 添加绑定事件    隐藏的时候不做处理
+
+      if (this.isShow === true) {
+        this.$nextTick(function () {
+          var hanlder = function hanlder(e) {
+            console.log('document的事件');
+            _this.isShow = false;
+            document.removeEventListener('click', hanlder);
+          };
+
+          document.addEventListener('click', hanlder);
+        });
+      }
+    }
+  }
+};
+exports.default = _default;
+        var $b8cade = exports.default || module.exports;
+      
+      if (typeof $b8cade === 'function') {
+        $b8cade = $b8cade.options;
+      }
+    
+        /* template */
+        Object.assign($b8cade, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "g-popover ib" }, [
+    _c(
+      "div",
+      { staticClass: "ib buttonWrapper", on: { click: _vm.clickBtn } },
+      [_vm._t("button")],
+      2
+    ),
+    _vm._v(" "),
+    _vm.isShow
+      ? _c(
+          "div",
+          {
+            staticClass: "ib contentWrapper",
+            on: { click: function($event) {} }
+          },
+          [_vm._t("content")],
+          2
+        )
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-b8cade",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$b8cade', $b8cade);
+          } else {
+            api.reload('$b8cade', $b8cade);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
 },{"_css_loader":"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"node_modules/assertion-error/index.js":[function(require,module,exports) {
 /*!
  * assertion-error
@@ -31832,10 +31946,13 @@ var _tabHeaderItem = _interopRequireDefault(require("./tab-header-item"));
 
 var _tabContentItem = _interopRequireDefault(require("./tab-content-item"));
 
+var _gPopover = _interopRequireDefault(require("./conponents/g-popover"));
+
 var _chai = _interopRequireDefault(require("chai"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//components 下面的的组件
 _vue.default.use(_plugin.default);
 
 _vue.default.component('g-button', _button.default);
@@ -31874,6 +31991,10 @@ _vue.default.component('tab-header-item', _tabHeaderItem.default);
 _vue.default.component('g-tab-content', _gTabContent.default);
 
 _vue.default.component('tab-content-item', _tabContentItem.default);
+/*popover*/
+
+
+_vue.default.component('g-popover', _gPopover.default);
 
 new _vue.default({
   el: '#app',
@@ -32010,7 +32131,7 @@ var expect = _chai.default.expect; //测试用例
 // 	// vm.$el.remove()
 // 	// vm.$destroy()
 // }
-},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon":"src/icon.vue","./g-button-group":"src/g-button-group.vue","./g-input":"src/g-input.vue","./g-row":"src/g-row.vue","./g-col":"src/g-col.vue","./g-container":"src/g-container.vue","./g-header":"src/g-header.vue","./g-main":"src/g-main.vue","./g-footer":"src/g-footer.vue","./g-aside":"src/g-aside.vue","./plugin":"src/plugin.js","./g-tab":"src/g-tab.vue","./g-tab-header":"src/g-tab-header.vue","./g-tab-content":"src/g-tab-content.vue","./tab-header-item":"src/tab-header-item.vue","./tab-content-item":"src/tab-content-item.vue","chai":"node_modules/chai/index.js"}],"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon":"src/icon.vue","./g-button-group":"src/g-button-group.vue","./g-input":"src/g-input.vue","./g-row":"src/g-row.vue","./g-col":"src/g-col.vue","./g-container":"src/g-container.vue","./g-header":"src/g-header.vue","./g-main":"src/g-main.vue","./g-footer":"src/g-footer.vue","./g-aside":"src/g-aside.vue","./plugin":"src/plugin.js","./g-tab":"src/g-tab.vue","./g-tab-header":"src/g-tab-header.vue","./g-tab-content":"src/g-tab-content.vue","./tab-header-item":"src/tab-header-item.vue","./tab-content-item":"src/tab-content-item.vue","./conponents/g-popover":"src/conponents/g-popover.vue","chai":"node_modules/chai/index.js"}],"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -32037,7 +32158,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "11915" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "14733" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
