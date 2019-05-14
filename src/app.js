@@ -17,6 +17,10 @@ import GtabContent from './g-tab-content';
 import GtabHeaderItem from './tab-header-item';
 import GtabContentItem from './tab-content-item';
 
+//components 下面的的组件
+import Gpopover from './conponents/g-popover'
+
+
 Vue.use(plugin);
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
@@ -38,6 +42,9 @@ Vue.component('g-tab-header', GtabHeader);
 Vue.component('tab-header-item', GtabHeaderItem);
 Vue.component('g-tab-content', GtabContent);
 Vue.component('tab-content-item', GtabContentItem);
+/*popover*/
+
+Vue.component('g-popover',Gpopover)
 new Vue({
 	el: '#app',
 	watch: {
