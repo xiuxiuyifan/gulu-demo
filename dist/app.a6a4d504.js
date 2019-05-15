@@ -21454,9 +21454,12 @@ var _default = {
       isShow: false
     };
   },
-  mounted: function mounted() {},
+  mounted: function mounted() {
+    //将content 里面的东西移动到body 下面
+    document.body.appendChild(this.$refs.contentWrapper);
+  },
   methods: {
-    clickBtn: function clickBtn() {
+    clickBtn: function clickBtn(event) {
       var _this = this;
 
       this.isShow = !this.isShow;
@@ -21464,6 +21467,9 @@ var _default = {
 
       if (this.isShow === true) {
         this.$nextTick(function () {
+          //将content 放在正确的位置
+          _this.checkPosition(event);
+
           var hanlder = function hanlder(e) {
             console.log('document的事件');
             _this.isShow = false;
@@ -21473,7 +21479,26 @@ var _default = {
           document.addEventListener('click', hanlder);
         });
       }
-    }
+    },
+    checkPosition: function checkPosition(event) {
+      console.log(event); // console.log(window.getComputedStyle(this.$refs.buttonWrapper));
+
+      var _this$$refs$contentWr = this.$refs.contentWrapper.getBoundingClientRect(),
+          height = _this$$refs$contentWr.height;
+
+      var _this$$refs$buttonWra = this.$refs.buttonWrapper.getBoundingClientRect(),
+          width = _this$$refs$buttonWra.width,
+          left = _this$$refs$buttonWra.left,
+          top = _this$$refs$buttonWra.top; //考虑到有滚动条   横向竖向
+      //将内容要放在按钮正上方的正中央
+
+
+      this.$refs.contentWrapper.style.left = left - width / 2 + window.scrollX + 'px';
+      this.$refs.contentWrapper.style.top = top - height + window.scrollY + 'px';
+      this.$refs.contentWrapper.style.position = 'absolute';
+    } // 点击其他地方   wrapperContent
+    // 点击wrapperCOntent 自身不消失
+
   }
 };
 exports.default = _default;
@@ -21492,22 +21517,36 @@ exports.default = _default;
   return _c("div", { staticClass: "g-popover ib" }, [
     _c(
       "div",
-      { staticClass: "ib buttonWrapper", on: { click: _vm.clickBtn } },
+      {
+        ref: "buttonWrapper",
+        staticClass: "ib buttonWrapper",
+        on: {
+          click: function($event) {
+            _vm.clickBtn($event)
+          }
+        }
+      },
       [_vm._t("button")],
       2
     ),
     _vm._v(" "),
-    _vm.isShow
-      ? _c(
-          "div",
+    _c(
+      "div",
+      {
+        directives: [
           {
-            staticClass: "ib contentWrapper",
-            on: { click: function($event) {} }
-          },
-          [_vm._t("content")],
-          2
-        )
-      : _vm._e()
+            name: "show",
+            rawName: "v-show",
+            value: _vm.isShow,
+            expression: "isShow"
+          }
+        ],
+        ref: "contentWrapper",
+        staticClass: "ib contentWrapper"
+      },
+      [_vm._t("content")],
+      2
+    )
   ])
 }
 var staticRenderFns = []
@@ -32158,7 +32197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "14733" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10982" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
