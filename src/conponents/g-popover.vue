@@ -1,5 +1,5 @@
 <template>
-    <div class="g-popover ib" @click="click($event)">
+    <div class="g-popover ib">
         <div class="ib button-wrapper" ref="buttonWrapper">
             <slot name="button"></slot>
         </div>
@@ -48,6 +48,13 @@
 		mounted() {
 			//将content 里面的东西移动到body 下面
 			document.body.appendChild(this.$refs.contentWrapper);
+			//判断当前的trigger
+            if(this.trigger==='click'){
+            	this.$el.addEventListener('click', this.open)
+            }else {
+				this.$el.addEventListener('mouseover', this.open)
+				this.$el.addEventListener('mouseout', this.close)
+			}
 		},
 		methods: {
 			click(event) {
@@ -96,9 +103,9 @@
 			},
             //控制弹出层 就给document 添加监听
             open(){
-				this.isShow = true;
-				console.log('我是button的事件');
-				//只在 contentWrapper 出来之后给document 添加绑定事件    隐藏的时候不做处理
+                this.isShow = true;
+                console.log('我是button的事件');
+                //只在 contentWrapper 出来之后给document 添加绑定事件    隐藏的时候不做处理
                 this.$nextTick(() => {
                     //将content 放在正确的位置
                     this.checkPosition();
@@ -125,6 +132,11 @@
 			// 点击wrapperCOntent 自身不消失
 
 		},
+        destroyed() {
+			document.removeEventListener('click',this.open)
+            document.removeEventListener('mouseover',this.open)
+            document.removeEventListener('mouseout',this.close)
+        }
 	};
 </script>
 

@@ -21483,7 +21483,14 @@ var _default = {
   },
   mounted: function mounted() {
     //将content 里面的东西移动到body 下面
-    document.body.appendChild(this.$refs.contentWrapper);
+    document.body.appendChild(this.$refs.contentWrapper); //判断当前的trigger
+
+    if (this.trigger === 'click') {
+      this.$el.addEventListener('click', this.open);
+    } else {
+      this.$el.addEventListener('mouseover', this.open);
+      this.$el.addEventListener('mouseout', this.close);
+    }
   },
   methods: {
     click: function click(event) {
@@ -21516,41 +21523,27 @@ var _default = {
       var diffWidth, diffHeight;
       diffWidth = width >= cenWidth ? (width - cenWidth) / 2 : (width - cenWidth) / 2;
       diffHeight = height < cenHeight ? (height - cenHeight) / 2 : (height - cenHeight) / 2;
-      this.$refs.contentWrapper.style.position = 'absolute'; // let x = {
-      // 	top:{
-      // 		top: top - cenHeight - 12 + window.scrollY ,
-      //         left: left + diffWidth + window.scrollX,
-      //     },
-      //     right:{
-      // 		top: top + diffHeight  + window.scrollY,
-      //         left: left + width + 12 + window.scrollX,
-      //     },
-      //     bottom:{
-      // 		top: top + 12 + height + window.scrollY,
-      // 		left: left + diffWidth + window.scrollX ,
-      //     },
-      //     left:{
-      // 		top: top + diffHeight  + window.scrollY,
-      // 		left: left - cenWidth - 12 + window.scrollX,
-      //     }
-      // }
-      // this.$refs.contentWrapper.style.top = x[this.position].top+ 'px';
-      // this.$refs.contentWrapper.style.left = x[this.position].left+ 'px';
-
-      if (this.position === 'top') {
-        this.$refs.contentWrapper.style.left = left + diffWidth + window.scrollX + 'px';
-        this.$refs.contentWrapper.style.top = top - cenHeight - 12 + window.scrollY + 'px';
-      } else if (this.position === 'right') {
-        console.log("哈哈哈");
-        this.$refs.contentWrapper.style.left = left + width + 12 + window.scrollX + 'px';
-        this.$refs.contentWrapper.style.top = top + diffHeight + window.scrollY + 'px';
-      } else if (this.position === 'bottom') {
-        this.$refs.contentWrapper.style.left = left + diffWidth + window.scrollX + 'px';
-        this.$refs.contentWrapper.style.top = top + 12 + height + window.scrollY + 'px';
-      } else if (this.position === 'left') {
-        this.$refs.contentWrapper.style.left = left - cenWidth - 12 + window.scrollX + 'px';
-        this.$refs.contentWrapper.style.top = top + diffHeight + window.scrollY + 'px';
-      }
+      this.$refs.contentWrapper.style.position = 'absolute';
+      var positions = {
+        top: {
+          top: top - cenHeight - 12 + window.scrollY,
+          left: left + diffWidth + window.scrollX
+        },
+        right: {
+          top: top + diffHeight + window.scrollY,
+          left: left + width + 12 + window.scrollX
+        },
+        bottom: {
+          top: top + 12 + height + window.scrollY,
+          left: left + diffWidth + window.scrollX
+        },
+        left: {
+          top: top + diffHeight + window.scrollY,
+          left: left - cenWidth - 12 + window.scrollX
+        }
+      };
+      this.$refs.contentWrapper.style.top = positions[this.position].top + 'px';
+      this.$refs.contentWrapper.style.left = positions[this.position].left + 'px';
     },
     //控制弹出层 就给document 添加监听
     open: function open() {
@@ -21583,6 +21576,11 @@ var _default = {
     } // 点击其他地方   wrapperContent
     // 点击wrapperCOntent 自身不消失
 
+  },
+  destroyed: function destroyed() {
+    document.removeEventListener('click', this.open);
+    document.removeEventListener('mouseover', this.open);
+    document.removeEventListener('mouseout', this.close);
   }
 };
 exports.default = _default;
@@ -21598,46 +21596,35 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass: "g-popover ib",
-      on: {
-        click: function($event) {
-          _vm.click($event)
-        }
-      }
-    },
-    [
-      _c(
-        "div",
-        { ref: "buttonWrapper", staticClass: "ib button-wrapper" },
-        [_vm._t("button")],
-        2
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.isShow,
-              expression: "isShow"
-            }
-          ],
-          ref: "contentWrapper",
-          staticClass: "ib content-wrapper",
-          class: ((_obj = {}),
-          (_obj["content-position-" + _vm.position] = true),
-          _obj)
-        },
-        [_vm._t("content")],
-        2
-      )
-    ]
-  )
+  return _c("div", { staticClass: "g-popover ib" }, [
+    _c(
+      "div",
+      { ref: "buttonWrapper", staticClass: "ib button-wrapper" },
+      [_vm._t("button")],
+      2
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.isShow,
+            expression: "isShow"
+          }
+        ],
+        ref: "contentWrapper",
+        staticClass: "ib content-wrapper",
+        class: ((_obj = {}),
+        (_obj["content-position-" + _vm.position] = true),
+        _obj)
+      },
+      [_vm._t("content")],
+      2
+    )
+  ])
   var _obj
 }
 var staticRenderFns = []
