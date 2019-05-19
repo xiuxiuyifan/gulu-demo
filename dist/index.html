@@ -199,10 +199,13 @@
 <!--        </g-tab>-->
 <!--    </div>-->
     <div class="typetitle">tabs组件功能展示</div>
-    <div class="show-gulu-demo" style="padding: 200px;">
+    <div class="show-gulu-demo" style="padding-left: 400px;">
         <g-popover position="left">
             <g-button slot="button">左边出现</g-button>
-            <div slot="content" class="popover">我容健康的身份和喀什大厦看风景奥斯卡都是废话环境奥斯卡的恢复看见爱上的说法发顺丰三不的说法啥时打算给大哥发大水发散</div>
+            <div slot-scope="slot_back" slot="content" class="popover">
+                我容健康的身份和喀什大厦看风景奥斯卡都是废话环境奥斯卡的恢复看见爱上的说法发顺丰三不的说法啥时打算给大哥发大水发散
+                <g-button @click="slot_back.close">关闭</g-button>
+            </div>
         </g-popover>
         <g-popover>
             <g-button slot="button">上边出现</g-button>

@@ -21486,7 +21486,7 @@ var _default = {
     document.body.appendChild(this.$refs.contentWrapper); //判断当前的trigger
 
     if (this.trigger === 'click') {
-      this.$el.addEventListener('click', this.open);
+      this.$el.addEventListener('click', this.click);
     } else {
       this.$el.addEventListener('mouseover', this.open);
       this.$el.addEventListener('mouseout', this.close);
@@ -21621,7 +21621,7 @@ exports.default = _default;
         (_obj["content-position-" + _vm.position] = true),
         _obj)
       },
-      [_vm._t("content")],
+      [_vm._t("content", null, { close: _vm.close })],
       2
     )
   ])

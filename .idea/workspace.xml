@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="将popover组建的内容放在body的下面 ，防止用户添加overflow属性并计算出正确的位置">
-      <change afterPath="$PROJECT_DIR$/src/asset/scss/index.scss" afterDir="false" />
+    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="添加trigger 支持 hover 和 click 两种触发方式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.a6a4d504.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.a6a4d504.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app.a6a4d504.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.a6a4d504.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/reset.302ca0b1.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/reset.302ca0b1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/conponents/g-popover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/conponents/g-popover.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-col.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-col.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-input.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-tab-header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-tab-header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-toast.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-toast.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/icon.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -57,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/conponents/g-popover.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="94" column="86" selection-start-line="94" selection-start-column="86" selection-end-line="94" selection-end-column="86" />
+            <state relative-caret-position="138">
+              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -98,13 +85,14 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="221" column="20" selection-start-line="221" selection-start-column="20" selection-end-line="221" selection-end-column="20" />
+            <state relative-caret-position="251">
+              <caret line="208" column="17" lean-forward="true" selection-start-line="208" selection-start-column="17" selection-end-line="208" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,6 +136,7 @@
       <find>activeCourrent</find>
       <find>tabPosition</find>
       <find>clearValue</find>
+      <find>trigger</find>
     </findStrings>
     <replaceStrings>
       <replace>el</replace>
@@ -211,8 +200,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/asset/scss/index.scss" />
         <option value="$PROJECT_DIR$/src/app.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/conponents/g-popover.vue" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -371,7 +360,7 @@
       <workItem from="1558097708309" duration="135000" />
       <workItem from="1558097866298" duration="2010000" />
       <workItem from="1558233630640" duration="1883000" />
-      <workItem from="1558235571948" duration="14370000" />
+      <workItem from="1558235571948" duration="17447000" />
     </task>
     <task id="LOCAL-00001" summary="给lodding添加动效">
       <created>1545233737787</created>
@@ -534,11 +523,32 @@
       <option name="project" value="LOCAL" />
       <updated>1557937633631</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="支持四个方位，并且让popover 在上下显示的时候都居中处理">
+      <created>1558264019909</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1558264019909</updated>
+    </task>
+    <task id="LOCAL-00025" summary="去掉四个方位的if else 判断 改为表编程，进行重构">
+      <created>1558264124637</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1558264124637</updated>
+    </task>
+    <task id="LOCAL-00026" summary="添加trigger 支持 hover 和 click 两种触发方式">
+      <created>1558268210946</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1558268210946</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311285000" />
+    <option name="totallyTimeSpent" value="314362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -591,7 +601,10 @@
     <MESSAGE value="更改dist文件引用路径2" />
     <MESSAGE value="默认更改列表" />
     <MESSAGE value="将popover组建的内容放在body的下面 ，防止用户添加overflow属性并计算出正确的位置" />
-    <option name="LAST_COMMIT_MESSAGE" value="将popover组建的内容放在body的下面 ，防止用户添加overflow属性并计算出正确的位置" />
+    <MESSAGE value="支持四个方位，并且让popover 在上下显示的时候都居中处理" />
+    <MESSAGE value="去掉四个方位的if else 判断 改为表编程，进行重构" />
+    <MESSAGE value="添加trigger 支持 hover 和 click 两种触发方式" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加trigger 支持 hover 和 click 两种触发方式" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
@@ -838,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/g-tab.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="41" column="49" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
@@ -872,20 +878,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/src/g-tab.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="221" column="20" selection-start-line="221" selection-start-column="20" selection-end-line="221" selection-end-column="20" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="803">
+          <caret line="41" column="49" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/conponents/g-popover.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="94" column="86" selection-start-line="94" selection-start-column="86" selection-end-line="94" selection-end-column="86" />
+        <state relative-caret-position="138">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="208" column="17" lean-forward="true" selection-start-line="208" selection-start-column="17" selection-end-line="208" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

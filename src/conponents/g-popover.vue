@@ -4,7 +4,7 @@
             <slot name="button"></slot>
         </div>
         <div class="ib content-wrapper" :class="{[`content-position-${position}`]:true}" ref="contentWrapper" v-show="isShow">
-            <slot name="content"></slot>
+            <slot name="content" :close="close"></slot>
         </div>
     </div>
 </template>
@@ -50,7 +50,7 @@
 			document.body.appendChild(this.$refs.contentWrapper);
 			//判断当前的trigger
             if(this.trigger==='click'){
-            	this.$el.addEventListener('click', this.open)
+            	this.$el.addEventListener('click', this.click)
             }else {
 				this.$el.addEventListener('mouseover', this.open)
 				this.$el.addEventListener('mouseout', this.close)
