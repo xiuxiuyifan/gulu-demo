@@ -21699,7 +21699,7 @@ var _tabHeaderItem = _interopRequireDefault(require("./tab-header-item"));
 
 var _tabContentItem = _interopRequireDefault(require("./tab-content-item"));
 
-var _gPopover = _interopRequireDefault(require("./conponents/g-popover"));
+var _gPopover = _interopRequireDefault(require("./components/g-popover"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21823,7 +21823,7 @@ new _vue.default({
   },
   mounted: function mounted() {}
 });
-},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon":"src/icon.vue","./g-button-group":"src/g-button-group.vue","./g-input":"src/g-input.vue","./g-row":"src/g-row.vue","./g-col":"src/g-col.vue","./g-container":"src/g-container.vue","./g-header":"src/g-header.vue","./g-main":"src/g-main.vue","./g-footer":"src/g-footer.vue","./g-aside":"src/g-aside.vue","./plugin":"src/plugin.js","./g-tab":"src/g-tab.vue","./g-tab-header":"src/g-tab-header.vue","./g-tab-content":"src/g-tab-content.vue","./tab-header-item":"src/tab-header-item.vue","./tab-content-item":"src/tab-content-item.vue","./conponents/g-popover":"src/conponents/g-popover.vue"}],"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon":"src/icon.vue","./g-button-group":"src/g-button-group.vue","./g-input":"src/g-input.vue","./g-row":"src/g-row.vue","./g-col":"src/g-col.vue","./g-container":"src/g-container.vue","./g-header":"src/g-header.vue","./g-main":"src/g-main.vue","./g-footer":"src/g-footer.vue","./g-aside":"src/g-aside.vue","./plugin":"src/plugin.js","./g-tab":"src/g-tab.vue","./g-tab-header":"src/g-tab-header.vue","./g-tab-content":"src/g-tab-content.vue","./tab-header-item":"src/tab-header-item.vue","./tab-content-item":"src/tab-content-item.vue","./conponents/g-popover":"src/components/g-popover.vue"}],"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

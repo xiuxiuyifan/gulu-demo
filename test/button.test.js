@@ -46,6 +46,7 @@ describe('Button', () => {
 		}).$mount(div);
 		let svg = vm.$el.querySelector('svg');
 		var {order} = getComputedStyle(svg);
+		console.log("我是oreder"+order)
 		expect(order).to.eq('1');
 		
 	});
