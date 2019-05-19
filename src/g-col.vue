@@ -90,7 +90,7 @@
 <style lang="scss" scoped>
     .g-col {
         float: left;
-        height: 100px;
+        heightsss: 100px;
         text-align: center;
     }
 

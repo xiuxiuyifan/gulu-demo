@@ -7,8 +7,11 @@
     <title>轱辘</title>
     <link rel="stylesheet" href="/reset.302ca0b1.css">
     <link rel="stylesheet" href="/common.5482dea7.css">
+    <style>.content-wrapper::before{
+            width: 100px;
+        }</style>
     <style>:root {
-            --button-height: 32px;
+            --button-heightsss: 32px;
             --font-size: 14px;
             --button-bg: white;
             --button-active-bg: #eee;
@@ -20,7 +23,6 @@
 
         #app {
             padding: 20px;
-            margin-top: 1500px;
         }
 
         .ib {
@@ -36,7 +38,7 @@
 
         .col-border {
             border: 1px solid rebeccapurple;
-            height: 100%;
+            heightsss: 100%;
             background: #c0c4cc;
         }
 
@@ -46,6 +48,9 @@
             transition: .2s;
             padding: 24px;
             margin-bottom: 20px;
+        }
+        .popover{
+            padding: 20px;
         }</style>
 <script src="/reset.302ca0b1.js"></script><script src="/common.5482dea7.js"></script><link rel="stylesheet" href="/app.a6a4d504.css"></head>
 <body>
@@ -101,7 +106,7 @@
 <!--    <div class="typetitle">container快速布局</div>-->
 <!--    &lt;!&ndash;1&ndash;&gt;-->
 <!--    <div class="show-gulu-demo">-->
-<!--        <g-container position="verticale" style="height: 100vh;">-->
+<!--        <g-container position="verticale" style="heightsss: 100vh;">-->
 <!--            <g-header>header</g-header>-->
 <!--            <g-main>main</g-main>-->
 <!--            <g-footer>footer</g-footer>-->
@@ -111,7 +116,7 @@
 
 <!--    &lt;!&ndash;2&ndash;&gt;-->
 <!--    <div class="show-gulu-demo">-->
-<!--        <g-container position="verticale" style="height: 100vh;">-->
+<!--        <g-container position="verticale" style="heightsss: 100vh;">-->
 <!--            <g-header>header</g-header>-->
 <!--            <g-container>-->
 <!--                <g-aside>aside</g-aside>-->
@@ -129,7 +134,7 @@
 <!--        &lt;!&ndash;overflow-y: scroll;&ndash;&gt;-->
 <!--        &lt;!&ndash;display: block;&ndash;&gt;-->
 <!--   <div class="show-gulu-demo">-->
-<!--       <g-container position="verticale" style="height: 100vh;">-->
+<!--       <g-container position="verticale" style="heightsss: 100vh;">-->
 <!--           <g-container>-->
 <!--               <g-aside>aside</g-aside>-->
 <!--               <g-container position="verticale" style=" overflow-y: scroll;display: block;">-->
@@ -194,10 +199,22 @@
 <!--        </g-tab>-->
 <!--    </div>-->
     <div class="typetitle">tabs组件功能展示</div>
-    <div class="show-gulu-demo">
+    <div class="show-gulu-demo" style="padding: 200px;">
+        <g-popover position="left">
+            <g-button slot="button">左边出现</g-button>
+            <div slot="content" class="popover">我容健康的身份和喀什大厦看风景奥斯卡都是废话环境奥斯卡的恢复看见爱上的说法发顺丰三不的说法啥时打算给大哥发大水发散</div>
+        </g-popover>
         <g-popover>
-            <g-button slot="button">点我</g-button>
-            <div slot="content">我是popover的内容</div>
+            <g-button slot="button">上边出现</g-button>
+            <div slot="content" class="popover">我容健康的身份和喀什大厦看风景奥斯卡都是废话环境奥斯卡的恢复看见爱上的说法发顺丰三不的说法啥时打算给大哥发大水发散</div>
+        </g-popover>
+        <g-popover position="bottom">
+            <g-button slot="button">下边出现</g-button>
+            <div slot="content" class="popover">我容健康的身份和喀什大厦看风景奥斯卡都是废话环境奥斯卡的恢复看见爱上的说法发顺丰三不的说法啥时打算给大哥发大水发散</div>
+        </g-popover>
+        <g-popover position="right">
+            <g-button slot="button">右边出现</g-button>
+            <div slot="content" class="popover">我容健康的身份和喀什大厦看风景奥斯卡都是废话环境奥斯卡的恢复看见爱上的说法发顺丰三不的说法啥时打算给大哥发大水发散</div>
         </g-popover>
     </div>
 </div>

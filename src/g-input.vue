@@ -88,7 +88,7 @@
 </script>
 
 <style lang="scss" scoped>
-    $height: 35px;
+    $heightsss: 35px;
     $border-radius: 4px;
     $border-color: #999;
     $border-color-hover: #666;
@@ -114,7 +114,7 @@
             > .input {
                 font-size: $font-size;
                 padding-left: 8px;
-                height: $height;
+                heightsss: $heightsss;
                 border-radius: $border-radius;
                 border: 1px solid $border-color;
                 transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);

@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped>
     .g-header {
-        height: 100px;
+        heightsss: 100px;
         background-color: #b3c0d1;
     }
 </style>
