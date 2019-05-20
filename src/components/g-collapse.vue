@@ -11,6 +11,10 @@
         props:{
 			selected:{
 				type:Array,
+            },
+			onlyone:{
+				type:Boolean,
+				default:false
             }
         },
         provide() {
@@ -22,20 +26,28 @@
             }
         },
         mounted() {
-            this.eventBus.$emit('update:select',this.selected);
-            this.eventBus.$on('update:change',(value)=>{
-				let arr = JSON.parse(JSON.stringify(this.selected));
-				console.log(arr)
-				if(value.type === 'add'){
-					console.log(arr)
-                    arr.push(value.value)
-					this.eventBus.$emit('update:selected',arr);
-                }else {
-					arr.splice(arr.indexOf(value.value),1);
-					this.eventBus.$emit('update:selected',arr);
-					console.log(arr)
+			console.log(this.onlyone);
+            if (this.onlyone) {
+				//就让子组件也知道需要选中多个的时候就不关闭 其他的了
+				this.$children.forEach((vm, index) => {
+					console.log(vm)
+					vm.onlyone = this.onlyone;
+				})
+			}
+            // 监听选择之后的结果
+            this.eventBus.$on('update:selected',(vm)=>{
+            	//打开就添加
+                let arr = JSON.parse(JSON.stringify(this.selected));
+            	if(vm.open){
+                    arr.push(vm.name)
+                }else {  //关闭就删除
+            		arr.splice(arr.indexOf(vm.name),1);
                 }
+            	this.$emit('update:selected',arr);
             })
+
+            //告诉大家那个被选中了
+			this.eventBus.$emit('update:checked',this.selected);
 		}
 	};
 </script>

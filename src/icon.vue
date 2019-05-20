@@ -25,7 +25,7 @@
 <style lang="scss" scoped>
     .g-icon {
         width: 1em;
-        heightsss: 1em;
+        height: 1em;
         display: inline-block;
         vertical-align: middle;
     }

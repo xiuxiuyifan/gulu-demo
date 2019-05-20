@@ -1,7 +1,7 @@
 
 .g-icon[data-v-b9388d] {
   width: 1em;
-  heightsss: 1em;
+  height: 1em;
   display: inline-block;
   vertical-align: middle;
 }
@@ -1488,6 +1488,18 @@
   font-weight: 500;
   transition: border-bottom-color 0.3s;
   outline: none;
+  position: relative;
+}
+.collapse-item > .title .rotate-icon[data-v-4d52b4] {
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: center center;
+}
+.collapse-item > .title > svg[data-v-4d52b4] {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
 }
 .collapse-item > .content[data-v-4d52b4] {
   border-bottom: 1px solid #ebeef5;
