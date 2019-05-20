@@ -20,8 +20,8 @@
 			trigger:{
 				type:String,
                 default: 'click',
-                validate(value) {
-					if(['click','hover'].indexOf(value) > 0 ){
+				validator(value) {
+					if(['click','hover'].indexOf(value) >= 0 ){
 						return value;
                     }else{
 						console.log("trigger的方式不合格规范")
@@ -31,8 +31,8 @@
 			position:{
 				type:String,
                 default: 'top',
-                validate(value){
-                	if(['top','bottom','left','right'].indexOf(value) > 0){
+				validator(value){
+                	if(['top','bottom','left','right'].indexOf(value) >= 0){
                         return value;
                     }else {
                 		console.warn("position的props不符合规则")

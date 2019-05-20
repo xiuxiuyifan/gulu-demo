@@ -21429,7 +21429,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/conponents/g-popover.vue":[function(require,module,exports) {
+},{"_css_loader":"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/g-popover.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -21456,8 +21456,8 @@ var _default = {
     trigger: {
       type: String,
       default: 'click',
-      validate: function validate(value) {
-        if (['click', 'hover'].indexOf(value) > 0) {
+      validator: function validator(value) {
+        if (['click', 'hover'].indexOf(value) >= 0) {
           return value;
         } else {
           console.log("trigger的方式不合格规范");
@@ -21467,8 +21467,8 @@ var _default = {
     position: {
       type: String,
       default: 'top',
-      validate: function validate(value) {
-        if (['top', 'bottom', 'left', 'right'].indexOf(value) > 0) {
+      validator: function validator(value) {
+        if (['top', 'bottom', 'left', 'right'].indexOf(value) >= 0) {
           return value;
         } else {
           console.warn("position的props不符合规则");
@@ -21584,14 +21584,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $b8cade = exports.default || module.exports;
+        var $8c2774 = exports.default || module.exports;
       
-      if (typeof $b8cade === 'function') {
-        $b8cade = $b8cade.options;
+      if (typeof $8c2774 === 'function') {
+        $8c2774 = $8c2774.options;
       }
     
         /* template */
-        Object.assign($b8cade, (function () {
+        Object.assign($8c2774, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -21634,7 +21634,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: "data-v-b8cade",
+            _scopeId: "data-v-8c2774",
             functional: undefined
           };
         })());
@@ -21647,9 +21647,262 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$b8cade', $b8cade);
+            api.createRecord('$8c2774', $8c2774);
           } else {
-            api.reload('$b8cade', $b8cade);
+            api.reload('$8c2774', $8c2774);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/g-collapse.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _vue = _interopRequireDefault(require("vue"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+var _default = {
+  name: 'collapse',
+  props: {
+    selected: {
+      type: Array
+    }
+  },
+  provide: function provide() {
+    return {
+      eventBus: this.eventBus
+    };
+  },
+  data: function data() {
+    return {
+      eventBus: new _vue.default()
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.eventBus.$emit('update:select', this.selected);
+    this.eventBus.$on('update:change', function (value) {
+      var arr = JSON.parse(JSON.stringify(_this.selected));
+      console.log(arr);
+
+      if (value.type === 'add') {
+        console.log(arr);
+        arr.push(value.value);
+
+        _this.eventBus.$emit('update:selected', arr);
+      } else {
+        arr.splice(arr.indexOf(value.value), 1);
+
+        _this.eventBus.$emit('update:selected', arr);
+
+        console.log(arr);
+      }
+    });
+  }
+};
+exports.default = _default;
+        var $c998af = exports.default || module.exports;
+      
+      if (typeof $c998af === 'function') {
+        $c998af = $c998af.options;
+      }
+    
+        /* template */
+        Object.assign($c998af, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "collapse" }, [_vm._t("default")], 2)
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-c998af",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$c998af', $c998af);
+          } else {
+            api.reload('$c998af', $c998af);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"vue":"node_modules/vue/dist/vue.common.js","_css_loader":"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js"}],"src/components/g-collapseItem.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  name: 'collapseItem',
+  inject: ['eventBus'],
+  props: {
+    title: {
+      type: String,
+      validator: function validator(value) {
+        if (value) {
+          return value;
+        } else {
+          console.log('title不能为空');
+        }
+      }
+    },
+    name: {
+      type: String,
+      validator: function validator(value) {
+        if (!value) {
+          console.log("name 不能为空");
+        } else {
+          return value;
+        }
+      }
+    }
+  },
+  data: function data() {
+    return {
+      open: false
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.eventBus.$on('update:select', function (value) {
+      console.log("子組件");
+      console.log(value);
+
+      if (value.indexOf(_this.name) >= 0) {
+        _this.open = true;
+      }
+    });
+  },
+  methods: {
+    toggle: function toggle() {
+      if (this.open === true) {
+        this.open = false;
+        this.eventBus.$emit('update:change', {
+          type: "del",
+          value: this.name
+        });
+      } else {
+        this.open = true;
+        this.eventBus.$emit('update:change', {
+          type: "add",
+          value: this.name
+        });
+      }
+    }
+  }
+};
+exports.default = _default;
+        var $4d52b4 = exports.default || module.exports;
+      
+      if (typeof $4d52b4 === 'function') {
+        $4d52b4 = $4d52b4.options;
+      }
+    
+        /* template */
+        Object.assign($4d52b4, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "collapse-item" }, [
+    _c("div", { staticClass: "title", on: { click: _vm.toggle } }, [
+      _vm._v("\n        " + _vm._s(_vm.title) + "\n    ")
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.open,
+            expression: "open"
+          }
+        ],
+        staticClass: "content"
+      },
+      [_vm._t("default")],
+      2
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-4d52b4",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$4d52b4', $4d52b4);
+          } else {
+            api.reload('$4d52b4', $4d52b4);
           }
         }
 
@@ -21701,9 +21954,14 @@ var _tabContentItem = _interopRequireDefault(require("./tab-content-item"));
 
 var _gPopover = _interopRequireDefault(require("./components/g-popover"));
 
+var _gCollapse = _interopRequireDefault(require("./components/g-collapse"));
+
+var _gCollapseItem = _interopRequireDefault(require("./components/g-collapseItem"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //components 下面的的组件
+// collapse 组件
 _vue.default.use(_plugin.default);
 
 _vue.default.component('g-button', _button.default);
@@ -21747,6 +22005,10 @@ _vue.default.component('tab-content-item', _tabContentItem.default);
 
 _vue.default.component('g-popover', _gPopover.default);
 
+_vue.default.component('g-collapse', _gCollapse.default);
+
+_vue.default.component('g-collapse-item', _gCollapseItem.default);
+
 new _vue.default({
   el: '#app',
   watch: {
@@ -21760,7 +22022,8 @@ new _vue.default({
       err: false,
       message: 'hello wold',
       selectedTab: '0',
-      tabPosition: 'left'
+      tabPosition: 'left',
+      selectedCollapse: ["1", "2"]
     };
   },
   methods: {
@@ -21823,7 +22086,7 @@ new _vue.default({
   },
   mounted: function mounted() {}
 });
-},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon":"src/icon.vue","./g-button-group":"src/g-button-group.vue","./g-input":"src/g-input.vue","./g-row":"src/g-row.vue","./g-col":"src/g-col.vue","./g-container":"src/g-container.vue","./g-header":"src/g-header.vue","./g-main":"src/g-main.vue","./g-footer":"src/g-footer.vue","./g-aside":"src/g-aside.vue","./plugin":"src/plugin.js","./g-tab":"src/g-tab.vue","./g-tab-header":"src/g-tab-header.vue","./g-tab-content":"src/g-tab-content.vue","./tab-header-item":"src/tab-header-item.vue","./tab-content-item":"src/tab-content-item.vue","./conponents/g-popover":"src/components/g-popover.vue"}],"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./icon":"src/icon.vue","./g-button-group":"src/g-button-group.vue","./g-input":"src/g-input.vue","./g-row":"src/g-row.vue","./g-col":"src/g-col.vue","./g-container":"src/g-container.vue","./g-header":"src/g-header.vue","./g-main":"src/g-main.vue","./g-footer":"src/g-footer.vue","./g-aside":"src/g-aside.vue","./plugin":"src/plugin.js","./g-tab":"src/g-tab.vue","./g-tab-header":"src/g-tab-header.vue","./g-tab-content":"src/g-tab-content.vue","./tab-header-item":"src/tab-header-item.vue","./tab-content-item":"src/tab-content-item.vue","./components/g-popover":"src/components/g-popover.vue","./components/g-collapse":"src/components/g-collapse.vue","./components/g-collapseItem":"src/components/g-collapseItem.vue"}],"../../15752/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -21850,7 +22113,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "6862" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "11272" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

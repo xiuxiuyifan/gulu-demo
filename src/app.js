@@ -18,9 +18,11 @@ import GtabHeaderItem from './tab-header-item';
 import GtabContentItem from './tab-content-item';
 
 //components 下面的的组件
-import Gpopover from './conponents/g-popover'
+import Gpopover from './components/g-popover'
 
-
+// collapse 组件
+import GCollapse from './components/g-collapse'
+import GCollapseItem from './components/g-collapseItem'
 Vue.use(plugin);
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
@@ -44,6 +46,10 @@ Vue.component('g-tab-content', GtabContent);
 Vue.component('tab-content-item', GtabContentItem);
 /*popover*/
 Vue.component('g-popover',Gpopover)
+
+
+Vue.component('g-collapse',GCollapse)
+Vue.component('g-collapse-item',GCollapseItem)
 new Vue({
 	el: '#app',
 	watch: {
@@ -57,7 +63,8 @@ new Vue({
 			err: false,
 			message: 'hello wold',
 			selectedTab: '0',
-			tabPosition: 'left'
+			tabPosition: 'left',
+			selectedCollapse:["1","2"]
 		};
 	},
 	methods: {
