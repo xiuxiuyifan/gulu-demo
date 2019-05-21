@@ -5,30 +5,30 @@
 </template>
 
 <script>
-	export default {
-		name: 'tab-content-item',
-		inject: ['tabEventBus'],
-		data() {
-			return {
-				active: false,
-			};
-		},
-		props: {
-			label: {
-				type: [String],
-			},
-		},
-		computed: {
-			classes() {
-				return {'active': this.active};
-			},
-		},
-		created() {
-			this.tabEventBus.$on('update:label', (value) => {
-				this.active = this.label === value.selected;
-			});
-		},
-	};
+export default {
+  name: 'tab-content-item',
+  inject: ['tabEventBus'],
+  data () {
+    return {
+      active: false
+    }
+  },
+  props: {
+    label: {
+      type: [String]
+    }
+  },
+  computed: {
+    classes () {
+      return { 'active': this.active }
+    }
+  },
+  created () {
+    this.tabEventBus.$on('update:label', (value) => {
+      this.active = this.label === value.selected
+    })
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -5,40 +5,39 @@
 </template>
 
 <script>
-	export default {
+export default {
 
-		data() {
-			return {
-				active: false,
-			};
-
-		},
-		inject: ['tabEventBus'],
-		name: 'tab-header-item',
-		props: {
-			label: {
-				type: [String],
-			},
-		},
-		computed: {
-			classes() {
-				return {'active': this.active};
-			},
-		},
-		created() {
-			this.tabEventBus.$on('update:label', (value) => {
-				this.active = this.label === value.selected;
-			});
-		},
-		methods: {
-			changeTab(event) {
-				if (this.$parent.$parent.beforChange()) {
-					this.tabEventBus.$emit('update:label', {selected:this.label});
-				}
-				// this.$emit('update:title', this.name);
-			},
-		},
-	};
+  data () {
+    return {
+      active: false
+    }
+  },
+  inject: ['tabEventBus'],
+  name: 'tab-header-item',
+  props: {
+    label: {
+      type: [String]
+    }
+  },
+  computed: {
+    classes () {
+      return { 'active': this.active }
+    }
+  },
+  created () {
+    this.tabEventBus.$on('update:label', (value) => {
+      this.active = this.label === value.selected
+    })
+  },
+  methods: {
+    changeTab (event) {
+      if (this.$parent.$parent.beforChange()) {
+        this.tabEventBus.$emit('update:label', { selected: this.label })
+      }
+      // this.$emit('update:title', this.name);
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -5,21 +5,21 @@
 </template>
 
 <script>
-	import './svg';
+import './svg'
 
-	export default {
-		name: 'g-icon',
-		props: {
-			icon: {
-				type: String,
-			},
-		},
-		methods: {
-			ccc() {
-				this.$emit('click');
-			},
-		},
-	};
+export default {
+  name: 'g-icon',
+  props: {
+    icon: {
+      type: String
+    }
+  },
+  methods: {
+    ccc () {
+      this.$emit('click')
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

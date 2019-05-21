@@ -8,47 +8,47 @@
     </button>
 </template>
 <script>
-	import Icon from './icon';
-	export default {
-		name: 'g-button',
-		props: {
-			//icon的名字
-			icon: {
-				type: String,
-			},
-			//是否lodding
-			lodding: {
-				type: Boolean,
-				default: false,
-			},
-			//icon 的位置
-			position: {
-				type: String,
-				default: 'left', //校验只能是left或者right
-				validator: function(value) {
-					if (value === 'left' || value === 'right') {
-						return true;
-					} else {
-						console.error('position属性只接受left或者right');
-						return false;
-					}
-				},
-			},
-			repples: {
-				type: Boolean,
-				default: false,
-			},
-		},
-		components: {
-			'g-icon': Icon,
-		},
-		mounted() {
-			if (this.repples) {
-				this.$el.classList.add('repples');
-			}
-		},
-		methods: {},
-	};
+import Icon from './icon'
+export default {
+  name: 'g-button',
+  props: {
+    // icon的名字
+    icon: {
+      type: String
+    },
+    // 是否lodding
+    lodding: {
+      type: Boolean,
+      default: false
+    },
+    // icon 的位置
+    position: {
+      type: String,
+      default: 'left', // 校验只能是left或者right
+      validator: function (value) {
+        if (value === 'left' || value === 'right') {
+          return true
+        } else {
+          console.error('position属性只接受left或者right')
+          return false
+        }
+      }
+    },
+    repples: {
+      type: Boolean,
+      default: false
+    }
+  },
+  components: {
+    'g-icon': Icon
+  },
+  mounted () {
+    if (this.repples) {
+      this.$el.classList.add('repples')
+    }
+  },
+  methods: {}
+}
 </script>
 <style lang="scss" scoped>
     .i-right {
@@ -118,7 +118,6 @@
             opacity: 0.2;
             transition: 0s;
         }
-
 
         & .g-word {
             font-size: 14px;

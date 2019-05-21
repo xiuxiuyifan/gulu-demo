@@ -13,14 +13,14 @@
 </template>
 
 <script>
-	export default {
-		name: 'g-aside',
-		data() {
-			return {
-				hide: true,
-			};
-		},
-	};
+export default {
+  name: 'g-aside',
+  data () {
+    return {
+      hide: true
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -20,8 +20,8 @@
 </template>
 
 <script>
-	import Icon from './icon';
-	/*
+import Icon from './icon'
+/*
     * 1.hover 状态
     * 2.focus 状态
     * 3.只读状态
@@ -30,61 +30,61 @@
     * 6.可以清空
     *
     * */
-	export default {
-		name: 'g-input',
-		props: {
-			value: {
-				type: String,
-			},
-			placeholder: {
-				type: String,
-			},
-			readonly: {
-				type: Boolean,
-			},
-			disabled: {
-				type: Boolean,
-				default: false,
-			},
-			err: {
-				type: Boolean,
-			},
-			type: {
-				type: String,
-				default: 'text',
-			},
-			rule: {
-				type: Array,
-			},
-		},
-		data() {
-			return {};
-		},
-		computed: {},
-		components: {
-			'g-icon': Icon,
-		},
-		methods: {
-			watchblur() {
-				if (this.rule[0].target === 'blur') {
-					let result = this.rule[0].validate(this.value);
-					this.$emit('computederr', result);
-				}
-			},
-			watchinput() {
+export default {
+  name: 'g-input',
+  props: {
+    value: {
+      type: String
+    },
+    placeholder: {
+      type: String
+    },
+    readonly: {
+      type: Boolean
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    err: {
+      type: Boolean
+    },
+    type: {
+      type: String,
+      default: 'text'
+    },
+    rule: {
+      type: Array
+    }
+  },
+  data () {
+    return {}
+  },
+  computed: {},
+  components: {
+    'g-icon': Icon
+  },
+  methods: {
+    watchblur () {
+      if (this.rule[0].target === 'blur') {
+        let result = this.rule[0].validate(this.value)
+        this.$emit('computederr', result)
+      }
+    },
+    watchinput () {
 
-			},
-			watchfocus() {
+    },
+    watchfocus () {
 
-			},
-			clearValue() {
-				console.log(this.value);
-				this.$emit('ccc', '');
-			},
-		},
-		mounted() {
-		},
-	};
+    },
+    clearValue () {
+      console.log(this.value)
+      this.$emit('ccc', '')
+    }
+  },
+  mounted () {
+  }
+}
 </script>
 
 <style lang="scss" scoped>

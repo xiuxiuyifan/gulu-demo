@@ -1,13 +1,13 @@
 <template>
-    <div class="g-main">
-        <slot></slot>
-    </div>
+  <div class="g-main">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
-	export default {
-		name: 'g-main',
-	};
+export default {
+  name: 'g-main'
+}
 </script>
 
 <style lang="scss" scoped>

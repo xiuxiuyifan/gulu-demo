@@ -10,90 +10,90 @@
 </template>
 
 <script>
-	export default {
-		name: 'g-toast',
-		data() {
-			return {
-				// toastPosition:{
-				// 	: true
-				// }
-			};
-		},
-		props: {
-			message: {
-				type: String,
-				validator: function(value) {
-					if (value) {
-						return value;
-					} else {
-						console.log('message 不能是一个空值');
-					}
-				},
-			},
-			position: {
-				type: String,
-				default: 'top',
-				validator(value) {
-					if (['top', 'right', 'bottom', 'left', 'middle'].indexOf(value) >= 0) {
-						return value;
-					} else {
-						console.log('position 的值只能是\'top\', \'right\', \'middle\', \'bottom\'');
-					}
-				},
-			},
-			btnMsg: {
-				type: String,
-				default: '关闭',
-			},
-			autoClose: {
-				type: [Boolean],
-				default: true,
-			},
-			closeTimer: {
-				type: Number,
-				default: 3,
-			},
-			callBack: {
-				type: Function,
-			},
-			showClose: {
-				type: Boolean,
-				default: false,
-			},
-		},
-		mounted() {
-			if (this.showClose) {
-				this.changeStyles();
-			}
-			console.log('您好');
-			if (this.autoClose) {
-				setTimeout(() => {
-					console.log('我进来了');
-					this.$el.remove();
-					this.$emit('close', {aaa: 'aaa'});
-					this.$destroy();
-				}, this.closeTimer * 1000);
-			}
-		},
-		methods: {
-			changeStyles() {
-				//此时组件还没有加入到body 里面
-				this.$nextTick(() => {
-					console.log(getComputedStyle(this.$el).heightsss);
-					this.$refs.solid.style.heightsss = getComputedStyle(this.$el).heightsss;
-				});
-			},
-			closeToast() {
-				this.$el.remove();
-				this.$emit('close', {aaa: 'aaa'});
-				this.$destroy();
-				//检测是否有回调函数
-				if (this.callBack) {
-					this.callBack(this);
-				}
-			},
-		},
-	};
+export default {
+  name: 'g-toast',
+  data () {
+    return {
+      // toastPosition:{
+      // 	: true
+      // }
+    }
+  },
+  props: {
+    message: {
+      type: String,
+      validator: function (value) {
+        if (value) {
+          return value
+        } else {
+          console.log('message 不能是一个空值')
+        }
+      }
+    },
+    position: {
+      type: String,
+      default: 'top',
+      validator (value) {
+        if (['top', 'right', 'bottom', 'left', 'middle'].indexOf(value) >= 0) {
+          return value
+        } else {
+          console.log('position 的值只能是\'top\', \'right\', \'middle\', \'bottom\'')
+        }
+      }
+    },
+    btnMsg: {
+      type: String,
+      default: '关闭'
+    },
+    autoClose: {
+      type: [Boolean],
+      default: true
+    },
+    closeTimer: {
+      type: Number,
+      default: 3
+    },
+    callBack: {
+      type: Function
+    },
+    showClose: {
+      type: Boolean,
+      default: false
+    }
+  },
+  mounted () {
+    if (this.showClose) {
+      this.changeStyles()
+    }
+    console.log('您好')
+    if (this.autoClose) {
+      setTimeout(() => {
+        console.log('我进来了')
+        this.$el.remove()
+        this.$emit('close', { aaa: 'aaa' })
+        this.$destroy()
+      }, this.closeTimer * 1000)
+    }
+  },
+  methods: {
+    changeStyles () {
+      // 此时组件还没有加入到body 里面
+      this.$nextTick(() => {
+        console.log(getComputedStyle(this.$el).heightsss)
+        this.$refs.solid.style.heightsss = getComputedStyle(this.$el).heightsss
+      })
+    },
+    closeToast () {
+      this.$el.remove()
+      this.$emit('close', { aaa: 'aaa' })
+      this.$destroy()
+      // 检测是否有回调函数
+      if (this.callBack) {
+        this.callBack(this)
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

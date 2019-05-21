@@ -11,73 +11,72 @@
 </template>
 
 <script>
-	export default {
-		name: 'collapseItem',
-        inject:['eventBus'],
-        props:{
-			title:{
-				type:String,
-				validator(value){
-					if (value) {
-						return value;
-					} else {
-						console.log('title不能为空');
-					}
-				}
-            },
-            name:{
-				type: String,
-                validator(value) {
-					if (!value){
-						console.log("name 不能为空")
-                    }else {
-						return value
-                    }
-				}
-			}
-        },
-        data(){
-			return {
-                open: false,
-                onlyone: false
-            }
-        },
-        mounted() {
-			//不要在mounted  的时候直接用 父组件里面直接修改的data
-            //因为 父组件的mounted钩子 是在子组件钩子之后执行的
-            //监听自己有没有被选中
-            this.eventBus.$on('update:selected',(vm)=>{
-            	//只有在父组件开启  onlyone 自己的时候才关闭其他的
-                if(vm!==this && this.onlyone === true){
-                    this.open = false;
-                }
-            })
-            // 监听通知过来的数据里面有没有自己
-            this.eventBus.$on('update:checked',(arr)=>{
-            	if(this.onlyone === true){
-            		if(arr.length>1){
-            			console.error("只能选中一个的时候不可以设置默认选中两个值")
-                    }
-                }else {
-					if(arr.indexOf(this.name)>=0){
-						this.open = true;
-					}
-                }
-            })
-
-        },
-        methods:{
-			toggle(){
-                if(this.open === true){
-                	this.open = false;
-					this.eventBus.$emit('update:selected',this)
-				}else {
-                	this.open = true;
-					this.eventBus.$emit('update:selected',this)
-				}
-            }
+export default {
+  name: 'collapseItem',
+  inject: ['eventBus'],
+  props: {
+    title: {
+      type: String,
+      validator (value) {
+        if (value) {
+          return value
+        } else {
+          console.log('title不能为空')
         }
-	};
+      }
+    },
+    name: {
+      type: String,
+      validator (value) {
+        if (!value) {
+          console.log('name 不能为空')
+        } else {
+          return value
+        }
+      }
+    }
+  },
+  data () {
+    return {
+      open: false,
+      onlyone: false
+    }
+  },
+  mounted () {
+    // 不要在mounted  的时候直接用 父组件里面直接修改的data
+    // 因为 父组件的mounted钩子 是在子组件钩子之后执行的
+    // 监听自己有没有被选中
+    this.eventBus.$on('update:selected', (vm) => {
+            	// 只有在父组件开启  onlyone 自己的时候才关闭其他的
+      if (vm !== this && this.onlyone === true) {
+        this.open = false
+      }
+    })
+    // 监听通知过来的数据里面有没有自己
+    this.eventBus.$on('update:checked', (arr) => {
+            	if (this.onlyone === true) {
+            		if (arr.length > 1) {
+            			console.error('只能选中一个的时候不可以设置默认选中两个值')
+        }
+      } else {
+        if (arr.indexOf(this.name) >= 0) {
+          this.open = true
+        }
+      }
+    })
+  },
+  methods: {
+    toggle () {
+      if (this.open === true) {
+                	this.open = false
+        this.eventBus.$emit('update:selected', this)
+      } else {
+                	this.open = true
+        this.eventBus.$emit('update:selected', this)
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

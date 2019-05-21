@@ -7,84 +7,84 @@
 </template>
 
 <script>
-	let createClasses = (value, col_class) => {
-		if (value) {
-			return `col_${col_class}${value}`;
-		}
-	};
-	export default {
-		name: 'g-col',
-		data() {
-			return {
-				gutter: 0,
-			};
-		},
-		created() {
+let createClasses = (value, col_class) => {
+  if (value) {
+    return `col_${col_class}${value}`
+  }
+}
+export default {
+  name: 'g-col',
+  data () {
+    return {
+      gutter: 0
+    }
+  },
+  created () {
 
-		},
-		computed: {
-			colclass: function() {
-				let {span, offset, xs, sm, md, lg, xl, xxl} = this;
-				console.log(this);
-				return [
-					// span && `col_span${span}`,
-					// offset && `col_offset${offset}`,
-					// xs && `col_xs${xs}`,
-					// sm && `col_sm${sm}`,
-					// md && `col_md${md}`,
-					// lg && `col_lg${lg}`,
-					// xl && `col_xl${xl}`,
-					// xxl && `col_xxl${xxl}`,
-					createClasses(span, 'span'),
-					createClasses(offset, 'offset'),
-					createClasses(xs, 'xs'),
-					createClasses(sm, 'sm'),
-					createClasses(md, 'md'),
-					createClasses(lg, 'lg'),
-					createClasses(xl, 'xl'),
-					createClasses(xxl, 'xxl'),
-				];
-			},
-			colstyle: function() {
-				let {gutter} = this;
-				return {
-					paddingLeft: gutter / 2 + 'px',
-					paddingRight: gutter / 2 + 'px',
-				};
-			},
-		},
-		props: {
-			span: {
-				type: [Number, String],
-			},
-			offset: {
-				type: [Number, String],
-			},
-			xs: {
-				type: [Number, String],
-			},
-			sm: {
-				type: [Number, String],
-			},
-			md: {
-				type: [Number, String],
-			},
-			lg: {
-				type: [Number, String],
-			},
-			xl: {
-				type: [Number, String],
-			},
-			xxl: {
-				type: [Number, String],
-			},
-		},
-		created() {
-		},
-		mounted() {
-			console.log(this.gutter);
-		},
-	};
+  },
+  computed: {
+    colclass: function () {
+      let { span, offset, xs, sm, md, lg, xl, xxl } = this
+      console.log(this)
+      return [
+        // span && `col_span${span}`,
+        // offset && `col_offset${offset}`,
+        // xs && `col_xs${xs}`,
+        // sm && `col_sm${sm}`,
+        // md && `col_md${md}`,
+        // lg && `col_lg${lg}`,
+        // xl && `col_xl${xl}`,
+        // xxl && `col_xxl${xxl}`,
+        createClasses(span, 'span'),
+        createClasses(offset, 'offset'),
+        createClasses(xs, 'xs'),
+        createClasses(sm, 'sm'),
+        createClasses(md, 'md'),
+        createClasses(lg, 'lg'),
+        createClasses(xl, 'xl'),
+        createClasses(xxl, 'xxl')
+      ]
+    },
+    colstyle: function () {
+      let { gutter } = this
+      return {
+        paddingLeft: gutter / 2 + 'px',
+        paddingRight: gutter / 2 + 'px'
+      }
+    }
+  },
+  props: {
+    span: {
+      type: [Number, String]
+    },
+    offset: {
+      type: [Number, String]
+    },
+    xs: {
+      type: [Number, String]
+    },
+    sm: {
+      type: [Number, String]
+    },
+    md: {
+      type: [Number, String]
+    },
+    lg: {
+      type: [Number, String]
+    },
+    xl: {
+      type: [Number, String]
+    },
+    xxl: {
+      type: [Number, String]
+    }
+  },
+  created () {
+  },
+  mounted () {
+    console.log(this.gutter)
+  }
+}
 </script>
 
 <style lang="scss" scoped>

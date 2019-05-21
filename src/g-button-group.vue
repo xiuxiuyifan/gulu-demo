@@ -5,9 +5,9 @@
 </template>
 
 <script>
-	export default {
-		name: 'g-button-group',
-	};
+export default {
+  name: 'g-button-group'
+}
 </script>
 
 <style lang="scss" scoped>
