@@ -55,5 +55,5 @@ Vue.component('g-collapse', GCollapse)
 Vue.component('g-collapse-item', GCollapseItem)
 
 new Vue({
-  render: h => h(App)
+  render: h => h(App),
 }).$mount('#app')
