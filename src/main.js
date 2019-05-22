@@ -21,6 +21,7 @@ import GtabContentItem from './tab-content-item'
 
 // components 下面的的组件
 import Gpopover from './components/g-popover'
+import GCascader from './g-cascader'
 
 // collapse 组件
 import GCollapse from './components/g-collapse'
@@ -54,6 +55,8 @@ Vue.component('g-popover', Gpopover)
 Vue.component('g-collapse', GCollapse)
 Vue.component('g-collapse-item', GCollapseItem)
 
+Vue.component('g-cascader', GCascader)
+
 new Vue({
-  render: h => h(App),
+  render: h => h(App)
 }).$mount('#app')

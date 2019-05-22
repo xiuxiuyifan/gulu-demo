@@ -51,6 +51,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  @import "asset/scss/index";
     .i-right {
         > svg {
             order: 2;
@@ -78,11 +79,11 @@ export default {
         display: inline-flex;
         align-items: center;
         vertical-align: middle;
-        background-color: var(--button-bg);
-        font-size: var(--font-size);
-        border-radius: var(--border-radius);
+        background-color: $button-bg;
+        font-size: $font-size;
+        border-radius: $border-radius;
         padding: 0.5em 1em;
-        border: 1px solid var(--border-color);
+        border: 1px solid $border-color;
         box-sizing: border-box;
 
         &.repples {
@@ -126,7 +127,7 @@ export default {
         }
 
         &:hover {
-            background-color: var(--button-active-bg);
+            background-color: $button-active-bg;
             border: 1px solid #409eff;
             cursor: pointer;
         }

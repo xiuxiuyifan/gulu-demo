@@ -18,11 +18,18 @@ module.exports = {
 				]
 			},
 			{
-				title: '组件库概览',
+				title: '组件库',
 				collapsable: false,
 				children: [
-					'/views/install/',
-					'/views/overview/'
+          '/views/guluDocs/button.md',
+          '/views/guluDocs/collapse.md',
+          '/views/guluDocs/container.md',
+          '/views/guluDocs/icon.md',
+					'/views/guluDocs/input.md',
+					'/views/guluDocs/Layout.md',
+          '/views/guluDocs/popover.md',
+          '/views/guluDocs/tabs.md',
+          '/views/guluDocs/toast.md',
 				]
 			}
 		]

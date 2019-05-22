@@ -26,12 +26,8 @@
 </template>
 
 <script>
-import Button from './button'
 export default {
   name: 'demo',
-  components: {
-    'g-button': Button
-  },
   data() {
     return {
       selectedCollapse: ['1']
