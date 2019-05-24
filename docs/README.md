@@ -6,3 +6,6 @@ actionLink: /views/install/
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 
+<ClientOnly>
+  <homeDocs/>
+</ClientOnly>
