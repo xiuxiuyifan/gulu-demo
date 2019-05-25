@@ -90,7 +90,7 @@ export default {
 <style lang="scss" scoped>
     .g-col {
         float: left;
-        heightsss: 100px;
+      height: 100px;
         text-align: center;
     }
 

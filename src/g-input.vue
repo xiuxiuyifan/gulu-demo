@@ -6,9 +6,6 @@
                    :rule="rule"
                    :type="type"
                    :value="value"
-                   @blur="watchblur()"
-                   @focus="watchfocus()"
-                   @input="$emit('input',$event.target.value)"
                    class="input">
             <g-icon :class="{fillerr:err}" class="blurafter" @click="clearValue()" icon="del" v-if="err"></g-icon>
         </div>
@@ -32,6 +29,13 @@ import Icon from './icon'
     * */
 export default {
   name: 'g-input',
+  data () {
+    //对不同的事件进行切换
+    // @blur="watchblur()"
+    // @focus="watchfocus()"
+    // @input="$emit('input',$event.target.value)"
+    return {}
+  },
   props: {
     value: {
       type: String
@@ -56,9 +60,6 @@ export default {
     rule: {
       type: Array
     }
-  },
-  data () {
-    return {}
   },
   computed: {},
   components: {
@@ -88,7 +89,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    $heightsss: 35px;
+  $height: 35px;
     $border-radius: 4px;
     $border-color: #999;
     $border-color-hover: #666;
@@ -114,7 +115,7 @@ export default {
             > .input {
                 font-size: $font-size;
                 padding-left: 8px;
-                heightsss: $heightsss;
+              height: $height;
                 border-radius: $border-radius;
                 border: 1px solid $border-color;
                 transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);

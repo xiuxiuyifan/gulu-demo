@@ -79,8 +79,8 @@ export default {
     changeStyles () {
       // 此时组件还没有加入到body 里面
       this.$nextTick(() => {
-        console.log(getComputedStyle(this.$el).heightsss)
-        this.$refs.solid.style.heightsss = getComputedStyle(this.$el).heightsss
+        console.log(getComputedStyle(this.$el).height)
+        this.$refs.solid.style.height = getComputedStyle(this.$el).height
       })
     },
     closeToast () {
@@ -125,13 +125,13 @@ export default {
         .message {
             margin-left: 1em;
             padding: 0.8em 0;
-            line-heightsss: 1.2;
+          line-height: 1.2;
             /*flex-shrink: 0;*/
         }
 
         .solid {
             width: 1px;
-            heightsss: 100%;
+          height: 100%;
             background: #6bc83c;
             margin: 0 1em;
             flex-shrink: 0;
@@ -141,7 +141,7 @@ export default {
             flex-shrink: 0;
             padding: 0.8em 0;
             cursor: pointer;
-            line-heightsss: 1.2;
+          line-height: 1.2;
         }
     }
 

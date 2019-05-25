@@ -12,7 +12,7 @@ export default {
 
 <style lang="scss" scoped>
     .g-header {
-        heightsss: 100px;
+      height: 100px;
         background-color: #b3c0d1;
     }
 </style>

@@ -37,12 +37,16 @@
         </div>
       </div>
       <div class="code-content" style="height: 0;">
-        <pre class="code-content-height"><code>{{str}}</code>
-        </pre>
+        <div class="code-content-height">
+          <div class="code-user-desc">
+            这里是组件重要属性的解释
+          </div>
+          <pre><code>{{str}}</code></pre>
+        </div>
       </div>
       <div class="lock-code" @click="showCode(0)" ref="xxx">
-        <g-icon class="icon-down" :icon="isShow === false ? 'codedown' : 'codeup'"></g-icon>
-        <span class="lock-code-word">{{isShow === false ? '显示代码' : '隐藏代码'}}</span>
+        <g-icon class="icon-down" :icon="isShow[0] === false ? 'codedown' : 'codeup'"></g-icon>
+        <span class="lock-code-word">{{isShow[0] === false ? '显示代码' : '隐藏代码'}}</span>
       </div>
     </div>
     <!--2-->
@@ -78,12 +82,16 @@
         </div>
       </div>
       <div class="code-content" style="height: 0;">
-        <pre class="code-content-height"><code>{{str1}}</code>
-        </pre>
+        <div class="code-content-height">
+          <div class="code-user-desc">
+            这里是组件重要属性的解释
+          </div>
+          <pre><code>{{str1}}</code></pre>
+        </div>
       </div>
       <div class="lock-code" @click="showCode(1)" ref="xxx">
-        <g-icon class="icon-down" :icon="isShow === false ? 'codedown' : 'codeup'"></g-icon>
-        <span class="lock-code-word">{{isShow === false ? '显示代码' : '隐藏代码'}}</span>
+        <g-icon class="icon-down" :icon="isShow[1] === false ? 'codedown' : 'codeup'"></g-icon>
+        <span class="lock-code-word">{{isShow[1] === false ? '显示代码' : '隐藏代码'}}</span>
       </div>
     </div>
     <!--3-->
@@ -119,12 +127,16 @@
         </div>
       </div>
       <div class="code-content" style="height: 0;">
-        <pre class="code-content-height"><code>{{str1}}</code>
-        </pre>
+        <div class="code-content-height">
+          <div class="code-user-desc">
+            这里是组件重要属性的解释
+          </div>
+          <pre><code>{{str1}}</code></pre>
+        </div>
       </div>
       <div class="lock-code" @click="showCode(2)" ref="xxx">
-        <g-icon class="icon-down" :icon="isShow === false ? 'codedown' : 'codeup'"></g-icon>
-        <span class="lock-code-word">{{isShow === false ? '显示代码' : '隐藏代码'}}</span>
+        <g-icon class="icon-down" :icon="isShow[2] === false ? 'codedown' : 'codeup'"></g-icon>
+        <span class="lock-code-word">{{isShow[2] === false ? '显示代码' : '隐藏代码'}}</span>
       </div>
     </div>
     <!--4-->
@@ -160,12 +172,16 @@
         </div>
       </div>
       <div class="code-content" style="height: 0;">
-        <pre class="code-content-height"><code>{{str1}}</code>
-        </pre>
+        <div class="code-content-height">
+          <div class="code-user-desc">
+            这里是组件重要属性的解释
+          </div>
+          <pre><code>{{str}}</code></pre>
+        </div>
       </div>
       <div class="lock-code" @click="showCode(3)" ref="xxx">
-        <g-icon class="icon-down" :icon="isShow === false ? 'codedown' : 'codeup'"></g-icon>
-        <span class="lock-code-word">{{isShow === false ? '显示代码' : '隐藏代码'}}</span>
+        <g-icon class="icon-down" :icon="isShow[3] === false ? 'codedown' : 'codeup'"></g-icon>
+        <span class="lock-code-word">{{isShow[3] === false ? '显示代码' : '隐藏代码'}}</span>
       </div>
     </div>
     <!--5-->
@@ -201,12 +217,16 @@
         </div>
       </div>
       <div class="code-content" style="height: 0;">
-        <pre class="code-content-height"><code>{{str1}}</code>
-        </pre>
+        <div class="code-content-height">
+          <div class="code-user-desc">
+            这里是组件重要属性的解释
+          </div>
+          <pre><code>{{str}}</code></pre>
+        </div>
       </div>
       <div class="lock-code" @click="showCode(4)" ref="xxx">
-        <g-icon class="icon-down" :icon="isShow === false ? 'codedown' : 'codeup'"></g-icon>
-        <span class="lock-code-word">{{isShow === false ? '显示代码' : '隐藏代码'}}</span>
+        <g-icon class="icon-down" :icon="isShow[4] === false ? 'codedown' : 'codeup'"></g-icon>
+        <span class="lock-code-word">{{isShow[4] === false ? '显示代码' : '隐藏代码'}}</span>
       </div>
     </div>
     <!--6-->
@@ -242,12 +262,16 @@
         </div>
       </div>
       <div class="code-content" style="height: 0;">
-        <pre class="code-content-height"><code>{{str1}}</code>
-        </pre>
+        <div class="code-content-height">
+          <div class="code-user-desc">
+            这里是组件重要属性的解释
+          </div>
+          <pre><code>{{str}}</code></pre>
+        </div>
       </div>
       <div class="lock-code" @click="showCode(5)" ref="xxx">
-        <g-icon class="icon-down" :icon="isShow === false ? 'codedown' : 'codeup'"></g-icon>
-        <span class="lock-code-word">{{isShow === false ? '显示代码' : '隐藏代码'}}</span>
+        <g-icon class="icon-down" :icon="isShow[5] === false ? 'codedown' : 'codeup'"></g-icon>
+        <span class="lock-code-word">{{isShow[5] === false ? '显示代码' : '隐藏代码'}}</span>
       </div>
     </div>
   </div>
@@ -316,77 +340,9 @@
 <style>
 </style>
 <style lang="scss" scoped>
-.button-docs{
-  .component-wrapper{
-    border: 1px solid #ebebeb;
-    border-radius: 3px;
-    transition: .2s;
+  @import "common";
 
-    .component-wrapper-demo {
-      padding: 24px 24px 0 24px;
-    }
-    h4{
-      margin: 55px 0 20px;
-    }
-    &:hover{
-      .lock-code .lock-code-word{
-        font-size: 14px;
-        transform: translateX(-40px);
-        opacity: 1;
-      }
-      .lock-code .icon-down{
-        transform: translateX(-40px);
-      }
-      box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5);
-    }
-    .code-content{
-      background-color: #fafafa;
-      border-top: 1px solid #eaeefb;
-      overflow: hidden;
-      transition: height .2s;
-      >pre{
-        background: none;
-        >code{
-          color: #3182bd;
-        }
-      }
-    }
-    .lock-code{
-      border-top: 1px solid #eaeefb;
-      height: 44px;
-      box-sizing: border-box;
-      background-color: #fff;
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
-      text-align: center;
-      margin-top: -1px;
-      color: #d3dce6;
-      cursor: pointer;
-      position: relative;
-      line-height: 44px;
-      color: #d3dce6;
-      &:hover{
-        background-color: #f9fafc;
-        .lock-code-word{
-          color: #409eff;
-        }
-        .icon-down{
-          fill:#409eff;
-        }
-      }
-      .icon-down{
-        transform: translateX(0px);
-        transition: all .1s;
-      }
-      text-align: center;
-      .lock-code-word{
-        font-size: 0px;
-        margin-left: 15px;
-        display: inline-block;
-        transition: all .1s;
-        opacity: 0;
-      }
-    }
-  }
+  .button-docs {
+
 }
 </style>

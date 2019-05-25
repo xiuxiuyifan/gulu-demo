@@ -102,7 +102,7 @@ export default {
             display: block;
             position: absolute;
             width: 100%;
-            heightsss: 100%;
+          height: 100%;
             top: 0;
             left: 0;
             pointer-events: none;

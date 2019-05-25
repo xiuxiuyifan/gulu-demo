@@ -85,14 +85,14 @@ export default {
       } else {
         this.$refs.activebar.style.transform = `translateY(${arrIndexSum(this.heightArr, index - 1) +
 					'px'})`
-        this.$refs.activebar.style.heightsss = this.heightArr[index] + 'px'
+        this.$refs.activebar.style.height = this.heightArr[index] + 'px'
       }
     },
     computedBar () {
       this.$children.forEach((item, index) => {
         if (item.$options.name === 'tab-header-item') {
           this.widthArr.push(parseInt(getComputedStyle(item.$el).width))
-          this.heightArr.push(parseInt(getComputedStyle(item.$el).heightsss))
+          this.heightArr.push(parseInt(getComputedStyle(item.$el).height))
           this.labelArr.push(item.label)
         }
       })
@@ -132,13 +132,13 @@ export default {
                 left: 0;
                 bottom: 0;
                 width: 100%;
-                heightsss: 2px;
+              height: 2px;
                 background-color: #e4e7ed;
                 z-index: 1;
             }
 
             > .acitve-bar {
-                heightsss: 2px;
+              height: 2px;
                 left: 0;
                 bottom: 0;
             }
@@ -150,7 +150,7 @@ export default {
             text-align: right;
 
             &:after {
-                heightsss: 100%;
+              height: 100%;
                 right: 0;
                 top: 0;
                 width: 2px;
@@ -183,7 +183,7 @@ export default {
             }
 
             &:after {
-                heightsss: 100%;
+              height: 100%;
                 width: 2px;
                 left: 0;
                 top: 0;
@@ -194,12 +194,12 @@ export default {
             > .acitve-bar {
                 bottom: 0;
                 left: 0;
-                heightsss: 2px;
+              height: 2px;
             }
 
             &:after {
                 width: 100%;
-                heightsss: 2px;
+              height: 2px;
                 left: 0;
                 bottom: 0;
             }
