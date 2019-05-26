@@ -1,25 +1,25 @@
 <template>
   <div class="g-cascader-item">
-    <!--      <div class="left">-->
-    <!--        <div @click="clickSelected(item.children)">-->
-    <!--          {{item.value}}-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--      <div class="right" v-if="selectedItem">-->
-    <!--        <g-cascader-item :options="selectedItem"></g-cascader-item>-->
-    <!--      </div>-->
-    <div class="box">
-      <div v-for="(item,index) in options" :key="index" @click="arr = item.children">{{item.value}}</div>
+    <div class="left">
+      <div @click="clickSelected(item)">
+        {{item.value}}
+      </div>
     </div>
-    <div class="box">
-      <div v-for="(item,index) in arr" :key="index" @click="arr1 = item.children">{{item.value}}</div>
+    <div class="right" v-if="rightSelected">
+      <g-cascader-item :options="rightSelected"></g-cascader-item>
     </div>
-    <div class="box">
-      <div v-for="(item,index) in arr1" :key="index">{{item.value}}</div>
-    </div>
-    <div class="box">
-      <div v-for="(item,index) in arr2" :key="index">{{item.value}}</div>
-    </div>
+    <!--    <div class="box">-->
+    <!--      <div v-for="(item,index) in options" :key="index" @click="arr = item.children">{{item.value}}</div>-->
+    <!--    </div>-->
+    <!--    <div class="box">-->
+    <!--      <div v-for="(item,index) in arr" :key="index" @click="arr1 = item.children">{{item.value}}</div>-->
+    <!--    </div>-->
+    <!--    <div class="box">-->
+    <!--      <div v-for="(item,index) in arr1" :key="index">{{item.value}}</div>-->
+    <!--    </div>-->
+    <!--    <div class="box">-->
+    <!--      <div v-for="(item,index) in arr2" :key="index">{{item.value}}</div>-->
+    <!--    </div>-->
   </div>
 </template>
 
@@ -36,17 +36,19 @@
     },
     data () {
       return {
-        selectedItem: null,
         arr: null,
         arr1: null,
         arr2: null,
       }
     },
+    computed: {
+      rightSelected () {
+        //如果左边选中了右边的值就是
+      },
+    },
     methods: {
       clickSelected (item) {
-        this.selectedItem = null
-        this.selectedItem = Object.assign([], item)
-        console.log(item)
+        this.leftSelected = null
       },
     },
   }
