@@ -37,15 +37,27 @@ export default {
       selectedCollapse: ['1'],
       options: [
         {
-          value: 'zhejiang',
+          value: '浙江',
           label: 'Zhejiang',
           children: [
             {
-              value: 'hangzhou',
+              value: '宁波',
+              label: 'NingBo',
+            },
+            {
+              value: '江西',
+              label: 'Jiang Xi',
+            },
+            {
+              value: '无锡',
+              label: 'Wu Xi',
+            },
+            {
+              value: '杭州',
               label: 'Hangzhou',
               children: [
                 {
-                  value: 'xihu',
+                  value: '西湖',
                   label: 'West Lake',
                 },
               ],
@@ -53,15 +65,15 @@ export default {
           ],
         },
         {
-          value: 'jiangsu',
+          value: '江苏',
           label: 'Jiangsu',
           children: [
             {
-              value: 'nanjing',
+              value: '南京',
               label: 'Nanjing',
               children: [
                 {
-                  value: 'zhonghuamen',
+                  value: '中华门',
                   label: 'Zhong Hua Men',
                 },
               ],
