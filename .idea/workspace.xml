@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="想办法改成递归渲染的形式">
+    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="递归渲染成功，右边渲染出一个和自己一样的组件，左边只渲染第一级数组下面的内容。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-cascader-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-cascader-item.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="843">
-              <caret line="74" column="12" lean-forward="true" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
+              <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -424,7 +423,7 @@
       <workItem from="1558705613259" duration="10654000" />
       <workItem from="1558789874349" duration="11188000" />
       <workItem from="1558837579756" duration="11196000" />
-      <workItem from="1559006775081" duration="3614000" />
+      <workItem from="1559006775081" duration="4658000" />
     </task>
     <task id="LOCAL-00001" summary="给lodding添加动效">
       <created>1545233737787</created>
@@ -664,11 +663,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558865559479</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="递归渲染成功，右边渲染出一个和自己一样的组件，左边只渲染第一级数组下面的内容。">
+      <created>1559015661540</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1559015661540</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="405831000" />
+    <option name="totallyTimeSpent" value="406875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -704,7 +710,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="重命名.travis.yml" />
     <MESSAGE value="添加input组件" />
     <MESSAGE value="添加栅格布局组件g-row 和 g-col" />
     <MESSAGE value="添加响应式功能" />
@@ -729,7 +734,8 @@
     <MESSAGE value="开始构建级联选择器组件  并且搭建yong vuepress搭建自己的官网文档" />
     <MESSAGE value="级联选择器组件简单功能实现，可以实现选择下一级。递归功能也实现了，但是不知道怎样将其结合起来。" />
     <MESSAGE value="想办法改成递归渲染的形式" />
-    <option name="LAST_COMMIT_MESSAGE" value="想办法改成递归渲染的形式" />
+    <MESSAGE value="递归渲染成功，右边渲染出一个和自己一样的组件，左边只渲染第一级数组下面的内容。" />
+    <option name="LAST_COMMIT_MESSAGE" value="递归渲染成功，右边渲染出一个和自己一样的组件，左边只渲染第一级数组下面的内容。" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -1155,7 +1161,7 @@
     <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="843">
-          <caret line="74" column="12" lean-forward="true" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
+          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
         </state>
       </provider>
     </entry>
