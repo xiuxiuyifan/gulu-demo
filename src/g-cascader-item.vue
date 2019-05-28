@@ -1,7 +1,7 @@
 <template>
   <div class="g-cascader-item">
     <div class="left">
-      <div @click="clickSelected(item)">
+      <div @click="clickSelected(item)" v-for="(item,index) in options" :key="index">
         {{item.value}}
       </div>
     </div>
@@ -39,16 +39,23 @@
         arr: null,
         arr1: null,
         arr2: null,
+        leftSelected: null,
       }
     },
     computed: {
       rightSelected () {
         //如果左边选中了右边的值就是
+        if (this.leftSelected && this.leftSelected.children) {
+          console.log(this.leftSelected.children)
+          return this.leftSelected.children
+        } else {
+          return
+        }
       },
     },
     methods: {
       clickSelected (item) {
-        this.leftSelected = null
+        this.leftSelected = item
       },
     },
   }
@@ -57,34 +64,18 @@
 
 <style lang="scss" scoped>
   .g-cascader-item {
-    .box {
+    height: 200px;
+    .left {
       display: inline-block;
       vertical-align: top;
 
       > div {
         padding: 10px;
-        border: 1px solid blue;
       }
     }
-
-    > div {
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-    }
-
-    .left {
-      border: 1px solid red;
-      padding: 10px;
-      display: inline-block;
-      vertical-align: top;
-    }
-
     .right {
-      border: 1px solid blue;
       display: inline-block;
+      border-left: 1px solid #c0c4cc;
       vertical-align: top;
     }
   }
