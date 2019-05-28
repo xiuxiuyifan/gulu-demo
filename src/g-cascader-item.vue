@@ -66,7 +66,15 @@
     methods: {
       clickSelected (item) {
         this.leftSelected = item
-        // this.rightSelected = null;
+        //递归清除 右边的子元素
+        let xxx = null
+        //一直有children
+        while (xxx.children == !undefined) {
+
+        }
+        if (!item.children === undefined) {
+          this.rightSelected.children = null
+        }
         //点击的时候进行判断  如果这个item 有孙子
       },
     },
