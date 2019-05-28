@@ -1,9 +1,9 @@
 <template>
   <div class="g-cascader">
-    <div class="top-wrapper">
+    <div class="top-wrapper" @click="showCascader()">
       <slot></slot>
     </div>
-    <div class="down-wrapper">
+    <div class="down-wrapper" v-if="isShow">
       <div>
         <g-cascader-item :options="options"></g-cascader-item>
       </div>
@@ -27,6 +27,8 @@
     },
     data () {
       return {
+        //控制 cascader 是否显示出来
+        isShow: false,
         //当前选中的内容
         leftSelected: null,
         //当前选中的index
@@ -43,8 +45,11 @@
           this.rightContent = item
           console.log(this.rightContent)
         }
+      },
+      showCascader () {
+        this.isShow = !this.isShow
+      },
     }
-  }
   };
 </script>
 
@@ -54,10 +59,17 @@
     }
 
     .down-wrapper {
-      border: 2px solid green;
       display: inline-block;
       vertical-align: top;
-      position: relative;
+      white-space: nowrap;
+      background: #fff;
+      position: absolute;
+      margin: 5px 0;
+      z-index: 2;
+      border: 1px solid #e4e7ed;
+      border-radius: 2px;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+      margin-top: 12px;
     }
   }
 </style>

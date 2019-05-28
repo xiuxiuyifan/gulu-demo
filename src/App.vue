@@ -25,6 +25,7 @@
     <g-cascader :options="options">
       <g-input placeholder="请选择住址"></g-input>
     </g-cascader>
+    <div>下面的东西</div>
 
   </div>
 </template>
