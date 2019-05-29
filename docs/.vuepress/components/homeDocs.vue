@@ -1,10 +1,31 @@
 <template>
-  <div>home下面的东西</div>
+  <div class="homeDocs">
+    <div class="box-wrapper">
+      <div class="box" :class="{'click-after':isClick}" @click="clickBox">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
   export default {
     name: 'homeDocs',
+    data () {
+      return {
+        isClick: false,
+      }
+    },
+    methods: {
+      clickBox () {
+        this.isClick = !this.isClick
+      },
+    },
     mounted () {
       // window.onmousewheel = document.onmousewheel = (e) => {
       //   console.log(e)
@@ -41,5 +62,104 @@
   }
 </style>
 <style lang="scss" scoped>
+  .homeDocs {
+    @keyframes move {
+      0% {
+        transform: rotateX(0deg) rotateY(0deg);
+      }
+      100% {
+        transform: rotateX(360deg) rotateY(360deg);
+      }
+    }
 
+    .box-wrapper {
+      text-align: center;
+      padding-top: 100px;
+
+      .box {
+        position: relative;
+        transform-style: preserve-3d;
+        animation: move 6s infinite linear;
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+
+        > div {
+          transition: all 1s;
+          width: 200px;
+          height: 200px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0.8;
+          cursor: pointer;
+          background-size: 100% 100% !important;
+        }
+
+        > div:nth-child(1) {
+          transform: translateZ(100px);
+          background: url("../public/1.jpg");
+        }
+
+        > div:nth-child(2) {
+          transform: translateZ(-100px);
+          background: url("../public/2.jpg");
+        }
+
+        > div:nth-child(3) {
+          transform: rotateX(90deg) translateZ(100px);
+          background: url("../public/3.jpg");
+        }
+
+        > div:nth-child(4) {
+          transform: rotateX(90deg) translateZ(-100px);
+          background: url("../public/4.jpg");
+        }
+
+        > div:nth-child(5) {
+          transform: rotateY(90deg) translateZ(100px);
+          background: url("../public/5.jpg");
+        }
+
+        > div:nth-child(6) {
+          transform: rotateY(90deg) translateZ(-100px);
+          background: url("../public/6.jpg");
+        }
+      }
+
+      > .click-after {
+        > div {
+          &:nth-child(1) {
+            transform: translateZ(150px);
+            background: url("../public/1.jpg");
+          }
+
+          &:nth-child(2) {
+            transform: translateZ(-150px);
+            background: url("../public/2.jpg");
+          }
+
+          &:nth-child(3) {
+            transform: rotateX(90deg) translateZ(150px);
+            background: url("../public/3.jpg");
+          }
+
+          &:nth-child(4) {
+            transform: rotateX(90deg) translateZ(-150px);
+            background: url("../public/4.jpg");
+          }
+
+          &:nth-child(5) {
+            transform: rotateY(90deg) translateZ(150px);
+            background: url("../public/5.jpg");
+          }
+
+          &:nth-child(6) {
+            transform: rotateY(90deg) translateZ(-150px);
+            background: url("../public/6.jpg");
+          }
+        }
+      }
+    }
+  }
 </style>
