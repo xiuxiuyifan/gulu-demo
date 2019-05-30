@@ -7,6 +7,9 @@
 <script>
   export default {
     name: 'g-carousel-item',
+    mounted () {
+
+    },
   }
 </script>
 
@@ -19,5 +22,6 @@
     top: 0;
     text-align: center;
     background: #d3dce6;
+    transition: all 0.5s;
   }
 </style>

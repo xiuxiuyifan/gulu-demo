@@ -24,6 +24,32 @@
     },
     mounted () {
       this.childrens = this.$children.length
+      let arr = []
+      let { width } = this.$el.getBoundingClientRect()
+      for (let i = 0; i < this.childrens; i++) {
+        console.log(i)
+        arr.push(i * width)
+        this.$children[i].$el.style.transform = `translateX(${i * width}px)`
+      }
+      var ccc = arr.slice(0)
+      let index = 0
+      setInterval(() => {
+        let xxx = ccc.slice(0, ccc.length - 1)
+        xxx.unshift(ccc[ccc.length - 1])
+        ccc = xxx.slice(0)  //复制一份
+        //每次把数组最前面的放在数组最后面就可以了
+        console.log(xxx)
+        for (let i = this.childrens - 1; i >= 0; i--) {
+          if (xxx[i] === 400) {
+            this.$children[i].$el.style.transition = `all 0.5s`
+          } else {
+            var bbb = setTimeout(() => {
+              this.$children[i].$el.style.transition = `unset`
+            }, 500)
+          }
+          this.$children[i].$el.style.transform = `translateX(${xxx[i]}px)`
+        }
+      }, 3000)
     },
   }
 </script>
@@ -31,7 +57,7 @@
 <style lang="scss" scoped>
   .g-carousel {
     position: relative;
-
+    overflow: hidden;
     .g-carousel-flag {
       position: absolute;
       left: 50%;
