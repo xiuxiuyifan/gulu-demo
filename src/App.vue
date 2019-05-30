@@ -26,13 +26,19 @@
       <g-input placeholder="请选择住址"></g-input>
     </g-cascader>
     <div>下面的东西</div>
-
+    <div style="width: 400px;">
+      <g-carousel :height="200">
+        <g-carousel-item v-for="item in 4">{{item}}</g-carousel-item>
+      </g-carousel>
+    </div>
   </div>
 </template>
 
 <script>
+  import GCarouselItem from './g-carousel-item'
 export default {
   name: 'demo',
+  components: { GCarouselItem },
   data() {
     return {
       selectedCollapse: ['1'],

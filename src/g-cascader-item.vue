@@ -52,14 +52,13 @@
         get () {
           //如果左边选中了右边的值就是
           if (this.leftSelected && this.leftSelected.children) {
-            console.log(this.leftSelected.children)
             return this.leftSelected.children
           } else {
             return
           }
         },
         set (value) {
-          this.rightSelected = value
+          this.leftSelected = value
         }
       },
     },
@@ -67,14 +66,6 @@
       clickSelected (item) {
         this.leftSelected = item
         //递归清除 右边的子元素
-        let xxx = null
-        //一直有children
-        while (xxx.children == !undefined) {
-
-        }
-        if (!item.children === undefined) {
-          this.rightSelected.children = null
-        }
         //点击的时候进行判断  如果这个item 有孙子
       },
     },

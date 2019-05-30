@@ -23,9 +23,14 @@ import GtabContentItem from './tab-content-item'
 import Gpopover from './components/g-popover'
 import GCascader from './g-cascader'
 
-// collapse 组件
+// collapse 级联选择器组件
 import GCollapse from './components/g-collapse'
 import GCollapseItem from './components/g-collapseItem'
+
+//  carousel 轮播图组件
+import GCarousel from './g-carousel'
+import GCarouselItem from './g-carousel-item'
+
 Vue.config.productionTip = false
 
 Vue.use(plugin)
@@ -57,6 +62,12 @@ Vue.component('g-collapse-item', GCollapseItem)
 
 Vue.component('g-cascader', GCascader)
 
+Vue.component('g-carousel', GCarousel)
+Vue.component('g-carouse-item'.GCarouselItem)
+
+//css
+import './asset/css/reset.css'
+import './asset/css/common.css'
 new Vue({
   render: h => h(App)
 }).$mount('#app')
