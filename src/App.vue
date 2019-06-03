@@ -22,15 +22,16 @@
     <!--      </g-collapse-item>-->
     <!--    </g-collapse>-->
     <!--    result:  {{selectedCollapse}}-->
-    <g-cascader :options="options">
+    <g-cascader :options="options" :selected.sync="selectData">
       <g-input placeholder="请选择住址"></g-input>
     </g-cascader>
-    <div>下面的东西</div>
-    <div style="width: 400px;">
-      <g-carousel :height="200">
-        <g-carousel-item v-for="item in 4">{{item}}</g-carousel-item>
-      </g-carousel>
-    </div>
+
+    <!--    <div>下面的东西</div>-->
+    <!--    <div style="width: 400px;">-->
+    <!--      <g-carousel :height="200">-->
+    <!--        <g-carousel-item v-for="item in 4">{{item}}</g-carousel-item>-->
+    <!--      </g-carousel>-->
+    <!--    </div>-->
   </div>
 </template>
 
@@ -42,6 +43,7 @@ export default {
   data() {
     return {
       selectedCollapse: ['1'],
+      selectData: [],
       options: [
         {
           value: '浙江',

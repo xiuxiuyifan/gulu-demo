@@ -1,27 +1,16 @@
 <template>
   <div class="g-cascader-item">
+    {{level}}
     <div class="left">
       <div class="item-world" @click="clickSelected(item)" v-for="(item,index) in options" :key="index">
         {{item.value}}
         <g-icon icon="right" class="down-icon"></g-icon>
       </div>
     </div>
-    <div class="right" v-if="rightSelected && noGrandChild">
-      <g-cascader-item :options="rightSelected"></g-cascader-item>
+    <div class="right" v-if="rightSelected">
+      <g-cascader-item :options="rightSelected" :level="level + 1" :selected="selected"
+                       v-on:update:selected="$emit('update:selected',$event)"></g-cascader-item>
     </div>
-    <!--死数据想法-->
-    <!--    <div class="box">-->
-    <!--      <div v-for="(item,index) in options" :key="index" @click="arr = item.children">{{item.value}}</div>-->
-    <!--    </div>-->
-    <!--    <div class="box">-->
-    <!--      <div v-for="(item,index) in arr" :key="index" @click="arr1 = item.children">{{item.value}}</div>-->
-    <!--    </div>-->
-    <!--    <div class="box">-->
-    <!--      <div v-for="(item,index) in arr1" :key="index">{{item.value}}</div>-->
-    <!--    </div>-->
-    <!--    <div class="box">-->
-    <!--      <div v-for="(item,index) in arr2" :key="index">{{item.value}}</div>-->
-    <!--    </div>-->
   </div>
 </template>
 
@@ -36,6 +25,15 @@
       options: {
         type: Array,
       },
+      selected: {
+        type: Array,
+        default: () => ([]),
+      },
+      //记录当前层级
+      level: {
+        type: Number,
+        default: 0,
+      },
     },
     data () {
       return {
@@ -43,16 +41,14 @@
         arr1: null,
         arr2: null,
         leftSelected: null,
-        //是否有孙子
-        noGrandChild: true,
       }
     },
     computed: {
       rightSelected: {
         get () {
           //如果左边选中了右边的值就是
-          if (this.leftSelected && this.leftSelected.children) {
-            return this.leftSelected.children
+          if (this.selected[this.level] && this.selected[this.level].children) {
+            return this.selected[this.level].children
           } else {
             return
           }
@@ -64,9 +60,11 @@
     },
     methods: {
       clickSelected (item) {
-        this.leftSelected = item
-        //递归清除 右边的子元素
-        //点击的时候进行判断  如果这个item 有孙子
+        //深拷贝一下
+        let obj = JSON.parse(JSON.stringify(this.selected))
+        obj[this.level] = item
+        //让父组件来更改数据
+        this.$emit('update:selected', obj)
       },
     },
   }

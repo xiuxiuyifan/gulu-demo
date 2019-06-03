@@ -5,7 +5,8 @@
     </div>
     <div class="down-wrapper" v-if="isShow">
       <div>
-        <g-cascader-item :options="options"></g-cascader-item>
+        <g-cascader-item :options="options" :selected="selected"
+                         v-on:update:selected="$emit('update:selected',$event)"></g-cascader-item>
       </div>
     </div>
   </div>
@@ -24,6 +25,11 @@
       options: {
         type: Array,
       },
+      //采用单向数据流的方式让最外层组件管理选中的数据
+      selected: {
+        type: Array,
+        default: () => ([]),
+      },
     },
     data () {
       return {
@@ -37,9 +43,14 @@
       }
     },
     mounted () {
-      console.log(this.options)
+      console.log(this.selected)
     },
     methods: {
+      xxx (value) {
+        console.log('监听到了')
+        console.log(value)
+        // this.
+      },
       clickSelect (item) {
         if (item) {
           this.rightContent = item
