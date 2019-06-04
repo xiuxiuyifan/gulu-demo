@@ -63,6 +63,10 @@
         //深拷贝一下
         let obj = JSON.parse(JSON.stringify(this.selected))
         obj[this.level] = item
+        //把当前 选中的下一层元素全部删除掉
+        console.log(this.level)
+        console.log(obj)
+        obj.splice(this.level + 1)
         //让父组件来更改数据
         this.$emit('update:selected', obj)
       },

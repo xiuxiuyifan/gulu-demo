@@ -22,6 +22,9 @@
     <!--      </g-collapse-item>-->
     <!--    </g-collapse>-->
     <!--    result:  {{selectedCollapse}}-->
+    {{selectData && selectData[0] && selectData[0].value || '空'}}
+    {{selectData && selectData[1] && selectData[1].value || '空'}}
+    {{selectData && selectData[2] && selectData[2].value || '空'}}
     <g-cascader :options="options" :selected.sync="selectData">
       <g-input placeholder="请选择住址"></g-input>
     </g-cascader>
