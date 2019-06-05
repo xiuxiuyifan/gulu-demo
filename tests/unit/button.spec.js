@@ -1,10 +1,19 @@
 import { expect } from 'chai'
+import { mount } from '@vue/test-utils'
 import GButton from '../../src/button'
 
 describe('button.vue', () => {
   it('测试button存在', () => {
-    console.log(typeof GButton)
+    const wrapper = mount(GButton)
     expect(typeof GButton).eq('object')
+  })
+  it('button可以设置 icon', () => {
+    const wrapper = mount(GButton, {
+      propsData: {
+        icon: 'setting',
+      },
+    })
+    expect(wrapper.find('use').attributes()['href']).eq('#i-setting')
   })
 })
 
