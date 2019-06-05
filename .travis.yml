@@ -1,7 +1,6 @@
 language: node_js # 使用node_js进行测试
 node_js: # node_js版本号
   - "8"
-  - "9"
   - "10"
 addons: # 插件
   chrome: stable # 谷歌浏览器稳定版
