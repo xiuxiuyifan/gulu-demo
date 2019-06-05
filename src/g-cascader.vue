@@ -5,8 +5,11 @@
     </div>
     <div class="down-wrapper" v-if="isShow">
       <div>
-        <g-cascader-item :options="options" :selected="selected"
-                         v-on:update:selected="$emit('update:selected',$event)"></g-cascader-item>
+        <g-cascader-item
+          :options="options"
+          :selected="selected"
+          v-on:update:selected="$emit('update:selected',$event)">
+        </g-cascader-item>
       </div>
     </div>
   </div>
@@ -15,7 +18,6 @@
 <script>
   //右边展示的就是当前点击元素的子元素而已
   import GCascaderItem from './g-cascader-item'
-
   export default {
     name: 'g-cascader',
     components: {
@@ -42,15 +44,7 @@
         rightContent: null,
       }
     },
-    mounted () {
-      console.log(this.selected)
-    },
     methods: {
-      xxx (value) {
-        console.log('监听到了')
-        console.log(value)
-        // this.
-      },
       clickSelect (item) {
         if (item) {
           this.rightContent = item
@@ -68,7 +62,6 @@
   .g-cascader {
     .top-wrapper {
     }
-
     .down-wrapper {
       display: inline-block;
       vertical-align: top;
