@@ -6,21 +6,21 @@
     </div>
     <div class="component-wrapper">
       <div class="component-wrapper-demo">
-          <pre><code>
-      完整引入
-      在 main.js 中写入以下内容：
+        <pre><code>
+            完整引入
+            在 main.js 中写入以下内容：
 
-      import Vue from 'vue';
-      import ElementUI from 'element-ui';
-      import 'element-ui/lib/theme-chalk/index.css';
-      import App from './App.vue';
+            import Vue from 'vue';
+            import ElementUI from 'element-ui';
+            import 'element-ui/lib/theme-chalk/index.css';
+            import App from './App.vue';
 
-      Vue.use(ElementUI);
+            Vue.use(ElementUI);
 
-      new Vue({
-      el: '#app',
-      render: h => h(App)
-      });
+            new Vue({
+            el: '#app',
+            render: h => h(App)
+            });
           </code></pre>
       </div>
     </div>
