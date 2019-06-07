@@ -9,7 +9,10 @@
     <div class="right" v-if="rightSelected">
       <g-cascader-item
         :options="rightSelected"
-        :level="level + 1" :selected="selected"
+        :level="level + 1"
+        :selected="selected"
+        :load-data="loadData"
+        :after-get-data="afterGetData"
         v-on:update:selected="$emit('update:selected',$event)">
       </g-cascader-item>
     </div>
@@ -36,6 +39,13 @@
         default: 0,
       },
       //动态获取数据并且插入到当前选中的children 里面
+      loadData: {
+        type: Boolean,
+        default: false,
+      },
+      afterGetData: {
+        type: Function,
+      },
     },
     data () {
       return {
@@ -76,11 +86,9 @@
         //把当前 选中的下一层元素全部删除掉
         obj.splice(this.level + 1)
         //让父组件来更改数据
-        const arr = db.filter((value, index) => {
-          return item.id == value.parent_id
-        })
-        console.log(this.level)
-        obj[this.level].children = arr
+        if (this.loadData) {
+          obj[this.level].children = this.afterGetData()
+        }
         this.$emit('update:selected', obj)
         console.log(arr)
       },

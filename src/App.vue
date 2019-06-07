@@ -22,10 +22,13 @@
     <!--      </g-collapse-item>-->
     <!--    </g-collapse>-->
     <!--    result:  {{selectedCollapse}}-->
-    {{selectData && selectData[0] && selectData[0].value || '空'}}
-    {{selectData && selectData[1] && selectData[1].value || '空'}}
-    {{selectData && selectData[2] && selectData[2].value || '空'}}
-    <g-cascader :options="options" :selected.sync="selectData">
+    {{selectData && selectData[0] && selectData[0].name || '空'}}
+    {{selectData && selectData[1] && selectData[1].name || '空'}}
+    {{selectData && selectData[2] && selectData[2].name || '空'}}
+    <g-cascader :options="options"
+                :load-data="true"
+                :after-get-data="getNextLevelData"
+                :selected.sync="selectData">
       <g-input placeholder="请选择住址"></g-input>
     </g-cascader>
 
@@ -39,6 +42,7 @@
 </template>
 
 <script>
+  import db from './db'
   import GCarouselItem from './g-carousel-item'
 export default {
   name: 'demo',
@@ -84,6 +88,15 @@ export default {
         { 'id': 34, 'name': '澳门' },
         { 'id': 35, 'name': '海外' }],
     }
+  },
+  methods: {
+    getNextLevelData () {
+      const arr = db.filter((value, index) => {
+        //好像必须找出当前选中的哪一级
+        return item.id == value.parent_id
+      })
+      return arr
+    },
   }
 }
 </script>

@@ -20,20 +20,20 @@
           <g-button type="danger">危险按钮</g-button>
         </div>
         <div style="margin: 20px 0">
-          <g-button>朴素按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
+          <g-button plain>朴素按钮</g-button>
+          <g-button plain type="primary">主要按钮</g-button>
+          <g-button plain type="success">成功按钮</g-button>
+          <g-button plain type="info">信息按钮</g-button>
+          <g-button plain type="warning">警告按钮</g-button>
+          <g-button plain type="danger">危险按钮</g-button>
         </div>
         <div style="margin: 20px 0">
-          <g-button>圆形按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
+          <g-button round>圆形按钮</g-button>
+          <g-button round type="primary">主要按钮</g-button>
+          <g-button round type="success">成功按钮</g-button>
+          <g-button round type="info">信息按钮</g-button>
+          <g-button round type="warning">警告按钮</g-button>
+          <g-button round type="danger">危险按钮</g-button>
         </div>
       </div>
       <div class="code-content" style="height: 0;">
@@ -192,28 +192,8 @@
     <div class="component-wrapper">
       <div class="component-wrapper-demo">
         <div>
-          <g-button>默认按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
-        </div>
-        <div style="margin: 20px 0">
-          <g-button>朴素按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
-        </div>
-        <div style="margin: 20px 0">
-          <g-button>圆形按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
+          <g-button :lodding="true">默认按钮</g-button>
+          <g-button type="primary" :lodding="lodding" @click="lodding = !lodding">点我加载</g-button>
         </div>
       </div>
       <div class="code-content" style="height: 0;">
@@ -237,28 +217,7 @@
     <div class="component-wrapper">
       <div class="component-wrapper-demo">
         <div>
-          <g-button>默认按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
-        </div>
-        <div style="margin: 20px 0">
-          <g-button>朴素按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
-        </div>
-        <div style="margin: 20px 0">
-          <g-button>圆形按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
+          <g-button :ripples="true">默认按钮</g-button>
         </div>
       </div>
       <div class="code-content" style="height: 0;">
@@ -293,6 +252,11 @@
         codeHeightArr: [],
         //每个区域的显示状态
         isShow: [],
+
+        //组件里面用到的状态
+        lodding: false,
+        lodding1: false,
+        lodding2: false,
         str:`<g-button>默认按钮</g-button>
              <g-button type="primary">主要按钮</g-button>
              <g-button type="success">成功按钮</g-button>`.replace(/\t+| +/g, '').trim(),

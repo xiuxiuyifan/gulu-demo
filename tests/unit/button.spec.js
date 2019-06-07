@@ -15,5 +15,10 @@ describe('button.vue', () => {
     })
     expect(wrapper.find('use').attributes()['href']).eq('#i-setting')
   })
+  it('button可以进行lodding 数据加载', () => {
+    const wrapper = mount(GButton, {
+      propsData: {},
+    })
+  })
 })
 

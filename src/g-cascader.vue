@@ -8,6 +8,8 @@
         <g-cascader-item
           :options="options"
           :selected="selected"
+          :load-data="loadData"
+          :after-get-data="afterGetData"
           v-on:update:selected="$emit('update:selected',$event)">
         </g-cascader-item>
       </div>
@@ -31,6 +33,13 @@
       selected: {
         type: Array,
         default: () => ([]),
+      },
+      loadData: {
+        type: Boolean,
+        default: false,
+      },
+      afterGetData: {
+        type: Function,
       },
     },
     data () {
