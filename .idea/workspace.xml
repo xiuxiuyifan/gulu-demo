@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="级联选择器 支持动态加载数据，实现层次就是给当前选中的元素添加child   并且 emit出去 把选中的数据交给父节点进行更新">
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/svg.js" afterDir="false" />
+    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="对button按钮添加了一下常用的属性，同时修改了button的文档，尽快的完善文档内容">
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/installDocs.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/buttonDocs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/buttonDocs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/enhanceApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/enhanceApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-cascader-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-cascader-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-cascader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/button.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/button.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/views/install/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/views/install/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,7 +19,7 @@
     <favorites_list name="gulu-demo" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5362123">
+    <splitter split-orientation="horizontal" split-proportion="0.6425835">
       <split-first>
         <splitter split-orientation="horizontal" split-proportion="0.41289088">
           <split-first>
@@ -47,8 +40,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests/unit/button.spec.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="667">
-                      <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+                    <state relative-caret-position="644">
+                      <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
                       <folding>
                         <element signature="e#0#29#0" expanded="true" />
                       </folding>
@@ -124,9 +117,11 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/buttonDocs.vue">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="483">
-                      <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+                    <state relative-caret-position="280">
+                      <caret line="40" column="38" lean-forward="true" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
                       <folding>
+                        <element signature="n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
+                        <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
                         <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
                         <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
                         <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -162,22 +157,10 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/unit/button.spec.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="207">
-                  <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#0#29#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/button.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="519">
-                  <caret line="207" column="8" selection-start-line="207" selection-start-column="8" selection-end-line="207" selection-end-column="8" />
+                <state relative-caret-position="198">
+                  <caret line="222" column="3" lean-forward="true" selection-start-line="222" selection-start-column="3" selection-end-line="222" selection-end-column="3" />
                   <folding>
                     <element signature="e#1157#1295#0" />
                     <element signature="e#1309#1449#0" />
@@ -189,8 +172,41 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="253">
+                <state relative-caret-position="230">
                   <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/docs/views/install/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor relative-caret-position="92">
+                    <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/docs/views/guluDocs/button.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor relative-caret-position="69">
+                    <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="13" />
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/installDocs.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="207">
+                  <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -216,8 +232,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -284,8 +300,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/g-container.vue" />
-        <option value="$PROJECT_DIR$/src/g-tab-content.vue" />
         <option value="$PROJECT_DIR$/src/g-main.vue" />
         <option value="$PROJECT_DIR$/src/components/g-popover.vue" />
         <option value="$PROJECT_DIR$/src/g-tab.vue" />
@@ -335,6 +349,8 @@
         <option value="$PROJECT_DIR$/docs/.vuepress/components/common.scss" />
         <option value="$PROJECT_DIR$/docs/.vuepress/components/buttonDocs.vue" />
         <option value="$PROJECT_DIR$/src/button.vue" />
+        <option value="$PROJECT_DIR$/docs/views/install/README.md" />
+        <option value="$PROJECT_DIR$/docs/.vuepress/components/installDocs.vue" />
       </list>
     </option>
   </component>
@@ -395,6 +411,26 @@
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name=".vuepress" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gulu-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gulu-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gulu-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gulu-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="guluDocs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gulu-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gulu-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="install" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gulu-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -572,7 +608,7 @@
       <workItem from="1559138561264" duration="1255000" />
       <workItem from="1559139828944" duration="5752000" />
       <workItem from="1559699092982" duration="12270000" />
-      <workItem from="1559896634089" duration="8354000" />
+      <workItem from="1559896634089" duration="9828000" />
     </task>
     <task id="LOCAL-00001" summary="给lodding添加动效">
       <created>1545233737787</created>
@@ -861,11 +897,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559748813927</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="对button按钮添加了一下常用的属性，同时修改了button的文档，尽快的完善文档内容">
+      <created>1559910364840</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1559910364840</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="468611000" />
+    <option name="totallyTimeSpent" value="470085000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -899,7 +942,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Project" order="3" sideWeight="0.49945116" visible="true" weight="0.109375" />
+      <window_info active="true" anchor="right" id="Project" order="3" sideWeight="0.49945116" visible="true" weight="0.26802886" />
       <window_info anchor="right" id="Nativescript Palette" order="4" />
       <window_info anchor="right" x="0" y="0" width="434" height="896" id="文档" order="5" sideWeight="0.50054884" side_tool="true" weight="0.19152361" />
     </layout>
@@ -910,7 +953,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="添加tab组建的五个文件，并且写了简单的样式" />
     <MESSAGE value="适应inject注入，完成爷爷到孙子组件之间的通信，让tab可以切换，并且添加position属性，可以选择tab出现的位置" />
     <MESSAGE value="删除dist" />
     <MESSAGE value="tabs的四个位置可以控制" />
@@ -935,7 +977,8 @@
     <MESSAGE value="改写button 的测试用例" />
     <MESSAGE value="travis ci nodejs 9 版本不通过测试问题" />
     <MESSAGE value="级联选择器 支持动态加载数据，实现层次就是给当前选中的元素添加child   并且 emit出去 把选中的数据交给父节点进行更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="级联选择器 支持动态加载数据，实现层次就是给当前选中的元素添加child   并且 emit出去 把选中的数据交给父节点进行更新" />
+    <MESSAGE value="对button按钮添加了一下常用的属性，同时修改了button的文档，尽快的完善文档内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="对button按钮添加了一下常用的属性，同时修改了button的文档，尽快的完善文档内容" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -943,7 +986,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/button.vue</url>
-          <line>98</line>
+          <line>100</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -951,28 +994,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/views/guluDocs/popover.md">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="26">
-            <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/views/guluDocs/tabs.md">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="26">
-            <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/views/guluDocs/toast.md">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -1011,21 +1032,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="208">
             <caret line="8" selection-start-line="8" selection-end-line="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/views/guluDocs/button.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="78">
-            <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="13" />
           </first_editor>
           <second_editor />
         </state>
@@ -1225,25 +1231,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/button.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/.vuepress/public/svg.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/.vuepress/enhanceApp.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1273,11 +1262,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/.vuepress/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/views/guluDocs/button.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="69">
+            <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/views/install/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="92">
+            <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/button.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/button.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="222" column="3" lean-forward="true" selection-start-line="222" selection-start-column="3" selection-end-line="222" selection-end-column="3" />
+          <folding>
+            <element signature="e#1157#1295#0" />
+            <element signature="e#1309#1449#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/installDocs.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/buttonDocs.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        <state relative-caret-position="280">
+          <caret line="40" column="38" lean-forward="true" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
           <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -1292,17 +1343,6 @@
             <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#6;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/button.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="207" column="8" selection-start-line="207" selection-start-column="8" selection-end-line="207" selection-end-column="8" />
-          <folding>
-            <element signature="e#1157#1295#0" />
-            <element signature="e#1309#1449#0" />
           </folding>
         </state>
       </provider>
