@@ -1,8 +1,8 @@
 <template>
   <div class="installDocs">
     <div>
-      <h2>button按钮</h2>
-      <p>常用的操作按钮</p>
+      <h2>安装</h2>
+      <p>npm 安装 npm install -S gulu-demo</p>
     </div>
     <div class="component-wrapper">
       <div class="component-wrapper-demo">
