@@ -1,7 +1,6 @@
 {
   "name": "gulu-demo",
-  "version": "0.0.7",
-  "private": true,
+  "version": "0.1.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -34,8 +33,7 @@
       "plugin:vue/essential"
     ],
     "rules": {},
-    "parserOptions": {
-    }
+    "parserOptions": {}
   },
   "postcss": {
     "plugins": {
@@ -47,4 +45,3 @@
     "last 2 versions"
   ]
 }
-
