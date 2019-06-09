@@ -9,6 +9,8 @@
         <pre><code>{{str}}</code></pre>
       </div>
     </div>
+    <p>组件风格参考element 和 ant design</p>
+    <p>文档样式主要参考element的文档官网样式</p>
   </div>
 </template>
 

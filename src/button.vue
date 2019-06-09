@@ -1,5 +1,5 @@
 <template>
-  <button :class="[`i-${position}`, verify('type'), verify('round'), verify('plain'),verify('disabled')]"
+  <button :class="[compatible(), verify('type'), verify('round'), verify('plain'),verify('disabled')]"
           @click="$emit('click')"
           class="g-button">
         <g-icon :icon="icon" v-if="!lodding"></g-icon>
@@ -64,7 +64,7 @@ export default {
     'g-icon': Icon
   },
   mounted () {
-    console.log(this.round)
+    console.log(this.$slots)
     if (this.ripples) {
       this.$el.classList.add('ripples')
     }
@@ -79,6 +79,13 @@ export default {
         return undefined
       }
       return `i-${props}-${this[props]}`
+    },
+    compatible () {
+      if (Object.keys(this.$slots).length === 0) {
+        return
+      } else {
+        return `i-${this.position}`
+      }
     },
   },
 }
@@ -102,7 +109,6 @@ export default {
       order: 1;
       margin-right: 0.5em;
     }
-
     .g-word {
       order: 2;
     }
@@ -116,10 +122,10 @@ export default {
     background-color: $button-bg;
     font-size: $font-size;
     border-radius: $border-radius;
-    padding: 0.6em 1.4em;
+    padding: 0.8em 1.4em;
     border: 1px solid $border-color;
     box-sizing: border-box;
-
+    line-height: 1;
     &.ripples {
       overflow: hidden;
       position: relative;

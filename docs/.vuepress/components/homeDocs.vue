@@ -323,6 +323,7 @@
       top: 100px;
       right: 0;
       border: 1px solid rebeccapurple;
+      z-index: -1;
     }
   }
 </style>
