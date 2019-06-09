@@ -46,6 +46,8 @@
           <div></div>
         </div>
       </div>
+      <p>待开发，换肤功能...</p>
+      <p>--version 0.1.4(开发测试版)</p>
       <div class="result">
 
       </div>
