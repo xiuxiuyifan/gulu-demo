@@ -1,7 +1,6 @@
 <template>
     <div class="collapse-item">
         <div class="title" @click="toggle">
-            {{onlyone}}
             {{title}}<g-icon icon="right" :class="{'rotate-icon':open}"></g-icon>
         </div>
         <div class="content" v-show="open">
@@ -11,9 +10,13 @@
 </template>
 
 <script>
+  import GIcon from '../icon'
 export default {
   name: 'collapseItem',
   inject: ['eventBus'],
+  components: {
+    GIcon,
+  },
   props: {
     title: {
       type: String,
