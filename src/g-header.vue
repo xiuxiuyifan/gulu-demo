@@ -1,7 +1,7 @@
 <template>
-    <div class="g-header">
-        <slot></slot>
-    </div>
+  <div class="g-header">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
@@ -11,8 +11,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .g-header {
-      height: 100px;
-        background-color: #b3c0d1;
-    }
+  .g-header {
+    height: 60px;
+    background-color: #b3c0d1;
+    line-height: 60px;
+  }
 </style>

@@ -10,6 +10,7 @@ export default {
   props: {
     position: {
       type: String,
+      default: 'verticale',
       validator: function (value) {
         let arr = ['level', 'verticale']
         if (arr.indexOf(value) >= 0) {
@@ -25,7 +26,7 @@ export default {
       let obj = null
       if (this.position === 'level') {
         obj = {
-          flexDirection:                   'row'
+          flexDirection: 'row',
         }
       } else if (this.position === 'verticale') {
         obj = {

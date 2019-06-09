@@ -12,7 +12,8 @@ export default {
 
 <style lang="scss" scoped>
   .g-footer {
-    height: 100px;
+    height: 60px;
+    line-height: 60px;
     background-color: #b3c0d1;
   }
 </style>

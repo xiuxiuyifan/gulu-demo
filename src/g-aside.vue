@@ -13,8 +13,12 @@
 </template>
 
 <script>
+  import GIcon from '../src/icon'
 export default {
   name: 'g-aside',
+  components: {
+    GIcon,
+  },
   data () {
     return {
       hide: true
@@ -24,31 +28,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .aside-wapper {
-        position: relative;
+  .aside-wapper {
+    position: relative;
+    background-color: #d3dce6;
 
-        .aside-list-wapper {
-            text-align: right;
-
-        }
-
-        .g-aside {
-            width: 200px;
-        }
-
-        .icon-list {
-            /*position: absolute;*/
-            /*right: 0;*/
-            cursor: pointer;
-        }
-
-        .movelist-enter-active, .movelist-leave-active {
-            transition: all .5s;
-        }
-
-        .movelist-enter, .movelist-leave-to /* .fade-leave-active below version 2.1.8 */
-        {
-            margin-left: -200px;
-        }
+    .aside-list-wapper {
+      text-align: right;
     }
+
+    .g-aside {
+      width: 200px;
+    }
+
+    .icon-list {
+      /*position: absolute;*/
+      /*right: 0;*/
+      cursor: pointer;
+    }
+
+    .movelist-enter-active, .movelist-leave-active {
+      transition: all .5s;
+    }
+
+    .movelist-enter, .movelist-leave-to /* .fade-leave-active below version 2.1.8 */
+    {
+      margin-left: -200px;
+    }
+  }
 </style>

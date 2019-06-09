@@ -1,5 +1,5 @@
 module.exports = {
-	title: '秦风UI组件',
+  title: 'Vue-UI组件',
 	themeConfig: {
 		logo: '/2.jfif',
 		nav: [
