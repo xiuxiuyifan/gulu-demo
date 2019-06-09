@@ -22,10 +22,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .g-icon {
-        width: 1em;
-        height: 1em;
-        display: inline-block;
-        vertical-align: middle;
-    }
+  .g-icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+  }
 </style>

@@ -1,11 +1,12 @@
 <template>
-  <button :class="[`i-${position}`, verify('type'), verify('round'), verify('plain')]" @click="$emit('click')"
+  <button :class="[`i-${position}`, verify('type'), verify('round'), verify('plain'),verify('disabled')]"
+          @click="$emit('click')"
           class="g-button">
         <g-icon :icon="icon" v-if="!lodding"></g-icon>
         <g-icon :class="{rotate:lodding}" icon="lodding" v-if="lodding"></g-icon>
-        <div class="g-word">
+    <span class="g-word">
             <slot></slot>
-        </div>
+        </span>
     </button>
 </template>
 <script>
@@ -53,6 +54,10 @@ export default {
     plain: {
       type: Boolean,
       default: false,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     }
   },
   components: {
@@ -67,7 +72,13 @@ export default {
   methods: {
     //检验props 用来控制class
     verify (props) {
-      return this[props] === undefined ? undefined : `i-${props}-${this[props]}`
+      if (this[props] === undefined) {
+        return undefined
+      }
+      if (this[props] === false) {
+        return undefined
+      }
+      return `i-${props}-${this[props]}`
     },
   },
 }
@@ -105,7 +116,7 @@ export default {
     background-color: $button-bg;
     font-size: $font-size;
     border-radius: $border-radius;
-    padding: 0.5em 1em;
+    padding: 0.6em 1.4em;
     border: 1px solid $border-color;
     box-sizing: border-box;
 
@@ -194,6 +205,7 @@ export default {
         background: #409eff;
         border-color: #409eff;
         color: #fff;
+        transition: all .2s;
       }
     }
   }
@@ -218,6 +230,7 @@ export default {
         background: #67c23a;
         border-color: #67c23a;
         color: #fff;
+        transition: all .2s;
       }
     }
   }
@@ -242,6 +255,7 @@ export default {
         background: #909399;
         border-color: #909399;
         color: #fff;
+        transition: all .2s;
       }
     }
   }
@@ -266,6 +280,7 @@ export default {
         background: #e6a23c;
         border-color: #e6a23c;
         color: #fff;
+        transition: all .2s;
       }
     }
   }
@@ -290,11 +305,16 @@ export default {
         background: #f56c6c;
         border-color: #f56c6c;
         color: #fff;
+        transition: all .2s;
       }
     }
   }
 
   .i-round-true {
     border-radius: 20px;
+  }
+
+  .i-disabled-true {
+    cursor: no-drop !important;
   }
 </style>

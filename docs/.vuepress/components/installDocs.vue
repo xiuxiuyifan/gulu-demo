@@ -35,5 +35,21 @@
 </script>
 
 <style lang="scss" scoped>
+  .installDocs {
+    .component-wrapper {
+      border: 1px solid #ebebeb;
 
+      &:hover {
+        box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5);
+      }
+    }
+
+    pre {
+      background: none;
+
+      > code {
+        color: #3182bd;
+      }
+    }
+  }
 </style>

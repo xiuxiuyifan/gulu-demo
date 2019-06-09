@@ -39,7 +39,7 @@
       <div class="code-content" style="height: 0;">
         <div class="code-content-height">
           <div class="code-user-desc">
-            这里是组件重要属性的解释
+            按钮通过"type" "plain" "round"属性控制其常用的按钮的几种状态状态 对应默认 朴素 圆角三种按钮
           </div>
           <pre><code>{{str}}</code></pre>
         </div>
@@ -57,34 +57,13 @@
     <div class="component-wrapper">
       <div class="component-wrapper-demo">
         <div>
-          <g-button>默认按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
-        </div>
-        <div style="margin: 20px 0">
-          <g-button>朴素按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
-        </div>
-        <div style="margin: 20px 0">
-          <g-button>圆形按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
+          <g-button disabled>禁用按钮</g-button>
         </div>
       </div>
       <div class="code-content" style="height: 0;">
         <div class="code-content-height">
           <div class="code-user-desc">
-            这里是组件重要属性的解释
+            "disabled"属性可以让网页上的鼠标变成是一个红色的圈加一个斜杠，表示禁止的意思
           </div>
           <pre><code>{{str1}}</code></pre>
         </div>
@@ -103,35 +82,35 @@
       <div class="component-wrapper-demo">
         <div>
           <g-button>默认按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
+          <g-button type="primary" icon="setting" position="right">主要按钮</g-button>
+          <g-button type="success" icon="good">成功按钮</g-button>
+          <g-button type="info" icon="del">删除</g-button>
+          <g-button type="warning" icon="information">警告按钮</g-button>
+          <g-button type="danger" icon="error">危险按钮</g-button>
         </div>
         <div style="margin: 20px 0">
           <g-button>朴素按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
+          <g-button plain type="primary" icon="setting">主要按钮</g-button>
+          <g-button plain type="success" icon="good">成功按钮</g-button>
+          <g-button plain type="info" icon="del">删除</g-button>
+          <g-button plain type="warning" icon="information">警告按钮</g-button>
+          <g-button plain type="danger" icon="error">危险按钮</g-button>
         </div>
         <div style="margin: 20px 0">
-          <g-button>圆形按钮</g-button>
-          <g-button type="primary">主要按钮</g-button>
-          <g-button type="success">成功按钮</g-button>
-          <g-button type="info">信息按钮</g-button>
-          <g-button type="warning">警告按钮</g-button>
-          <g-button type="danger">危险按钮</g-button>
+          <g-button round>圆形按钮</g-button>
+          <g-button round type="primary" icon="setting">主要按钮</g-button>
+          <g-button round type="success" icon="good">成功按钮</g-button>
+          <g-button round type="info" icon="del">删除</g-button>
+          <g-button round type="warning" icon="information">警告按钮</g-button>
+          <g-button round type="danger" icon="error">危险按钮</g-button>
         </div>
       </div>
       <div class="code-content" style="height: 0;">
         <div class="code-content-height">
           <div class="code-user-desc">
-            这里是组件重要属性的解释
+            "icon"属性可以显示自己想要的图标 "position"设置图标色位置
           </div>
-          <pre><code>{{str1}}</code></pre>
+          <pre><code>{{str2}}</code></pre>
         </div>
       </div>
       <div class="lock-code" @click="showCode(2)" ref="xxx">
@@ -176,7 +155,7 @@
           <div class="code-user-desc">
             这里是组件重要属性的解释
           </div>
-          <pre><code>{{str}}</code></pre>
+          <pre><code>{{str3}}</code></pre>
         </div>
       </div>
       <div class="lock-code" @click="showCode(3)" ref="xxx">
@@ -201,7 +180,7 @@
           <div class="code-user-desc">
             这里是组件重要属性的解释
           </div>
-          <pre><code>{{str}}</code></pre>
+          <pre><code>{{str4}}</code></pre>
         </div>
       </div>
       <div class="lock-code" @click="showCode(4)" ref="xxx">
@@ -217,15 +196,15 @@
     <div class="component-wrapper">
       <div class="component-wrapper-demo">
         <div>
-          <g-button :ripples="true">默认按钮</g-button>
+          <g-button ripples>涟漪按钮</g-button>
         </div>
       </div>
       <div class="code-content" style="height: 0;">
         <div class="code-content-height">
           <div class="code-user-desc">
-            这里是组件重要属性的解释
+            点击按钮的时候出现涟漪的效果 "ripples"属性既可以控制
           </div>
-          <pre><code>{{str}}</code></pre>
+          <pre><code>{{str5}}</code></pre>
         </div>
       </div>
       <div class="lock-code" @click="showCode(5)" ref="xxx">
@@ -257,17 +236,60 @@
         lodding: false,
         lodding1: false,
         lodding2: false,
-        str:`<g-button>默认按钮</g-button>
-             <g-button type="primary">主要按钮</g-button>
-             <g-button type="success">成功按钮</g-button>`.replace(/\t+| +/g, '').trim(),
-        str1: `<g-button>默认按钮</g-button>
-             <g-button type="primary">主要按钮</g-button>
-             <g-button type="primary">主要按钮</g-button>
-             <g-button type="primary">主要按钮</g-button>
-             <g-button type="primary">主要按钮</g-button>
-             <g-button type="primary">主要按钮</g-button>
-             <g-button type="primary">主要按钮</g-button>
-             <g-button type="success">成功按钮</g-button>`.replace(/\t+| +/g, '').trim(),
+        str: `
+            <div>
+                <g-button>默认按钮</g-button>
+                <g-button type="primary">主要按钮</g-button>
+                <g-button type="success">成功按钮</g-button>
+                <g-button type="info">信息按钮</g-button>
+                <g-button type="warning">警告按钮</g-button>
+                <g-button type="danger">危险按钮</g-button>
+            </div>
+            <div style="margin: 20px 0">
+              <g-button>朴素按钮</g-button>
+              <g-button type="primary">主要按钮</g-button>
+              <g-button type="success">成功按钮</g-button>
+              <g-button type="info">信息按钮</g-button>
+              <g-button type="warning">警告按钮</g-button>
+              <g-button type="danger">危险按钮</g-button>
+            </div>
+            <div style="margin: 20px 0">
+              <g-button>圆形按钮</g-button>
+              <g-button type="primary">主要按钮</g-button>
+              <g-button type="success">成功按钮</g-button>
+              <g-button type="info">信息按钮</g-button>
+              <g-button type="warning">警告按钮</g-button>
+              <g-button type="danger">危险按钮</g-button>
+            </div>`.replace(/^\s*/gm, '').trim(),
+        str1: `<g-button disabled>禁用按钮</g-button>`.replace(/^\s*/gm, '').trim(),
+        str2: `
+        <div>
+          <g-button>默认按钮</g-button>
+          <g-button type="primary" icon="setting" position="right">主要按钮</g-button>
+          <g-button type="success" icon="good">成功按钮</g-button>
+          <g-button type="info" icon="del">删除</g-button>
+          <g-button type="warning" icon="information">警告按钮</g-button>
+          <g-button type="danger" icon="error">危险按钮</g-button>
+        </div>
+        <div style="margin: 20px 0">
+          <g-button>朴素按钮</g-button>
+          <g-button plain type="primary" icon="setting">主要按钮</g-button>
+          <g-button plain type="success" icon="good">成功按钮</g-button>
+          <g-button plain type="info" icon="del">删除</g-button>
+          <g-button plain type="warning" icon="information">警告按钮</g-button>
+          <g-button plain type="danger" icon="error">危险按钮</g-button>
+        </div>
+        <div style="margin: 20px 0">
+          <g-button round>圆形按钮</g-button>
+          <g-button round type="primary" icon="setting">主要按钮</g-button>
+          <g-button round type="success" icon="good">成功按钮</g-button>
+          <g-button round type="info" icon="del">删除</g-button>
+          <g-button round type="warning" icon="information">警告按钮</g-button>
+          <g-button round type="danger" icon="error">危险按钮</g-button>
+        </div>`.replace(/^\s*/gm, '').trim(),
+        str3: ``,
+        str4: ``,
+        str5: `<g-button ripples>涟漪按钮</g-button>`,
       }
     },
     methods:{
