@@ -461,7 +461,7 @@
     <property name="SearchEverywhereHistoryKey" value="vcs&#9;FILE&#9;file://C:/Users/code/gulu-demo/.idea/vcs.xml&#10;reformat&#9;ACTION&#9;ReformatWithPrettierAction" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/.vuepress/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
