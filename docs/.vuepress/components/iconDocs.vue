@@ -1,22 +1,24 @@
 <template>
     <div class="g-icon-docs">
-      <h2>创建组件文档模板</h2>
-      <p>组件描述</p>
-      <h3>组件功能名字</h3>
-      <p>组件功能描述</p>
+      <h2>Icon图标组件</h2>
+      <p>常用的图标</p>
+      <p>可以引入iconfont上面所有的图标请参照<a target="_blank"
+                                  href="https://www.iconfont.cn/help/detail?spm=a313x.7781069.1998910419.16&helptype=code">iconfont</a>上面代码使用
+      </p>
       <div class="component-wrapper">
         <div class="component-wrapper-demo">
           <div class="icon-box-wrapper">
-            <div class="icon-wrapper" v-for="(item) in 30">
-              <g-icon icon="setting"></g-icon>
-              <span class="desc">设置</span>
+            <div class="icon-wrapper" v-for="(item) in iconArr">
+              <g-icon :icon="item.icon"></g-icon>
+              <span class="desc">{{item.icon}}</span>
             </div>
           </div>
         </div>
         <div class="code-content" style="height: 0;">
           <div class="code-content-height">
             <div class="code-user-desc">
-              组件描述说明
+              "icon"可以设置自己想要的图标，也可以自己引入iconfont的图标但是前缀要以"i-"开头就可以使用本组件引入所有的iconfont上的图标在自己的项目中了<br>
+              如果想要改变图标的颜色请给组件设置color属性即可,自己引入的图标需要批量去色后就可以随便更换颜色了，以便于在代码中更好地复用
             </div>
             <pre><code>{{str}}</code></pre>
           </div>
@@ -35,50 +37,109 @@
 
 <script>
   import GIcon from '../../../src/icon'
+  import mixin from '../mixin'
   export default {
     name: 'g-icon-docs',
+    mixins: [mixin],
     components: {
       GIcon,
     },
     data () {
       return {
-        //每一个区域的高度
-        codeParent: [],
-        codeHeightArr: [],
-        //每个区域的显示状态
-        isShow: [],
-        str: `组件代码 code`,
+        iconArr: [
+          {
+            icon: 'codedown',
+          },
+          {
+            icon: 'codeup',
+          },
+          {
+            icon: 'setting',
+          },
+          {
+            icon: 'list',
+          },
+          {
+            icon: 'del',
+          },
+          {
+            icon: 'good',
+          },
+          {
+            icon: 'information',
+          },
+          {
+            icon: 'error',
+          },
+          {
+            icon: 'left',
+          },
+          {
+            icon: 'right',
+          },
+          {
+            icon: 'down',
+          },
+          {
+            icon: 'up',
+          },
+          {
+            icon: 'help',
+          },
+          {
+            icon: 'download',
+          },
+          {
+            icon: 'lodding',
+          },
+          {
+            icon: 'setting',
+          },
+          {
+            icon: 'add',
+          },
+          {
+            icon: 'jd',
+          },
+          {
+            icon: 'food',
+          },
+          {
+            icon: 'time',
+          },
+          {
+            icon: 'iphone',
+          },
+          {
+            icon: 'serch',
+          },
+          {
+            icon: 'phone',
+          },
+          {
+            icon: 'video',
+          },
+          {
+            icon: 'mobile',
+          },
+          {
+            icon: 'reduce',
+          },
+          {
+            icon: 'zhifubao',
+          },
+          {
+            icon: 'code',
+          },
+          {
+            icon: 'weixin',
+          },
+          {
+            icon: 'star',
+          },
+        ],
+        str: `<g-icon icon="setting"></g-icon>`,
       }
-    },
-    methods: {
-      //根据子元素的高度 设置代码区域父元素的高度
-      showCode (index) {
-        this.$set(this.isShow, index, !this.isShow[index])
-        this.$nextTick(() => {
-          if (this.isShow[index] === true) {
-            this.codeParent[index].style.height = this.codeHeightArr[index] + 'px'
-          } else {
-            this.codeParent[index].style.height = 0
-          }
-        })
-      },
-      //得到所有代码区域的高度
-      getCodesHeight () {
-        const arr = document.getElementsByClassName('code-content-height')
-        this.codeParent = document.getElementsByClassName('code-content')
-        const arrLength = arr.length
-        for (let i = 0; i < arrLength; i++) {
-          this.codeHeightArr.push(arr[i].getBoundingClientRect().height)
-          this.isShow.push(false)
-        }
-        console.log(this.codeParent)
-      },
-    },
-    mounted () {
-      //异步获取当前组件内部 code区域的高度 以便于给点击的时候使用
-      this.$nextTick(() => {
-        this.getCodesHeight()
-      })
     },
   }
 </script>

@@ -64,7 +64,6 @@ export default {
     'g-icon': Icon
   },
   mounted () {
-    console.log(this.$slots)
     if (this.ripples) {
       this.$el.classList.add('ripples')
     }
