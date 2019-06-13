@@ -1,12 +1,13 @@
 <template>
-  <div class="demo">
-    <h2>创建组件文档模板</h2>
-    <p>组件描述</p>
-    <h3>组件功能名字</h3>
-    <p>组件功能描述</p>
+  <div class="inputDocs">
+    <h2>Input输入框组件</h2>
+    <p>网页上面让用户提交信息的组件</p>
+    <h3>双向绑定</h3>
+    <p>用户输入的值变化的同时，数据也发生了变化</p>
     <div class="component-wrapper">
       <div class="component-wrapper-demo">
-        组件展示位置
+        <g-input v-model="value" placeholder="请输入内容"></g-input>
+        <span style="margin-left: 10px">结果是{{value}}</span>
       </div>
       <div class="code-content" style="height: 0;">
         <div class="code-content-height">
@@ -30,16 +31,26 @@
 
 <script>
   import GIcon from '../../../src/icon'
+  import GInput from '../../../src/g-input'
   import mixin from '../mixin'
+
   export default {
-    name: 'demo',
+    name: 'inputDocs',
     mixins: [mixin],
     components: {
       GIcon,
+      GInput,
+    },
+    data () {
+      return {
+        value: '',
+        str: ``,
+      }
     },
   }
 </script>
 
 <style lang="scss" scoped>
-
+  .inputDocs {
+  }
 </style>

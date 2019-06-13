@@ -5,6 +5,7 @@
                    :placeholder="placeholder" :readonly="readonly"
                    :rule="rule"
                    :type="type"
+                   @input="$emit('input',$event.target.value)"
                    :value="value"
                    class="input">
             <g-icon :class="{fillerr:err}" class="blurafter" @click="clearValue()" icon="del" v-if="err"></g-icon>
