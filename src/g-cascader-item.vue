@@ -80,9 +80,11 @@
         //让父组件来更改数据
         let node = item
         console.log(node)
+        //要找到点的这个node 在总节点里面的层级找到了就可以造出新的options 然后Emit出去
         let callBack = (result) => {
           let options = JSON.parse(JSON.stringify(this.options))
-          options[0].children = JSON.parse(JSON.stringify(result))
+          options[this.level].children = JSON.parse(JSON.stringify(result))
+          console.log(options)
           this.$emit('update:options', options)
         }
         if (this.loadData) {
