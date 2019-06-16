@@ -25,10 +25,11 @@
     {{selectData && selectData[0] && selectData[0].name || '空'}}
     {{selectData && selectData[1] && selectData[1].name || '空'}}
     {{selectData && selectData[2] && selectData[2].name || '空'}}
-    <g-cascader :options="options"
-                :load-data="true"
-                :after-get-data="getNextLevelData"
-                :selected.sync="selectData">
+    <g-cascader
+      :options.sync="options"
+      :load-data="true"
+      :after-get-data="getNextLevelData"
+      :selected.sync="selectData">
       <g-input placeholder="请选择住址"></g-input>
     </g-cascader>
 
@@ -42,6 +43,26 @@
 </template>
 
 <script>
+  //回调的形式
+  // const nextLevelData =  (node,callBack)=>{
+  //   setTimeout(()=>{
+  //     let result = db.filter((value, index)=>{
+  //       return node.id === value.parent_id
+  //     })
+  //     callBack(result)
+  //   },3000)
+  // }
+
+  const nextLevelData = (node) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        let result = db.filter((value, index) => {
+          return node.id === value.parent_id
+        })
+        resolve(result)
+      }, 300)
+    })
+  }
   import db from './db'
   import GCarouselItem from './g-carousel-item'
 export default {
@@ -90,12 +111,16 @@ export default {
     }
   },
   methods: {
-    getNextLevelData () {
-      const arr = db.filter((value, index) => {
-        //好像必须找出当前选中的哪一级
-        return item.id == value.parent_id
+    //告诉用户当前
+    getNextLevelData (node, callBack) {
+      //
+      nextLevelData(node).then((result) => {
+        //框架主动帮用户把当前节点的子节点插入在这一级的children下面
+        callBack(result)
       })
-      return arr
+        .catch((error) => {
+          console.log(error)
+        })
     },
   }
 }

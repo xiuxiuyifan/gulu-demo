@@ -13,6 +13,7 @@
         :selected="selected"
         :load-data="loadData"
         :after-get-data="afterGetData"
+        v-on:update:options="$emit('update:options',$event)"
         v-on:update:selected="$emit('update:selected',$event)">
       </g-cascader-item>
     </div>
@@ -56,41 +57,38 @@
       }
     },
     mounted () {
-      const arr = db.filter((value, index) => {
-        return value.parent_id == 0
-      })
-      console.log(JSON.stringify(arr))
+
     },
     computed: {
-      rightSelected: {
-        get () {
+      rightSelected () {
           //如果左边选中了右边的值就是
-          if (this.selected[this.level] && this.selected[this.level].children &&
-            this.selected[this.level].children.length > 0) {
-            return this.selected[this.level].children
+        if (this.options[this.level] && this.options[this.level].children &&
+          this.options[this.level].children.length > 0) {
+          return this.options[this.level].children
           } else {
             return
-          }
-        },
-        set (value) {
-          this.leftSelected = value
         }
       },
     },
     methods: {
       clickSelected (item) {
-        console.log(item)
         //深拷贝一下
         let obj = JSON.parse(JSON.stringify(this.selected))
         obj[this.level] = item
         //把当前 选中的下一层元素全部删除掉
         obj.splice(this.level + 1)
         //让父组件来更改数据
+        let node = item
+        console.log(node)
+        let callBack = (result) => {
+          let options = JSON.parse(JSON.stringify(this.options))
+          options[0].children = JSON.parse(JSON.stringify(result))
+          this.$emit('update:options', options)
+        }
         if (this.loadData) {
-          obj[this.level].children = this.afterGetData()
+          this.afterGetData(node, callBack)
         }
         this.$emit('update:selected', obj)
-        console.log(arr)
       },
     },
   }
