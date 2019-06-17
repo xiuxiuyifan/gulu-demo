@@ -10,8 +10,8 @@
           :selected="selected"
           :load-data="loadData"
           :after-get-data="afterGetData"
-          v-on:update:options="$emit('update:options',$event)"
-          v-on:update:selected="$emit('update:selected',$event)">
+          @update:options="$emit('update:options',$event)"
+          @update:selected="$emit('update:selected',$event)">
         </g-cascader-item>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="g-cascader-item">
     <div class="left">
-      <div class="item-world" @click="clickSelected(item)" v-for="(item,index) in options" :key="index">
+      <div class="item-world" @click="clickSelected(item,index)" v-for="(item,index) in options" :key="index">
         {{item.name}}
         <g-icon icon="right" class="down-icon"></g-icon>
       </div>
@@ -11,10 +11,11 @@
         :options="rightSelected"
         :level="level + 1"
         :selected="selected"
+        :item="rightSelected"
         :load-data="loadData"
         :after-get-data="afterGetData"
-        v-on:update:options="$emit('update:options',$event)"
-        v-on:update:selected="$emit('update:selected',$event)">
+        @update:options="$emit('update:options',$event)"
+        @update:selected="$emit('update:selected',$event)">
       </g-cascader-item>
     </div>
   </div>
@@ -27,6 +28,9 @@
   export default {
     name: 'g-cascader-item',
     props: {
+      item: {
+        type: Array,
+      },
       options: {
         type: Array,
       },
@@ -62,16 +66,16 @@
     computed: {
       rightSelected () {
           //如果左边选中了右边的值就是
-        if (this.options[this.level] && this.options[this.level].children &&
-          this.options[this.level].children.length > 0) {
-          return this.options[this.level].children
+        if (this.selected[this.level] && this.selected[this.level].children &&
+          this.selected[this.level].children.length > 0) {
+          return this.selected[this.level].children
           } else {
             return
         }
       },
     },
     methods: {
-      clickSelected (item) {
+      clickSelected (item, index) {
         //深拷贝一下
         let obj = JSON.parse(JSON.stringify(this.selected))
         obj[this.level] = item
@@ -79,13 +83,32 @@
         obj.splice(this.level + 1)
         //让父组件来更改数据
         let node = item
-        console.log(node)
         //要找到点的这个node 在总节点里面的层级找到了就可以造出新的options 然后Emit出去
         let callBack = (result) => {
+          console.log(node.id)
+          console.log(JSON.stringify(this.options))
+
           let options = JSON.parse(JSON.stringify(this.options))
-          options[this.level].children = JSON.parse(JSON.stringify(result))
+          //简单的先找一下
+          console.log(item.id)
+          let index = 0
+          for (let i = 0; i < this.options.length; i++) {
+            if (options[i].id === item.id) {
+              index = options[i].id === item.id ? i : undefined
+              break
+            }
+          }
+          console.log('index' + index)
+          options[index].children = JSON.parse(JSON.stringify(result))
+          console.log('我是options')
           console.log(options)
           this.$emit('update:options', options)
+          // console.log('选择之后')
+          // console.log(this.options)
+          // setTimeout(()=>{
+          //   console.log('更新完成')
+          //   console.log(this.options)
+          // },100)
         }
         if (this.loadData) {
           this.afterGetData(node, callBack)
