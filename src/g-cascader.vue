@@ -9,6 +9,7 @@
           :options="options"
           :selected="selected"
           :load-data="loadData"
+          :item="options"
           :after-get-data="afterGetData"
           @update:options="$emit('update:options',$event)"
           @update:selected="$emit('update:selected',$event)">
