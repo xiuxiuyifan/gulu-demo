@@ -8,13 +8,11 @@
     </div>
     <div class="right" v-if="rightSelected">
       <g-cascader-item
-        :after-get-data="afterGetData"
         :item="rightSelected"
         :level="level + 1"
         :load-data="loadData"
         :options="rightSelected"
         :selected="selected"
-        @update:options="$emit('update:options',$event)"
         @update:selected="$emit('update:selected',$event)">
       </g-cascader-item>
     </div>
@@ -48,9 +46,6 @@
         type: Boolean,
         default: false,
       },
-      afterGetData: {
-        type: Function,
-      },
     },
     data () {
       return {
@@ -69,7 +64,6 @@
         if (this.selected && this.selected[this.level]) {
           //再依赖当前的item 进行计算
           let result = this.item.filter((item) => (item.id === this.selected[this.level].id))[0]
-          console.log(result)
           return result.children && result.children.length > 0 ? result.children : undefined
         } else {
           return
@@ -78,6 +72,8 @@
     },
     beforeUpdate () {
       // console.log(this.item)
+      console.log('数据更新了')
+      console.log(this.options)
     },
     methods: {
       clickSelected (item, index) {
@@ -86,26 +82,6 @@
         obj[this.level] = item
         //把当前 选中的下一层元素全部删除掉
         obj.splice(this.level + 1)
-        //让父组件来更改数据
-        let node = item
-        //要找到点的这个node 在总节点里面的层级找到了就可以造出新的options 然后Emit出去
-        let callBack = (result) => {
-
-          let options = JSON.parse(JSON.stringify(this.options))
-          //简单的先找一下
-          let index = 0
-          for (let i = 0; i < this.options.length; i++) {
-            if (options[i].id === item.id) {
-              index = options[i].id === item.id ? i : undefined
-              break
-            }
-          }
-          options[index].children = JSON.parse(JSON.stringify(result))
-          this.$emit('update:options', options)
-        }
-        if (this.loadData) {
-          this.afterGetData(node, callBack)
-        }
         this.$emit('update:selected', obj)
       },
     },

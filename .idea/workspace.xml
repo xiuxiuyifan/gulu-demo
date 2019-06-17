@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="实现动态加载级联选择器内容">
+    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="computed 不及时更新是因为他依赖的两个属性没有变，解决办法是让他在计算的时候再多依赖一个属性">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/g-cascader-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-cascader-item.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/g-cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-cascader.vue" afterDir="false" />
     </list>
@@ -23,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="46">
+              <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -41,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-69">
-              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+            <state relative-caret-position="46">
+              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -50,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="851">
-              <caret line="37" column="14" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="14" />
+            <state relative-caret-position="506">
+              <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -77,7 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>class=&quot;g-cascader-item&quot;</find>
       <find>xxxx</find>
       <find>value</find>
       <find>div</find>
@@ -105,8 +105,9 @@
       <find>afterGetData</find>
       <find>showCascader</find>
       <find>rightSelected</find>
-      <find>getNextLevelData</find>
       <find>clickSelected</find>
+      <find>getNextLevelData</find>
+      <find>console</find>
     </findStrings>
     <replaceStrings>
       <replace>el</replace>
@@ -187,8 +188,8 @@
         <option value="$PROJECT_DIR$/docs/views/guluDocs/input.md" />
         <option value="$PROJECT_DIR$/src/g-input.vue" />
         <option value="$PROJECT_DIR$/docs/.vuepress/components/inputDocs.vue" />
-        <option value="$PROJECT_DIR$/src/g-cascader.vue" />
         <option value="$PROJECT_DIR$/src/g-cascader-item.vue" />
+        <option value="$PROJECT_DIR$/src/g-cascader.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
       </list>
     </option>
@@ -406,21 +407,7 @@
       <workItem from="1560428523066" duration="6223000" />
       <workItem from="1560513781015" duration="4000" />
       <workItem from="1560685262722" duration="10502000" />
-      <workItem from="1560773807648" duration="6561000" />
-    </task>
-    <task id="LOCAL-00004" summary="给lodding添加动效">
-      <created>1550665420255</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1550665420255</updated>
-    </task>
-    <task id="LOCAL-00005" summary="添加自动化单元测试">
-      <created>1550760248255</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1550760248255</updated>
+      <workItem from="1560773807648" duration="10881000" />
     </task>
     <task id="LOCAL-00006" summary="添加自动化单元测试">
       <created>1550983029272</created>
@@ -751,11 +738,25 @@
       <option name="project" value="LOCAL" />
       <updated>1560698756536</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="取selected的时候发现数据不及时更新的问题">
+      <created>1560785728720</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1560785728720</updated>
+    </task>
+    <task id="LOCAL-00054" summary="computed 不及时更新是因为他依赖的两个属性没有变，解决办法是让他在计算的时候再多依赖一个属性">
+      <created>1560787312882</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1560787312882</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="532628000" />
+    <option name="totallyTimeSpent" value="536948000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -800,8 +801,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="支持 在popover 弹出层里面添加按钮并且关闭popover层" />
-    <MESSAGE value="新增collapse组件" />
     <MESSAGE value="collapse 組件基本功能完成" />
     <MESSAGE value="构建工具改为vue cli3 collapse 组件功能完成等待写测试用例" />
     <MESSAGE value="开始构建级联选择器组件  并且搭建yong vuepress搭建自己的官网文档" />
@@ -825,7 +824,9 @@
     <MESSAGE value="添加icon 组件的文档信息" />
     <MESSAGE value="完成icon组建的文档" />
     <MESSAGE value="实现动态加载级联选择器内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现动态加载级联选择器内容" />
+    <MESSAGE value="取selected的时候发现数据不及时更新的问题" />
+    <MESSAGE value="computed 不及时更新是因为他依赖的两个属性没有变，解决办法是让他在计算的时候再多依赖一个属性" />
+    <option name="LAST_COMMIT_MESSAGE" value="computed 不及时更新是因为他依赖的两个属性没有变，解决办法是让他在计算的时候再多依赖一个属性" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1218,24 +1219,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
+    <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="37" column="14" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="14" />
+        <state relative-caret-position="46">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
+    <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+        <state relative-caret-position="506">
+          <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="46">
+          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
         </state>
       </provider>
     </entry>

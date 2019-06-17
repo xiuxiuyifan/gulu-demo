@@ -25,8 +25,10 @@
     {{selectData && selectData[0] && selectData[0].name || '空'}}
     {{selectData && selectData[1] && selectData[1].name || '空'}}
     {{selectData && selectData[2] && selectData[2].name || '空'}}
+    {{options}}
     <g-cascader
-      :options.sync="options"
+      :options="options"
+      @update:options="xxxxx"
       :load-data="true"
       :after-get-data="getNextLevelData"
       :selected.sync="selectData">
@@ -55,12 +57,12 @@
 
   const nextLevelData = (node) => {
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
+      // setTimeout(() => {
         let result = db.filter((value, index) => {
           return node.id === value.parent_id
         })
         resolve(result)
-      }, 300)
+      // }, 300)
     })
   }
   import db from './db'
@@ -111,6 +113,10 @@ export default {
     }
   },
   methods: {
+    xxxxx (value) {
+      this.options = value
+      console.log('收到更新')
+    },
     //告诉用户当前
     getNextLevelData (node, callBack) {
       //

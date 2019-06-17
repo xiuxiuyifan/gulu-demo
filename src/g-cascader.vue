@@ -11,8 +11,7 @@
           :load-data="loadData"
           :item="options"
           :after-get-data="afterGetData"
-          @update:options="$emit('update:options',$event)"
-          @update:selected="$emit('update:selected',$event)">
+          @update:selected="xxxx">
         </g-cascader-item>
       </div>
     </div>
@@ -64,6 +63,35 @@
       },
       showCascader () {
         this.isShow = !this.isShow
+      },
+      xxxx (newSelected) {
+        this.$emit('update:selected', newSelected)
+        //让父组件来更改数据
+        //选中数组的最后一个 就是当前选中的那个数据
+        let node = newSelected[newSelected.length - 1]
+        //要找到点的这个node 在总节点里面的层级找到了就可以造出新的options 然后Emit出去
+        let callBack = (result) => {
+          console.log('选择结果')
+          console.log(result)
+          let options = JSON.parse(JSON.stringify(this.options))
+          //简单的先找一下
+          let index = 0
+          for (let i = 0; i < this.options.length; i++) {
+            if (options[i].id === node.id) {
+              index = options[i].id === node.id ? i : undefined
+              break
+            }
+          }
+          options[index].children = JSON.parse(JSON.stringify(result))
+          this.$emit('update:options', options)
+          setTimeout(() => {
+            console.log('查找结果')
+            console.log(JSON.stringify(this.options))
+          }, 0)
+        }
+        if (this.loadData) {
+          this.afterGetData(node, callBack)
+        }
       },
     }
   };
