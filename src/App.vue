@@ -26,8 +26,7 @@
     {{selectData && selectData[1] && selectData[1].name || '空'}}
     {{selectData && selectData[2] && selectData[2].name || '空'}}
     <g-cascader
-      :options="options"
-      @update:options="xxxxx"
+      :options.sync="options"
       :load-data="true"
       :after-get-data="getNextLevelData"
       :selected.sync="selectData">
@@ -112,10 +111,6 @@ export default {
     }
   },
   methods: {
-    xxxxx (value) {
-      this.options = value
-      console.log('收到更新')
-    },
     //告诉用户当前
     getNextLevelData (node, callBack) {
       //

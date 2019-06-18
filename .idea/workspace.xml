@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="发现一个大大的Bug 子组件里面emit数据之后拿到的这个值依然是原来的值，新的值只有在beforeUpDate钩子或者延迟（异步）之后才才可以拿到">
+    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="之前的在子组件里面更新父组件的值的时候，当一更新完马上去获取这个值拿到的还是旧的因为这个$emit可能是异步的&#10;添加根据当前选择的id在数据源里面找到这一项的算法">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/g-cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-cascader.vue" afterDir="false" />
@@ -20,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="322">
+              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -41,17 +41,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
+            <state relative-caret-position="-874">
               <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
+            <state relative-caret-position="541">
+              <caret line="88" column="15" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -77,7 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>xxxx</find>
       <find>value</find>
       <find>div</find>
       <find>clickSelect</find>
@@ -105,8 +104,9 @@
       <find>rightSelected</find>
       <find>clickSelected</find>
       <find>getNextLevelData</find>
-      <find>console</find>
       <find>afterGetData</find>
+      <find>console</find>
+      <find>xxxxx</find>
     </findStrings>
     <replaceStrings>
       <replace>el</replace>
@@ -188,8 +188,8 @@
         <option value="$PROJECT_DIR$/src/g-input.vue" />
         <option value="$PROJECT_DIR$/docs/.vuepress/components/inputDocs.vue" />
         <option value="$PROJECT_DIR$/src/g-cascader-item.vue" />
-        <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/g-cascader.vue" />
+        <option value="$PROJECT_DIR$/src/App.vue" />
       </list>
     </option>
   </component>
@@ -407,14 +407,7 @@
       <workItem from="1560513781015" duration="4000" />
       <workItem from="1560685262722" duration="10502000" />
       <workItem from="1560773807648" duration="11195000" />
-      <workItem from="1560859038358" duration="3314000" />
-    </task>
-    <task id="LOCAL-00007" summary="重命名.travis.yml">
-      <created>1550983321385</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1550983321385</updated>
+      <workItem from="1560859038358" duration="3894000" />
     </task>
     <task id="LOCAL-00008" summary="添加input组件">
       <created>1551606213220</created>
@@ -752,11 +745,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560790273975</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="之前的在子组件里面更新父组件的值的时候，当一更新完马上去获取这个值拿到的还是旧的因为这个$emit可能是异步的&#10;添加根据当前选择的id在数据源里面找到这一项的算法">
+      <created>1560872654689</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1560872654690</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="540576000" />
+    <option name="totallyTimeSpent" value="541156000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -801,7 +801,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="构建工具改为vue cli3 collapse 组件功能完成等待写测试用例" />
     <MESSAGE value="开始构建级联选择器组件  并且搭建yong vuepress搭建自己的官网文档" />
     <MESSAGE value="级联选择器组件简单功能实现，可以实现选择下一级。递归功能也实现了，但是不知道怎样将其结合起来。" />
     <MESSAGE value="想办法改成递归渲染的形式" />
@@ -826,7 +825,8 @@
     <MESSAGE value="取selected的时候发现数据不及时更新的问题" />
     <MESSAGE value="computed 不及时更新是因为他依赖的两个属性没有变，解决办法是让他在计算的时候再多依赖一个属性" />
     <MESSAGE value="发现一个大大的Bug 子组件里面emit数据之后拿到的这个值依然是原来的值，新的值只有在beforeUpDate钩子或者延迟（异步）之后才才可以拿到" />
-    <option name="LAST_COMMIT_MESSAGE" value="发现一个大大的Bug 子组件里面emit数据之后拿到的这个值依然是原来的值，新的值只有在beforeUpDate钩子或者延迟（异步）之后才才可以拿到" />
+    <MESSAGE value="之前的在子组件里面更新父组件的值的时候，当一更新完马上去获取这个值拿到的还是旧的因为这个$emit可能是异步的&#10;添加根据当前选择的id在数据源里面找到这一项的算法" />
+    <option name="LAST_COMMIT_MESSAGE" value="之前的在子组件里面更新父组件的值的时候，当一更新完马上去获取这个值拿到的还是旧的因为这个$emit可能是异步的&#10;添加根据当前选择的id在数据源里面找到这一项的算法" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1212,13 +1212,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/http.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -1226,17 +1219,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.vue">
+    <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="541">
+          <caret line="88" column="15" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
+    <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
+        <state relative-caret-position="-874">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
         </state>
       </provider>
     </entry>

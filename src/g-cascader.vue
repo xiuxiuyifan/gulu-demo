@@ -59,7 +59,6 @@
       clickSelect (item) {
         if (item) {
           this.rightContent = item
-          console.log(this.rightContent)
         }
       },
       showCascader () {
@@ -70,11 +69,8 @@
         //让父组件来更改数据
         //选中数组的最后一个 就是当前选中的那个数据
         let node = newSelected[newSelected.length - 1]
-        console.log('当前选中的结果' + node.id)
         //要找到点的这个node 在总节点里面的层级找到了就可以造出新的options 然后Emit出去
         let callBack = (result) => {
-          console.log('选择结果')
-          console.log(result)
           let options = JSON.parse(JSON.stringify(this.options))
           let currentselect = null
           //既然是找东西，找到了就return 找不到就不要管，继续找
@@ -94,12 +90,7 @@
             }
           }
           findOptions(node.id, options)
-          console.log('添加children之前')
-          console.log(currentselect)
           currentselect.children = result
-          console.log('当前选中的哪一项')
-          console.log(currentselect)
-          console.log(options)
           this.$emit('update:options', options)
         }
         if (this.loadData) {
