@@ -25,7 +25,6 @@
     {{selectData && selectData[0] && selectData[0].name || '空'}}
     {{selectData && selectData[1] && selectData[1].name || '空'}}
     {{selectData && selectData[2] && selectData[2].name || '空'}}
-    {{options}}
     <g-cascader
       :options="options"
       @update:options="xxxxx"

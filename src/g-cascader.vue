@@ -1,16 +1,16 @@
 <template>
   <div class="g-cascader">
-    <div class="top-wrapper" @click="showCascader()">
+    <div @click="showCascader()" class="top-wrapper">
       <slot></slot>
     </div>
     <div class="down-wrapper" v-if="isShow">
       <div>
         <g-cascader-item
+          :after-get-data="afterGetData"
+          :item="options"
+          :load-data="loadData"
           :options="options"
           :selected="selected"
-          :load-data="loadData"
-          :item="options"
-          :after-get-data="afterGetData"
           @update:selected="xxxx">
         </g-cascader-item>
       </div>
@@ -21,6 +21,7 @@
 <script>
   //右边展示的就是当前点击元素的子元素而已
   import GCascaderItem from './g-cascader-item'
+
   export default {
     name: 'g-cascader',
     components: {
@@ -69,38 +70,51 @@
         //让父组件来更改数据
         //选中数组的最后一个 就是当前选中的那个数据
         let node = newSelected[newSelected.length - 1]
+        console.log('当前选中的结果' + node.id)
         //要找到点的这个node 在总节点里面的层级找到了就可以造出新的options 然后Emit出去
         let callBack = (result) => {
           console.log('选择结果')
           console.log(result)
           let options = JSON.parse(JSON.stringify(this.options))
-          //简单的先找一下
-          let index = 0
-          for (let i = 0; i < this.options.length; i++) {
-            if (options[i].id === node.id) {
-              index = options[i].id === node.id ? i : undefined
-              break
+          let currentselect = null
+          //既然是找东西，找到了就return 找不到就不要管，继续找
+          //深度优先 如果发现有儿子就马上去搜索儿子里面有没有符合的情况
+          //结束的条件是当前这一项没有儿子的时候就停止了
+
+          //有儿子就搜素儿子，没有儿子也得把自己遍历完
+          const findOptions = (id, data) => {
+            for (let i = 0; i < data.length; i++) {
+              if (id === data[i].id) {
+                currentselect = data[i]
+                return
+              }
+              if (data[i].children && data[i].children.length > 0) {
+                findOptions(id, data[i].children)
+              }
             }
           }
-          options[index].children = JSON.parse(JSON.stringify(result))
+          findOptions(node.id, options)
+          console.log('添加children之前')
+          console.log(currentselect)
+          currentselect.children = result
+          console.log('当前选中的哪一项')
+          console.log(currentselect)
+          console.log(options)
           this.$emit('update:options', options)
-          setTimeout(() => {
-            console.log('查找结果')
-            console.log(JSON.stringify(this.options))
-          }, 0)
         }
         if (this.loadData) {
           this.afterGetData(node, callBack)
         }
       },
-    }
-  };
+    },
+  }
 </script>
 
 <style lang="scss" scoped>
   .g-cascader {
     .top-wrapper {
     }
+
     .down-wrapper {
       display: inline-block;
       vertical-align: top;
