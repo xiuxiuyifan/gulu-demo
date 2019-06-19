@@ -1,13 +1,15 @@
 <template>
     <div class="g-input">
         <div class="g-input-content">
-            <input :class="{'disabled':disabled,'error':err}" :disabled="disabled"
-                   :placeholder="placeholder" :readonly="readonly"
-                   :rule="rule"
-                   :type="type"
-                   @input="$emit('input',$event.target.value)"
-                   :value="value"
-                   class="input">
+          <input :class="{'disabled':disabled,'error':err}"
+                 :disabled="disabled"
+                 :placeholder="placeholder"
+                 :readonly="readonly"
+                 :rule="rule"
+                 :type="type"
+                 @input="$emit('input',$event.target.value)"
+                 :value="value"
+                 class="input">
             <g-icon :class="{fillerr:err}" class="blurafter" @click="clearValue()" icon="del" v-if="err"></g-icon>
         </div>
         <div v-if="err">

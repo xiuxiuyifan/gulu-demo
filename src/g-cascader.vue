@@ -1,6 +1,7 @@
 <template>
   <div class="g-cascader">
     <div @click="showCascader()" class="top-wrapper">
+      <g-input placeholder="请选择住址" v-model="result"></g-input>
       <slot></slot>
     </div>
     <div class="down-wrapper" v-if="isShow">
@@ -11,7 +12,7 @@
           :load-data="loadData"
           :options="options"
           :selected="selected"
-          @update:selected="xxxx">
+          @update:selected="updateChange">
         </g-cascader-item>
       </div>
     </div>
@@ -55,6 +56,18 @@
         rightContent: null,
       }
     },
+    computed: {
+      result: {
+        get () {
+          let data = []
+          data = this.selected.map((item, index) => item.name)
+          return data.join('/')
+        },
+        set () {
+
+        },
+      },
+    },
     methods: {
       clickSelect (item) {
         if (item) {
@@ -64,7 +77,7 @@
       showCascader () {
         this.isShow = !this.isShow
       },
-      xxxx (newSelected) {
+      updateChange (newSelected) {
         this.$emit('update:selected', newSelected)
         //让父组件来更改数据
         //选中数组的最后一个 就是当前选中的那个数据

@@ -72,14 +72,13 @@
     },
     beforeUpdate () {
       // console.log(this.item)
-      console.log('数据更新了')
-      console.log(this.options)
     },
     methods: {
       clickSelected (item, index) {
+        console.log(item)
         //深拷贝一下
         let obj = JSON.parse(JSON.stringify(this.selected))
-        obj[this.level] = item
+        obj[this.level] = Object.assign({}, { id: item.id, name: item.name })
         //把当前 选中的下一层元素全部删除掉
         obj.splice(this.level + 1)
         this.$emit('update:selected', obj)
