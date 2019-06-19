@@ -68,6 +68,9 @@
         },
       },
     },
+    beforeUpdate () {
+      console.log(JSON.stringify(this.options))
+    },
     methods: {
       clickSelect (item) {
         if (item) {

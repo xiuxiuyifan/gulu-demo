@@ -3,7 +3,9 @@
     <div class="left">
       <div :key="index" @click="clickSelected(item,index)" class="item-world" v-for="(item,index) in options">
         {{item.name}}
-        <g-icon class="down-icon" icon="right"></g-icon>
+        <!--分两种情况loadData和静态加载-->
+        <g-icon icon="right" class="down-icon" v-if="loadData ? item.isLeaves : item.children"></g-icon>
+        <!--        <g-icon icon="lodding" class="down-icon" v-if="loadData ? (item.isLeaves && startLoadData) : item.children"></g-icon>-->
       </div>
     </div>
     <div class="right" v-if="rightSelected">
@@ -53,6 +55,7 @@
         arr1: null,
         arr2: null,
         leftSelected: null,
+        startLoadData: false,
       }
     },
     mounted () {
@@ -68,13 +71,14 @@
         } else {
           return
         }
-      },
+      }
     },
     beforeUpdate () {
       // console.log(this.item)
     },
     methods: {
       clickSelected (item, index) {
+        this.startLoadData = true
         console.log(item)
         //深拷贝一下
         let obj = JSON.parse(JSON.stringify(this.selected))
