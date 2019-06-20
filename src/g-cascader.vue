@@ -10,6 +10,7 @@
           :after-get-data="afterGetData"
           :item="options"
           :load-data="loadData"
+          :load-item="loadItem"
           :options="options"
           :selected="selected"
           @update:selected="updateChange">
@@ -49,11 +50,7 @@
       return {
         //控制 cascader 是否显示出来
         isShow: false,
-        //当前选中的内容
-        leftSelected: null,
-        //当前选中的index
-        selectedIndex: 0,
-        rightContent: null,
+        loadItem: {},
       }
     },
     computed: {
@@ -72,11 +69,6 @@
       console.log(JSON.stringify(this.options))
     },
     methods: {
-      clickSelect (item) {
-        if (item) {
-          this.rightContent = item
-        }
-      },
       showCascader () {
         this.isShow = !this.isShow
       },
@@ -85,8 +77,11 @@
         //让父组件来更改数据
         //选中数组的最后一个 就是当前选中的那个数据
         let node = newSelected[newSelected.length - 1]
+        console.log(node)
         //要找到点的这个node 在总节点里面的层级找到了就可以造出新的options 然后Emit出去
         let callBack = (result) => {
+          //结果查找完成取消loadItem
+          this.loadItem = {}
           let options = JSON.parse(JSON.stringify(this.options))
           let currentselect = null
           //既然是找东西，找到了就return 找不到就不要管，继续找
@@ -110,6 +105,8 @@
           this.$emit('update:options', options)
         }
         if (this.loadData) {
+          //拿着当前选中的node 去请求他下面的子节点的数据
+          this.loadItem = Object.assign({}, node)
           this.afterGetData(node, callBack)
         }
       },

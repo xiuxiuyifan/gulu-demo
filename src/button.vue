@@ -177,19 +177,9 @@ export default {
     }
 
     & .rotate {
-      animation: lodding 1s linear infinite;
-    }
-
-    @keyframes lodding {
-      0% {
-        transform: rotate(0);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
+      animation: spin 1s linear infinite;
     }
   }
-
   .i-type-primary {
     color: #fff;
     background-color: #409eff;

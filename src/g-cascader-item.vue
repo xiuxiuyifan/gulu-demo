@@ -2,10 +2,16 @@
   <div class="g-cascader-item">
     <div class="left">
       <div :key="index" @click="clickSelected(item,index)" class="item-world" v-for="(item,index) in options">
-        {{item.name}}
+        <span class="world-style">{{item.name}}</span>
         <!--分两种情况loadData和静态加载-->
-        <g-icon icon="right" class="down-icon" v-if="loadData ? item.isLeaves : item.children"></g-icon>
-        <!--        <g-icon icon="lodding" class="down-icon" v-if="loadData ? (item.isLeaves && startLoadData) : item.children"></g-icon>-->
+        <template v-if="loadItem.name===item.name">
+          <g-icon class="down-icon lodding-icon" icon="lodding"
+                  v-if="loadData ? item.isLeaves : item.children"></g-icon>
+        </template>
+        <template v-else>
+          <g-icon class="down-icon" icon="right"
+                  v-if="loadData ? item.isLeaves : (item.children && item.children.length>0)"></g-icon>
+        </template>
       </div>
     </div>
     <div class="right" v-if="rightSelected">
@@ -13,6 +19,7 @@
         :item="rightSelected"
         :level="level + 1"
         :load-data="loadData"
+        :load-item="loadItem"
         :options="rightSelected"
         :selected="selected"
         @update:selected="$emit('update:selected',$event)">
@@ -48,15 +55,13 @@
         type: Boolean,
         default: false,
       },
+      loadItem: {
+        type: Object,
+        default: () => ({}),
+      },
     },
     data () {
-      return {
-        arr: null,
-        arr1: null,
-        arr2: null,
-        leftSelected: null,
-        startLoadData: false,
-      }
+      return {}
     },
     mounted () {
 
@@ -71,15 +76,13 @@
         } else {
           return
         }
-      }
+      },
     },
     beforeUpdate () {
       // console.log(this.item)
     },
     methods: {
       clickSelected (item, index) {
-        this.startLoadData = true
-        console.log(item)
         //深拷贝一下
         let obj = JSON.parse(JSON.stringify(this.selected))
         obj[this.level] = Object.assign({}, { id: item.id, name: item.name })
@@ -92,6 +95,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "./asset/scss/index";
+
   .g-cascader-item {
     height: 200px;
 
@@ -118,15 +123,22 @@
         box-sizing: border-box;
         cursor: pointer;
         outline: none;
-        padding-right: 70px;
+        display: flex;
+        align-items: center;
+
+        .world-style {
+          margin-right: 30px;
+        }
 
         .down-icon {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          right: 15px;
           fill: #bfcbd9;
           width: 0.8em;
+          margin-left: auto;
+        }
+
+        .lodding-icon {
+          width: 1em;
+          animation: spin 1s linear infinite;
         }
       }
     }
