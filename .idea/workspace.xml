@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="让用户可以拿到选中后的结果，改变原来传slot的方式默认内部为input并且将选中后的结果展示出来">
+    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="菊花添加完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-cascader-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-cascader-item.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/g-cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-cascader.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="295">
+              <caret line="119" column="43" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -33,29 +31,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/db.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
+            <state relative-caret-position="92">
               <caret column="4037" selection-start-column="4028" selection-end-column="4037" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            <state relative-caret-position="483">
+              <caret line="90" column="42" lean-forward="true" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
               <folding>
-                <element signature="e#626#651#0" expanded="true" />
+                <element signature="e#849#874#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/button.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="182" column="19" lean-forward="true" selection-start-line="182" selection-start-column="19" selection-end-line="182" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/asset/scss/index.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+            <state relative-caret-position="437">
+              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -81,18 +97,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>chai</find>
-      <find>@vue/test-utils</find>
-      <find>c</find>
-      <find>getAttribute</find>
-      <find>mocha</find>
-      <find>selected</find>
       <find>selectData</find>
       <find>&quot;parent_id&quot;:1</find>
       <find>陕西</find>
       <find>&quot;parent_id&quot;:2931</find>
       <find>lable</find>
-      <find>lodding</find>
       <find>eslint</find>
       <find>str1</find>
       <find>karma</find>
@@ -109,8 +118,15 @@
       <find>parent_id</find>
       <find>console</find>
       <find>clickSelected</find>
-      <find>leftSelected</find>
       <find>arr</find>
+      <find>rightContent</find>
+      <find>clickSelect</find>
+      <find>selectedIndex</find>
+      <find>leftSelected</find>
+      <find>lodding</find>
+      <find>isShow</find>
+      <find>新城</find>
+      <find>startLoadData</find>
     </findStrings>
     <replaceStrings>
       <replace>el</replace>
@@ -147,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/g-toast.vue" />
         <option value="$PROJECT_DIR$/src/g-footer.vue" />
         <option value="$PROJECT_DIR$/src/g-tab-header.vue" />
-        <option value="$PROJECT_DIR$/src/asset/scss/index.scss" />
         <option value="$PROJECT_DIR$/docs/.vuepress/public/common.css" />
         <option value="$PROJECT_DIR$/docs/README.md" />
         <option value="$PROJECT_DIR$/src/main.js" />
@@ -181,7 +196,6 @@
         <option value="$PROJECT_DIR$/docs/.vuepress/enhanceApp.js" />
         <option value="$PROJECT_DIR$/docs/.vuepress/mixin.js" />
         <option value="$PROJECT_DIR$/docs/.vuepress/components/buttonDocs.vue" />
-        <option value="$PROJECT_DIR$/src/button.vue" />
         <option value="$PROJECT_DIR$/src/svg.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/docs/.vuepress/components/iconDocs.vue" />
@@ -191,9 +205,11 @@
         <option value="$PROJECT_DIR$/docs/views/guluDocs/input.md" />
         <option value="$PROJECT_DIR$/docs/.vuepress/components/inputDocs.vue" />
         <option value="$PROJECT_DIR$/src/g-input.vue" />
-        <option value="$PROJECT_DIR$/src/g-cascader.vue" />
+        <option value="$PROJECT_DIR$/src/asset/scss/index.scss" />
+        <option value="$PROJECT_DIR$/src/button.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/g-cascader-item.vue" />
+        <option value="$PROJECT_DIR$/src/g-cascader.vue" />
       </list>
     </option>
   </component>
@@ -413,13 +429,7 @@
       <workItem from="1560773807648" duration="11195000" />
       <workItem from="1560859038358" duration="3894000" />
       <workItem from="1560946694588" duration="13577000" />
-    </task>
-    <task id="LOCAL-00009" summary="添加栅格布局组件g-row 和 g-col">
-      <created>1551626178185</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1551626178185</updated>
+      <workItem from="1561039632156" duration="7318000" />
     </task>
     <task id="LOCAL-00010" summary="添加响应式功能">
       <created>1551885153687</created>
@@ -757,11 +767,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560951474223</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="菊花添加完成">
+      <created>1561045091387</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1561045091387</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="554733000" />
+    <option name="totallyTimeSpent" value="562051000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -795,7 +812,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Project" order="3" sideWeight="0.49945116" visible="true" weight="0.24358974" />
+      <window_info active="true" anchor="right" id="Project" order="3" sideWeight="0.49945116" visible="true" weight="0.20713142" />
       <window_info anchor="right" id="Nativescript Palette" order="4" />
       <window_info anchor="right" x="0" y="0" width="434" height="896" id="文档" order="5" sideWeight="0.50054884" side_tool="true" weight="0.19152361" />
     </layout>
@@ -806,7 +823,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="级联选择器组件简单功能实现，可以实现选择下一级。递归功能也实现了，但是不知道怎样将其结合起来。" />
     <MESSAGE value="想办法改成递归渲染的形式" />
     <MESSAGE value="递归渲染成功，右边渲染出一个和自己一样的组件，左边只渲染第一级数组下面的内容。" />
     <MESSAGE value="完善级联选择器的基本样式 ，考虑里面的数据如何清空，还有支持高度可以接受props 等，动态获取数据等方式" />
@@ -831,7 +847,8 @@
     <MESSAGE value="发现一个大大的Bug 子组件里面emit数据之后拿到的这个值依然是原来的值，新的值只有在beforeUpDate钩子或者延迟（异步）之后才才可以拿到" />
     <MESSAGE value="之前的在子组件里面更新父组件的值的时候，当一更新完马上去获取这个值拿到的还是旧的因为这个$emit可能是异步的&#10;添加根据当前选择的id在数据源里面找到这一项的算法" />
     <MESSAGE value="让用户可以拿到选中后的结果，改变原来传slot的方式默认内部为input并且将选中后的结果展示出来" />
-    <option name="LAST_COMMIT_MESSAGE" value="让用户可以拿到选中后的结果，改变原来传slot的方式默认内部为input并且将选中后的结果展示出来" />
+    <MESSAGE value="菊花添加完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="菊花添加完成" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -903,13 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/asset/scss/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1047,13 +1057,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/button.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/svg.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1163">
@@ -1127,17 +1130,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/views/guluDocs/button.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="69">
             <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="13" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -1203,13 +1206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/g-input.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -1219,32 +1215,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
+        <state relative-caret-position="92">
           <caret column="4037" selection-start-column="4028" selection-end-column="4037" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
+    <entry file="file://$PROJECT_DIR$/src/http.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="71" column="45" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
+        <state relative-caret-position="46">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/asset/scss/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/button.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="182" column="19" lean-forward="true" selection-start-line="182" selection-start-column="19" selection-end-line="182" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="295">
+          <caret line="119" column="43" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="483">
+          <caret line="90" column="42" lean-forward="true" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
           <folding>
-            <element signature="e#626#651#0" expanded="true" />
+            <element signature="e#849#874#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
         </state>
       </provider>
     </entry>

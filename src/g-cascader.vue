@@ -1,10 +1,10 @@
 <template>
   <div class="g-cascader">
-    <div @click="showCascader()" class="top-wrapper">
+    <div @click="showCascader()" class="top-wrapper" ref="clickArea">
       <g-input placeholder="请选择住址" v-model="result"></g-input>
       <slot></slot>
     </div>
-    <div class="down-wrapper" v-if="isShow">
+    <div class="down-wrapper" v-clickDocumentClose="isShow" v-if="isShow">
       <div>
         <g-cascader-item
           :after-get-data="afterGetData"
@@ -26,6 +26,22 @@
 
   export default {
     name: 'g-cascader',
+    directives: {
+      clickDocumentClose: {
+        inserted: function (el, binding) {
+          console.log(el)
+          document.addEventListener('click', function (event) {
+            console.log(event.target)
+            if (event.target.contains(el)) {
+              return
+            }
+            // else{
+            //   el.style.display = 'none'
+            // }
+          })
+        },
+      },
+    },
     components: {
       GCascaderItem,
     },
@@ -70,7 +86,7 @@
     },
     methods: {
       showCascader () {
-        this.isShow = !this.isShow
+        this.isShow = true
       },
       updateChange (newSelected) {
         this.$emit('update:selected', newSelected)
