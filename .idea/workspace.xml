@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="点击外面关闭级联选择器">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-cascader.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -70,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+            <state relative-caret-position="23">
+              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -429,14 +428,7 @@
       <workItem from="1560773807648" duration="11195000" />
       <workItem from="1560859038358" duration="3894000" />
       <workItem from="1560946694588" duration="13577000" />
-      <workItem from="1561039632156" duration="7546000" />
-    </task>
-    <task id="LOCAL-00011" summary="新增container默认布局组件实现简单的动画">
-      <created>1552202546407</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1552202546407</updated>
+      <workItem from="1561039632156" duration="7847000" />
     </task>
     <task id="LOCAL-00012" summary="添加toast组件 模仿element 的样式，实现了props aotoClose closeTimer 参数">
       <created>1552232045150</created>
@@ -774,11 +766,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561047129673</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="点击外面关闭级联选择器">
+      <created>1561047388892</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1561047388892</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562279000" />
+    <option name="totallyTimeSpent" value="562580000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -805,14 +804,14 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4994612" weight="0.32857144" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053877" side_tool="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50080127" side_tool="true" weight="0.22659324" />
       <window_info anchor="bottom" id="调试" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49959937" visible="true" weight="0.22659324" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4991987" visible="true" weight="0.22659324" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32930514" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Project" order="3" sideWeight="0.49945116" visible="true" weight="0.20713142" />
+      <window_info anchor="right" id="Project" order="3" sideWeight="0.49945116" visible="true" weight="0.20713142" />
       <window_info anchor="right" id="Nativescript Palette" order="4" />
       <window_info anchor="right" x="0" y="0" width="434" height="896" id="文档" order="5" sideWeight="0.50054884" side_tool="true" weight="0.19152361" />
     </layout>
@@ -1260,8 +1259,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        <state relative-caret-position="23">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
         </state>
       </provider>
     </entry>
