@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="菊花添加完成">
+    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="点击外面关闭级联选择器">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/g-cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-cascader.vue" afterDir="false" />
     </list>
@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+            <state relative-caret-position="368">
+              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -429,14 +429,7 @@
       <workItem from="1560773807648" duration="11195000" />
       <workItem from="1560859038358" duration="3894000" />
       <workItem from="1560946694588" duration="13577000" />
-      <workItem from="1561039632156" duration="7318000" />
-    </task>
-    <task id="LOCAL-00010" summary="添加响应式功能">
-      <created>1551885153687</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1551885153687</updated>
+      <workItem from="1561039632156" duration="7546000" />
     </task>
     <task id="LOCAL-00011" summary="新增container默认布局组件实现简单的动画">
       <created>1552202546407</created>
@@ -774,11 +767,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561045091387</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="点击外面关闭级联选择器">
+      <created>1561047129673</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1561047129673</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562051000" />
+    <option name="totallyTimeSpent" value="562279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -823,7 +823,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="想办法改成递归渲染的形式" />
     <MESSAGE value="递归渲染成功，右边渲染出一个和自己一样的组件，左边只渲染第一级数组下面的内容。" />
     <MESSAGE value="完善级联选择器的基本样式 ，考虑里面的数据如何清空，还有支持高度可以接受props 等，动态获取数据等方式" />
     <MESSAGE value="级联选择器 改成单向数据流的实现方式，把选中的数值交给最外层的组件来维护，这样方便下面组件控制数据" />
@@ -848,7 +847,8 @@
     <MESSAGE value="之前的在子组件里面更新父组件的值的时候，当一更新完马上去获取这个值拿到的还是旧的因为这个$emit可能是异步的&#10;添加根据当前选择的id在数据源里面找到这一项的算法" />
     <MESSAGE value="让用户可以拿到选中后的结果，改变原来传slot的方式默认内部为input并且将选中后的结果展示出来" />
     <MESSAGE value="菊花添加完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="菊花添加完成" />
+    <MESSAGE value="点击外面关闭级联选择器" />
+    <option name="LAST_COMMIT_MESSAGE" value="点击外面关闭级联选择器" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1260,8 +1260,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        <state relative-caret-position="368">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
         </state>
       </provider>
     </entry>

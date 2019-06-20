@@ -32,12 +32,13 @@
           console.log(el)
           document.addEventListener('click', function (event) {
             console.log(event.target)
-            if (event.target.contains(el)) {
+            //在级联选择器里面
+            if (el.contains(event.target)) {
               return
+            } else {
+              console.log(window.getComputedStyle(el).display)
+              // el.style.display = 'none'
             }
-            // else{
-            //   el.style.display = 'none'
-            // }
           })
         },
       },
