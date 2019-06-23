@@ -118,6 +118,7 @@ export default {
       document.removeEventListener('click', this.lintenDocument)
     },
     lintenDocument (event) {
+      console.log('点击了document')
       // 点的是popover 就不管
       if (this.$refs.contentWrapper.contains(event.target) || this.$refs.buttonWrapper.contains(event.target)) {
         return

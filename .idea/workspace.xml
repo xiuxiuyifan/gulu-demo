@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="点击外面关闭级联选择器">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/g-popover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/g-popover.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/g-cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-cascader.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +24,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="119" column="43" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="43" />
+            <state relative-caret-position="299">
+              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+              <folding>
+                <element signature="e#2317#2338#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,20 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="90" column="42" lean-forward="true" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
-              <folding>
-                <element signature="e#849#874#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/button.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="182" column="19" lean-forward="true" selection-start-line="182" selection-start-column="19" selection-end-line="182" selection-end-column="19" />
+            <state relative-caret-position="598">
+              <caret line="90" column="42" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -69,8 +63,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="138">
+              <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/g-popover.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-69">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -96,7 +99,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selectData</find>
       <find>&quot;parent_id&quot;:1</find>
       <find>陕西</find>
       <find>&quot;parent_id&quot;:2931</find>
@@ -123,9 +125,10 @@
       <find>selectedIndex</find>
       <find>leftSelected</find>
       <find>lodding</find>
-      <find>isShow</find>
       <find>新城</find>
       <find>startLoadData</find>
+      <find>lintenDocument</find>
+      <find>isShow</find>
     </findStrings>
     <replaceStrings>
       <replace>el</replace>
@@ -158,7 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/g-header.vue" />
         <option value="$PROJECT_DIR$/src/g-toast.vue" />
         <option value="$PROJECT_DIR$/src/g-footer.vue" />
         <option value="$PROJECT_DIR$/src/g-tab-header.vue" />
@@ -206,8 +208,9 @@
         <option value="$PROJECT_DIR$/src/g-input.vue" />
         <option value="$PROJECT_DIR$/src/asset/scss/index.scss" />
         <option value="$PROJECT_DIR$/src/button.vue" />
-        <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/g-cascader-item.vue" />
+        <option value="$PROJECT_DIR$/src/components/g-popover.vue" />
+        <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/g-cascader.vue" />
       </list>
     </option>
@@ -245,6 +248,7 @@
       <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,11 +266,16 @@
               <item name="gulu-demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="gulu-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gulu-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -429,6 +438,8 @@
       <workItem from="1560859038358" duration="3894000" />
       <workItem from="1560946694588" duration="13577000" />
       <workItem from="1561039632156" duration="7847000" />
+      <workItem from="1561261560780" duration="1321000" />
+      <workItem from="1561272345151" duration="7398000" />
     </task>
     <task id="LOCAL-00012" summary="添加toast组件 模仿element 的样式，实现了props aotoClose closeTimer 参数">
       <created>1552232045150</created>
@@ -777,7 +788,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562580000" />
+    <option name="totallyTimeSpent" value="571299000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -806,12 +817,12 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50080127" side_tool="true" weight="0.22659324" />
       <window_info anchor="bottom" id="调试" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4991987" visible="true" weight="0.22659324" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4991987" visible="true" weight="0.22659324" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32930514" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Project" order="3" sideWeight="0.49945116" visible="true" weight="0.20713142" />
+      <window_info anchor="right" id="Project" order="3" sideWeight="0.49945116" visible="true" weight="0.21274039" />
       <window_info anchor="right" id="Nativescript Palette" order="4" />
       <window_info anchor="right" x="0" y="0" width="434" height="896" id="文档" order="5" sideWeight="0.50054884" side_tool="true" weight="0.19152361" />
     </layout>
@@ -862,7 +873,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/HelloWorld.vue" />
     <entry file="file://$PROJECT_DIR$/tests/unit/example.spec.js" />
     <entry file="file://$PROJECT_DIR$/src/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1129,17 +1139,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/views/guluDocs/button.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="69">
             <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="13" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -1219,13 +1229,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/asset/scss/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -1233,34 +1236,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/http.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/button.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="182" column="19" lean-forward="true" selection-start-line="182" selection-start-column="19" selection-end-line="182" selection-end-column="19" />
+        <state relative-caret-position="875">
+          <caret line="182" column="19" selection-start-line="182" selection-start-column="19" selection-end-line="182" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="119" column="43" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="43" />
+        <state relative-caret-position="299">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding>
+            <element signature="e#2317#2338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/g-popover.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/g-cascader-item.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="90" column="42" lean-forward="true" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
-          <folding>
-            <element signature="e#849#874#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="598">
+          <caret line="90" column="42" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/g-cascader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        <state relative-caret-position="138">
+          <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
         </state>
       </provider>
     </entry>

@@ -26,7 +26,10 @@
       :options.sync="options"
       :selected.sync="selectData">
     </g-cascader>
-
+    <g-propover>
+      <button slot="button">按钮</button>
+      <div slot="content">你好呀</div>
+    </g-propover>
     <!--    <div>下面的东西</div>-->
     <!--    <div style="width: 400px;">-->
     <!--      <g-carousel :height="200">-->
@@ -72,10 +75,10 @@
   }
   import db from './db'
   import GCarouselItem from './g-carousel-item'
-
+  import GPropover from './components/g-popover'
   export default {
     name: 'demo',
-    components: { GCarouselItem },
+    components: { GCarouselItem, GPropover },
     data () {
       return {
         selectedCollapse: ['1'],

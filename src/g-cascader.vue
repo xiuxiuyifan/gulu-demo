@@ -1,10 +1,10 @@
 <template>
   <div class="g-cascader">
-    <div @click="showCascader()" class="top-wrapper" ref="clickArea">
+    <div @click="toggle()" class="top-wrapper" ref="clickArea">
       <g-input placeholder="请选择住址" v-model="result"></g-input>
       <slot></slot>
     </div>
-    <div class="down-wrapper" v-clickDocumentClose="isShow" v-if="isShow">
+    <div class="down-wrapper" v-show="isShow" v-clickDocumentClose ref="selectArea">
       <div>
         <g-cascader-item
           :after-get-data="afterGetData"
@@ -29,17 +29,10 @@
     directives: {
       clickDocumentClose: {
         inserted: function (el, binding) {
-          console.log(el)
-          document.addEventListener('click', function (event) {
-            console.log(event.target)
-            //在级联选择器里面
-            if (el.contains(event.target)) {
-              return
-            } else {
-              console.log(window.getComputedStyle(el).display)
-              // el.style.display = 'none'
-            }
-          })
+          console.log('绑定')
+        },
+        unbind: function () {
+          console.log('解绑')
         },
       },
     },
@@ -86,8 +79,30 @@
       console.log(JSON.stringify(this.options))
     },
     methods: {
-      showCascader () {
+      onClickDocument (e) {
+        console.log('document添加了点击事件')
+        // 点击document的时候进行判断
+        // 在里面就什么都不做 和document 点击到按钮的时候什么都不做
+        if (this.$el.contains(e.target)) {
+          return
+        } else {
+          this.close()
+        }
+      },
+      open () {
         this.isShow = true
+        document.addEventListener('click', this.onClickDocument)
+      },
+      close () {
+        this.isShow = false
+        document.removeEventListener('click', this.onClickDocument)
+      },
+      toggle () {
+        if (this.isShow === true) {
+          this.close()
+        } else {
+          this.open()
+        }
       },
       updateChange (newSelected) {
         this.$emit('update:selected', newSelected)
