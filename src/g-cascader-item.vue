@@ -85,7 +85,13 @@
       clickSelected (item, index) {
         //深拷贝一下
         let obj = JSON.parse(JSON.stringify(this.selected))
-        obj[this.level] = Object.assign({}, { id: item.id, name: item.name })
+        let next
+        if (item.isLeaves) {
+          next = item.isLeaves
+        } else {
+          next = (item.children && item.children.length > 0) ? true : false
+        }
+        obj[this.level] = Object.assign({}, { id: item.id, name: item.name, next })
         //把当前 选中的下一层元素全部删除掉
         obj.splice(this.level + 1)
         this.$emit('update:selected', obj)

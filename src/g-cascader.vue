@@ -28,11 +28,11 @@
     name: 'g-cascader',
     directives: {
       clickDocumentClose: {
-        inserted: function (el, binding) {
-          console.log('绑定')
+        bind: function (el, binding) {
+          // console.log('绑定')
         },
         unbind: function () {
-          console.log('解绑')
+          // console.log('解绑')
         },
       },
     },
@@ -55,6 +55,10 @@
       afterGetData: {
         type: Function,
       },
+      autoClose: {
+        type: Boolean,
+        default: true,
+      },
     },
     data () {
       return {
@@ -76,11 +80,9 @@
       },
     },
     beforeUpdate () {
-      console.log(JSON.stringify(this.options))
     },
     methods: {
       onClickDocument (e) {
-        console.log('document添加了点击事件')
         // 点击document的时候进行判断
         // 在里面就什么都不做 和document 点击到按钮的时候什么都不做
         if (this.$el.contains(e.target)) {
@@ -106,10 +108,15 @@
       },
       updateChange (newSelected) {
         this.$emit('update:selected', newSelected)
+        console.log(newSelected.length)
+        if (newSelected[newSelected.length - 1].next === false && this.autoClose) {
+          this.close()
+        }
+        //看一下当前选中的有没有孩子或者isLeaves
+
         //让父组件来更改数据
         //选中数组的最后一个 就是当前选中的那个数据
         let node = newSelected[newSelected.length - 1]
-        console.log(node)
         //要找到点的这个node 在总节点里面的层级找到了就可以造出新的options 然后Emit出去
         let callBack = (result) => {
           //结果查找完成取消loadItem
