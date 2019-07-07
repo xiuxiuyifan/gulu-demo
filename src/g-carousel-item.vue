@@ -1,11 +1,11 @@
 <template>
-  <div class="g-carousel-item" v-if="selected === currentKey">
-    <transition name="carousel">
+  <transition name="carousel">
+    <div class="g-carousel-item" v-if="selected === currentKey">
       <div class="g-carousel-item-wrapper">
         <slot></slot>
       </div>
-    </transition>
-  </div>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -41,27 +41,27 @@
     transition: all 0.5s;
 
     .carousel-enter {
-
+      opacity: 0;
     }
 
     .carousel-enter-active {
-
+      transition: all 100s;
     }
 
     .carousel-enter-to {
-
+      opacity: 1;
     }
 
     .carousel-leave {
-
+      opacity: 1;
     }
 
     .carousel-leave-active {
-
+      transition: all 100s;
     }
 
     .carousel-leave-to {
-
+      opacity: 0;
     }
 
     &-wrapper {

@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="开始编写无缝轮播组件">
-      <change afterPath="$PROJECT_DIR$/src/components/transition/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/transition/index1.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="轮播组件基本样式和基本的数据组成完毕，等待添加动画，">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/iconDocs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/iconDocs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/g-collapse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/g-collapse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/g-collapseItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/g-collapseItem.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/g-carousel-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-carousel-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/g-carousel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/g-carousel.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1393">
-              <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+            <state relative-caret-position="1600">
+              <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
               <folding>
                 <element signature="e#2820#2833#0" />
               </folding>
@@ -39,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/g-carousel.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+            <state relative-caret-position="1127">
+              <caret line="49" column="59" lean-forward="true" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
               <folding>
                 <element signature="e#420#446#0" expanded="true" />
               </folding>
@@ -52,10 +44,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/transition/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/g-carousel-item.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state relative-caret-position="184">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -72,7 +73,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lable</find>
       <find>eslint</find>
       <find>str1</find>
       <find>karma</find>
@@ -101,6 +101,7 @@
       <find>console</find>
       <find>clickSelected</find>
       <find>selected</find>
+      <find>carousel</find>
       <find>clickPrevious</find>
     </findStrings>
     <replaceStrings>
@@ -183,8 +184,8 @@
         <option value="$PROJECT_DIR$/src/components/g-collapse.vue" />
         <option value="$PROJECT_DIR$/src/components/g-collapseItem.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
-        <option value="$PROJECT_DIR$/src/g-carousel-item.vue" />
         <option value="$PROJECT_DIR$/src/g-carousel.vue" />
+        <option value="$PROJECT_DIR$/src/g-carousel-item.vue" />
       </list>
     </option>
   </component>
@@ -244,6 +245,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="gulu-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gulu-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="transition" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -270,19 +278,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\code\gulu-demo\docs\.vuepress\public" />
-      <recent name="G:\vue\gulu-demo\src" />
-      <recent name="G:\vue\gulu-demo\tests\unit" />
-      <recent name="C:\Users\code\gulu-demo\docs\.vuepress" />
-      <recent name="C:\Users\code\gulu-demo" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\vue\gulu-demo\tests\unit" />
       <recent name="G:\vue\gulu-demo\tests" />
       <recent name="G:\vue\gulu-demo\src\asset\css" />
       <recent name="C:\Users\code\gulu-demo\public" />
       <recent name="C:\Users\code\gulu-demo\docs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\code\gulu-demo\docs\.vuepress\public" />
+      <recent name="G:\vue\gulu-demo\src" />
+      <recent name="G:\vue\gulu-demo\tests\unit" />
+      <recent name="C:\Users\code\gulu-demo\docs\.vuepress" />
+      <recent name="C:\Users\code\gulu-demo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -419,14 +427,7 @@
       <workItem from="1561981016735" duration="606000" />
       <workItem from="1562500199799" duration="7883000" />
       <workItem from="1562512443070" duration="224000" />
-      <workItem from="1562512678867" duration="4730000" />
-    </task>
-    <task id="LOCAL-00015" summary="添加tab组建的五个文件，并且写了简单的样式">
-      <created>1552572234350</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1552572234350</updated>
+      <workItem from="1562512678867" duration="5882000" />
     </task>
     <task id="LOCAL-00016" summary="添加tab组建的五个文件，并且写了简单的样式">
       <created>1552572295934</created>
@@ -764,11 +765,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562500296930</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="轮播组件基本样式和基本的数据组成完毕，等待添加动画，">
+      <created>1562517670311</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1562517670311</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="593437000" />
+    <option name="totallyTimeSpent" value="594589000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -813,7 +821,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="去掉eslint 测试框架改成vue cli3推荐的测试框架的方式，添加vue.config.js全局的配置文件" />
     <MESSAGE value="改写button 的测试用例" />
     <MESSAGE value="travis ci nodejs 9 版本不通过测试问题" />
     <MESSAGE value="级联选择器 支持动态加载数据，实现层次就是给当前选中的元素添加child   并且 emit出去 把选中的数据交给父节点进行更新" />
@@ -838,7 +845,8 @@
     <MESSAGE value="点击外面时关闭级联选择器" />
     <MESSAGE value="添加了选中后隐藏弹出层的功能" />
     <MESSAGE value="开始编写无缝轮播组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="开始编写无缝轮播组件" />
+    <MESSAGE value="轮播组件基本样式和基本的数据组成完毕，等待添加动画，" />
+    <option name="LAST_COMMIT_MESSAGE" value="轮播组件基本样式和基本的数据组成完毕，等待添加动画，" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1192,13 +1200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/transition/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -1253,28 +1254,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1393">
-          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+        <state relative-caret-position="1600">
+          <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
           <folding>
             <element signature="e#2820#2833#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/g-carousel-item.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/g-carousel.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+        <state relative-caret-position="1127">
+          <caret line="49" column="59" lean-forward="true" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
           <folding>
             <element signature="e#420#446#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/transition/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/g-carousel-item.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
