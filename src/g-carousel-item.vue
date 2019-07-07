@@ -1,14 +1,30 @@
 <template>
-  <div class="g-carousel-item">
-    <slot></slot>
+  <div class="g-carousel-item" v-if="selected === currentKey">
+    <transition name="carousel">
+      <div class="g-carousel-item-wrapper">
+        <slot></slot>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
   export default {
     name: 'g-carousel-item',
+    inject: ['eventBus'],
+    data () {
+      return {
+        selected: 0,
+        currentKey: 0,
+      }
+    },
     mounted () {
-
+      this.currentKey = this.$vnode.key
+      console.log(this.selected === this.currentKey)
+      this.eventBus.$on('update:selected', (data) => {
+        console.log('接受到了')
+        this.selected = data
+      })
     },
   }
 </script>
@@ -17,11 +33,40 @@
   .g-carousel-item {
     width: 100%;
     height: 100%;
-    /*position: absolute;*/
+    position: absolute;
     left: 0;
     top: 0;
     text-align: center;
     background: #d3dce6;
     transition: all 0.5s;
+
+    .carousel-enter {
+
+    }
+
+    .carousel-enter-active {
+
+    }
+
+    .carousel-enter-to {
+
+    }
+
+    .carousel-leave {
+
+    }
+
+    .carousel-leave-active {
+
+    }
+
+    .carousel-leave-to {
+
+    }
+
+    &-wrapper {
+      width: 100%;
+      height: 100%;
+    }
   }
 </style>

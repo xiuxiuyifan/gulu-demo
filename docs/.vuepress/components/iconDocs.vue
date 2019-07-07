@@ -152,7 +152,7 @@
 
       .icon-wrapper {
         display: flex;
-        width: 115px;
+        width: 16.66%;
         flex-direction: column;
         align-items: center;
         padding: 20px;
