@@ -28,12 +28,12 @@
       :after-get-data="getNextLevelData"
       :selected.sync="selectData">
     </g-cascader>
-    <!--    <div>下面的东西</div>-->
-    <!--    <div style="width: 400px;">-->
-    <!--      <g-carousel :height="200">-->
-    <!--        <g-carousel-item v-for="item in 4">{{item}}</g-carousel-item>-->
-    <!--      </g-carousel>-->
-    <!--    </div>-->
+    <div>下面的东西</div>
+    <div>
+      <g-carousel :selected="1">
+        <g-carousel-item v-for="item in 4">{{item}}</g-carousel-item>
+      </g-carousel>
+    </div>
   </div>
 </template>
 
