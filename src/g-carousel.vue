@@ -189,7 +189,7 @@
 
         > div {
           height: 100%;
-          background: #eeeeee;
+          background: #393e46;
           display: block;
           opacity: 0.48;
           width: 30px;

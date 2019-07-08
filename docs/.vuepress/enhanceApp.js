@@ -1,4 +1,14 @@
 import './public/index.scss'
+import Vue from 'vue'
+import hljs from 'highlight.js'
+import 'highlight.js/styles/color-brewer.css'
+
+Vue.directive('highlight', function (el) {
+  let blocks = el.querySelectorAll('pre code')
+  blocks.forEach((block) => {
+    hljs.highlightBlock(block)
+  })
+})
 export default ({
                   Vue, // VuePress 正在使用的 Vue 构造函数
                   // options, // 附加到根实例的一些选项
