@@ -87,10 +87,10 @@ export default {
         this.$emit("update:selected", action.next);
         this.eventBus.$emit("update:selected", action.next);
         if (this.autoPlay) {
-          this.timerId = setTimeout(fn, 2000);
+          this.timerId = setTimeout(fn, 3000);
         }
       };
-      this.timerId = setTimeout(fn, 2000);
+      this.timerId = setTimeout(fn, 3000);
     },
     pause() {
       window.clearTimeout(this.timerId);
@@ -99,7 +99,9 @@ export default {
     onMouseEnter() {
       this.pause();
     },
-    onMouseLeave() {}
+    onMouseLeave() {
+      this.playAuto();
+    }
   }
 };
 </script>
@@ -108,8 +110,8 @@ export default {
 .g-carousel {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 200px;
+  width: 590px;
+  height: 470px;
   margin: 0 auto;
   > div.g-carousel-item:nth-child(even) {
     background: #d3dce6;

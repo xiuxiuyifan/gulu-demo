@@ -49,13 +49,21 @@ export default {
 }
 
 .carousel-enter-active {
-  transition: all 1s ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .carousel-enter-to {
   transform: translateX(0%);
 }
-
+.carousel-leave {
+  transform: translateX(0%);
+}
+.carousel-leave-active {
+  transition: all 0.4s ease-in-out;
+}
+.carousel-leave-to {
+  transform: translateX(-100%);
+}
 .g-carousel-item {
   width: 100%;
   height: 100%;

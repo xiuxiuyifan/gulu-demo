@@ -31,7 +31,10 @@
     <!--    <div>下面的东西</div>-->
     <div>
       <g-carousel :selected.sync="selected">
-        <g-carousel-item :key="index" v-for="(item,index) in 4">{{index}}</g-carousel-item>
+        <g-carousel-item :key="index" v-for="(item,index) in imgArr">
+          <img :src="item" class="carousel-img" alt />
+          <!-- {{index}} -->
+        </g-carousel-item>
       </g-carousel>
     </div>
     <GTransition></GTransition>
@@ -82,6 +85,12 @@ export default {
   components: { GCarouselItem, GPropover, GTransition },
   data() {
     return {
+      imgArr: [
+        require("../src/asset/img/1.webp"),
+        require("../src/asset/img/2.jpg"),
+        require("../src/asset/img/3.webp"),
+        require("../src/asset/img/4.webp")
+      ],
       selectedCollapse: ["1"],
       selectData: [],
       selected: 1,
@@ -193,4 +202,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.carousel-img {
+  width: 100%;
+  height: 100%;
+}
 </style>
