@@ -10,23 +10,8 @@
       <p>用 --dev 或 -D 会在 devDependencies 里安装一个或多个包。这是开发依赖，就是那些只在开发过程中需要，而运行时不需要的依赖（比如 Babel 和 Flow）。</p>
     </div>
     <div class="component-wrapper">
-      <div class="component-wrapper-demo">
-        <pre><code>
-            完整引入
-            在 main.js 中写入以下内容：
-
-            import Vue from 'vue';
-            import GuluDemo from 'gulu-demo';
-            import 'gulu-demo/lib/css/index.css';
-            import App from './App.vue';
-
-            Vue.use(GuluDemo);
-
-            new Vue({
-            el: '#app',
-            render: h => h(App)
-            });
-          </code></pre>
+      <div class="component-wrapper-demo" v-highlight>
+        <pre><code>{{str}}</code></pre>
       </div>
     </div>
     <p>目前在测试版本1.0之前的版本属于测试版本</p>
@@ -35,27 +20,47 @@
 </template>
 
 <script>
-  export default {
-    name: 'installDocs',
+export default {
+  name: "installDocs",
+  data() {
+    return {
+      str: `
+完整引入
+在 main.js 中写入以下内容：
+
+import Vue from 'vue';
+import GuluDemo from 'gulu-demo';
+import 'gulu-demo/lib/css/index.css';
+import App from './App.vue';
+
+Vue.use(GuluDemo);
+
+new Vue({
+el: '#app',
+render: h => h(App)
+})`.trim()
+    };
   }
+};
 </script>
 
 <style lang="scss" scoped>
-  .installDocs {
-    .component-wrapper {
-      border: 1px solid #ebebeb;
+.installDocs {
+  .component-wrapper {
+    border: 1px solid #ebebeb;
 
-      &:hover {
-        box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6), 0 2px 4px 0 rgba(232, 237, 250, 0.5);
-      }
-    }
-
-    pre {
-      background: none;
-
-      > code {
-        color: #3182bd;
-      }
+    &:hover {
+      box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6),
+        0 2px 4px 0 rgba(232, 237, 250, 0.5);
     }
   }
+
+  pre {
+    background: none;
+
+    > code {
+      color: #3182bd;
+    }
+  }
+}
 </style>
