@@ -40,9 +40,10 @@
     transition: height .2s;
 
     .code-content-height {
+      padding: 10px 10px 0 10px;
       .code-user-desc {
         background: #ffffff;
-        margin: 10px 10px 0 10px;
+        //margin: 10px 10px 0 10px;
         padding: 5px 10px;
         font-size: 14px;
         line-height: 26px;
@@ -52,7 +53,7 @@
 
       > pre {
         background: none;
-
+        margin: 0;
         > code {
           color: #3182bd;
         }

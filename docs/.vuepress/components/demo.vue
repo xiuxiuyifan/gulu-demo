@@ -29,7 +29,7 @@
 </template>
 
 <script>
-  import GIcon from '../../../src/icon'
+  import GIcon from '../../../src/components/icon/icon'
   import mixin from '../mixin'
   export default {
     name: 'demo',

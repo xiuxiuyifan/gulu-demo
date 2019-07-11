@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import GIcon from '../src/icon'
+  import GIcon from './components/icon/icon'
 export default {
   name: 'g-aside',
   components: {

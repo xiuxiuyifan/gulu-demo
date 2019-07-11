@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import Button from './button'
-import Icon from './icon'
-import GButtonGroup from './g-button-group'
+import Button from './components/button/g-button'
+import Icon from './components/icon/icon'
+import GButtonGroup from './components/button/g-button-group'
 import Ginput from './g-input'
-import Grow from './g-row'
-import Gcol from './g-col'
+import Grow from './components/layout/g-row'
+import Gcol from './components/layout/g-col'
 import Gcontainer from './g-container'
 import Gheader from './g-header'
 import Gmain from './g-main'
@@ -20,16 +20,16 @@ import GtabHeaderItem from './tab-header-item'
 import GtabContentItem from './tab-content-item'
 
 // components 下面的的组件
-import Gpopover from './components/g-popover'
-import GCascader from './g-cascader'
+import Gpopover from './components/popover/g-popover'
+import GCascader from './components/cascader/g-cascader'
 
 // collapse 级联选择器组件
-import GCollapse from './components/g-collapse'
-import GCollapseItem from './components/g-collapseItem'
+import GCollapse from './components/collapse/g-collapse'
+import GCollapseItem from './components/collapse/g-collapse-Item'
 
 //  carousel 轮播图组件
-import GCarousel from './g-carousel'
-import GCarouselItem from './g-carousel-item'
+import GCarousel from './components/carousel/g-carousel'
+import GCarouselItem from './components/carousel/g-carousel-item'
 
 Vue.config.productionTip = false
 

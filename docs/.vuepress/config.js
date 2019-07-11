@@ -4,8 +4,7 @@ module.exports = {
 		logo: '/2.jfif',
 		nav: [
 			{ text: 'Home', link: '/' },
-			{ text: 'Guide', link: '/guide/' },
-			{ text: 'External', link: 'https://google.com' },
+      { text: 'Github', link: 'https://github.com/xiuxiuyifan/gulu-demo' },
 		],
 		sidebar: [
 			{
@@ -29,6 +28,14 @@ module.exports = {
           '/views/guluDocs/popover.md',
           '/views/guluDocs/tabs.md',
           '/views/guluDocs/toast.md',
+          '/views/guluDocs/carousel.md',
+          '/views/guluDocs/checkBox.md',
+          '/views/guluDocs/menu.md',
+          '/views/guluDocs/form.md',
+          '/views/guluDocs/paging.md',
+          '/views/guluDocs/table.md',
+          '/views/guluDocs/upload.md',
+          '/views/guluDocs/sticky.md',
 				]
 			}
 		]

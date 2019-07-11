@@ -7,7 +7,7 @@
     <p>选中结果{{selected}}</p>
     <div class="component-wrapper">
       <div class="component-wrapper-demo">
-        <g-collapse :selected="selected">
+        <g-collapse :selected.sync="selected">
           <g-collapse-item name="1" title="天明">
             非攻
           </g-collapse-item>
@@ -22,7 +22,7 @@
           </g-collapse-item>
         </g-collapse>
       </div>
-      <div class="code-content" style="height: 0;">
+      <div class="code-content" style="height: 0;" v-highlight>
         <div class="code-content-height">
           <div class="code-user-desc">
             "selected表示要选中的项"
@@ -38,9 +38,10 @@
 
     <h3>只可以同时查看一个</h3>
     <p>点击下一个的同时关闭上一个和默认展开</p>
+    <p>选中结果{{selected1}}</p>
     <div class="component-wrapper">
       <div class="component-wrapper-demo">
-        <g-collapse :selected="selected" onlyone>
+        <g-collapse :selected.sync="selected1" onlyone>
           <g-collapse-item name="1" title="天明">
             非攻
           </g-collapse-item>
@@ -55,7 +56,7 @@
           </g-collapse-item>
         </g-collapse>
       </div>
-      <div class="code-content" style="height: 0;">
+      <div class="code-content" style="height: 0;" v-highlight>
         <div class="code-content-height">
           <div class="code-user-desc">
             "onlyone"属性可以控制同时值出现一个详情
@@ -72,9 +73,9 @@
 </template>
 
 <script>
-  import GCollapse from '../../../src/components/g-collapse'
-  import GCollapseItem from '../../../src/components/g-collapseItem'
-  import GIcon from '../../../src/icon'
+  import GCollapse from '../../../src/components/collapse/g-collapse'
+  import GCollapseItem from '../../../src/components/collapse/g-collapse-Item'
+  import GIcon from '../../../src/components/icon/icon'
 
   export default {
     name: 'collapseDocs',
@@ -92,36 +93,37 @@
         isShow: [],
 
         selected: ['3'],
+        selected1: ['3'],
         str: `
-        <g-collapse :selected="selected">
-          <g-collapse-item name="1" title="天明">
-            非攻
-          </g-collapse-item>
-          <g-collapse-item name="2" title="月儿">
-            幻音宝盒
-          </g-collapse-item>
-          <g-collapse-item name="3" title="少羽">
-            项氏一族
-          </g-collapse-item>
-          <g-collapse-item name="4" title="月儿">
-            虞姬
-          </g-collapse-item>
-        </g-collapse>`.replace(/^\s*/gm, '').trim(),
+<g-collapse :selected="selected">
+  <g-collapse-item name="1" title="天明">
+    非攻
+  </g-collapse-item>
+  <g-collapse-item name="2" title="月儿">
+    幻音宝盒
+  </g-collapse-item>
+  <g-collapse-item name="3" title="少羽">
+    项氏一族
+  </g-collapse-item>
+  <g-collapse-item name="4" title="月儿">
+    虞姬
+  </g-collapse-item>
+</g-collapse>`.trim(),
         str1: `
-        <g-collapse :selected="selected" onlyone>
-          <g-collapse-item name="1" title="天明">
-            非攻
-          </g-collapse-item>
-          <g-collapse-item name="2" title="月儿">
-            幻音宝盒
-          </g-collapse-item>
-          <g-collapse-item name="3" title="少羽">
-            项氏一族
-          </g-collapse-item>
-          <g-collapse-item name="4" title="月儿">
-            虞姬
-          </g-collapse-item>
-        </g-collapse>`.replace(/^\s*/gm, '').trim(),
+<g-collapse :selected="selected" onlyone>
+  <g-collapse-item name="1" title="天明">
+    非攻
+  </g-collapse-item>
+  <g-collapse-item name="2" title="月儿">
+    幻音宝盒
+  </g-collapse-item>
+  <g-collapse-item name="3" title="少羽">
+    项氏一族
+  </g-collapse-item>
+  <g-collapse-item name="4" title="月儿">
+    虞姬
+  </g-collapse-item>
+</g-collapse>`.trim(),
       }
     },
     methods: {

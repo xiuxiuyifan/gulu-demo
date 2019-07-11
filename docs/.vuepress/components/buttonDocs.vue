@@ -182,9 +182,9 @@
 </template>
 
 <script>
-import GButtonGroup from "../../../src/g-button-group";
-import GButton from "../../../src/button";
-import GIcon from "../../../src/icon";
+  import GButtonGroup from '../../../src/components/button/g-button-group'
+  import GButton from '../../../src/components/button/g-button'
+  import GIcon from '../../../src/components/icon/icon'
 import mixin from "../mixin";
 
 export default {

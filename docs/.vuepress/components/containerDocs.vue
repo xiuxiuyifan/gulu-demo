@@ -76,7 +76,7 @@
 </template>
 
 <script>
-  import GIcon from '../../../src/icon'
+  import GIcon from '../../../src/components/icon/icon'
   import GContainer from '../../../src/g-container'
   import GFooter from '../../../src/g-footer'
   import GHeader from '../../../src/g-header'

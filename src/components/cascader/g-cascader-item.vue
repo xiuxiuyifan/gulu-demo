@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import http from "./http";
-import db from "./db";
+  import http from '../../http'
+  import db from '../../db'
 
 export default {
   name: "g-cascader-item",
@@ -117,7 +117,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./asset/scss/index";
+  @import "../../asset/scss/index";
 
 .g-cascader-item {
   height: 200px;

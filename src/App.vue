@@ -77,8 +77,8 @@
     })
   }
   import db from './db'
-  import GCarouselItem from './g-carousel-item'
-  import GPropover from './components/g-popover'
+  import GCarouselItem from './components/carousel/g-carousel-item'
+  import GPropover from './components/popover/g-popover'
   import GTransition from './components/transition'
 
   export default {

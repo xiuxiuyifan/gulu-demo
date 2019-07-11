@@ -10,7 +10,7 @@
     </button>
 </template>
 <script>
-import Icon from './icon'
+  import Icon from '../icon/icon'
 export default {
   name: 'g-button',
   props: {
@@ -90,7 +90,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  @import "asset/scss/index";
+  @import "../../asset/scss/index";
 
   .i-right {
     > svg {

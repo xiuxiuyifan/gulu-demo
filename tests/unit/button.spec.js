@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { mount } from '@vue/test-utils'
-import GButton from '../../src/button'
+import GButton from '../../src/components/button/g-button'
 
 describe('button.vue', () => {
   it('测试button存在', () => {

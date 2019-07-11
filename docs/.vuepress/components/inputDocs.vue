@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  import GIcon from '../../../src/icon'
+  import GIcon from '../../../src/components/icon/icon'
   import GInput from '../../../src/g-input'
   import mixin from '../mixin'
 

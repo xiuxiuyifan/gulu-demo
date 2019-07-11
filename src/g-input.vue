@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Icon from './icon'
+  import Icon from './components/icon/icon'
 /*
     * 1.hover 状态
     * 2.focus 状态

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import GIcon from '../icon'
+  import GIcon from '../icon/icon'
 
   export default {
     name: 'collapseItem',
@@ -59,6 +59,7 @@
       })
       // 监听通知过来的数据里面有没有自己
       this.eventBus.$on('update:checked', (arr) => {
+        console.log(arr)
         if (this.onlyone === true) {
           if (arr.length > 1) {
             console.error('只能选中一个的时候不可以设置默认选中两个值')

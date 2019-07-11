@@ -18,9 +18,8 @@
 </template>
 
 <script>
-  import GIcon from './icon'
+  import GIcon from '../icon/icon'
   import Vue from 'vue'
-
   export default {
     name: 'g-carousel',
     components: {
