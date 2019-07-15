@@ -1,5 +1,5 @@
 ---
-title: "datePicker--(粘滞)"
+title: "datePicker--(日期组件)"
 ---
 <ClientOnly>
   <datePickerDocs/>

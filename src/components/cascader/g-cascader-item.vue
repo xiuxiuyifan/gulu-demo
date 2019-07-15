@@ -117,7 +117,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../../asset/scss/index";
+  @import "../../styles/var";
 
 .g-cascader-item {
   height: 200px;

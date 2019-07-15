@@ -31,7 +31,7 @@
 
 <script>
   import GIcon from '../../../src/components/icon/icon'
-  import GInput from '../../../src/g-input'
+  import GInput from '../../../src/components/input/g-input'
   import mixin from '../mixin'
 
   export default {

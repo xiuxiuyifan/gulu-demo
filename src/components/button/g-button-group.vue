@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../../asset/scss/index";
+  @import "../../styles/var";
 
 .g-button-group {
   font-size: 0;

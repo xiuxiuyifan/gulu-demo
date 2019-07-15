@@ -22,9 +22,9 @@ module.exports = {
           '/views/guluDocs/icon.md',
           '/views/guluDocs/button.md',
           '/views/guluDocs/collapse.md',
-          '/views/guluDocs/container.md',
+          '/views/guluDocs/grid.md',
 					'/views/guluDocs/input.md',
-					'/views/guluDocs/Layout.md',
+          '/views/guluDocs/layout.md',
           '/views/guluDocs/popover.md',
           '/views/guluDocs/tabs.md',
           '/views/guluDocs/toast.md',
@@ -36,6 +36,10 @@ module.exports = {
           '/views/guluDocs/table.md',
           '/views/guluDocs/upload.md',
           '/views/guluDocs/sticky.md',
+          '/views/guluDocs/scroll.md',
+          '/views/guluDocs/datepicker.md',
+          '/views/guluDocs/tree.md',
+          '/views/guluDocs/notification.md',
 				]
 			}
 		]

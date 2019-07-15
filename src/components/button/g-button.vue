@@ -90,7 +90,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  @import "../../asset/scss/index";
+  @import "../../styles/var";
 
   .i-right {
     > svg {

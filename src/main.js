@@ -4,21 +4,21 @@ import App from './App.vue'
 import Button from './components/button/g-button'
 import Icon from './components/icon/icon'
 import GButtonGroup from './components/button/g-button-group'
-import Ginput from './g-input'
-import Grow from './components/layout/g-row'
-import Gcol from './components/layout/g-col'
-import Gcontainer from './g-container'
-import Gheader from './g-header'
-import Gmain from './g-main'
-import Gfooter from './g-footer'
-import Gaside from './g-aside'
+import Ginput from './components/input/g-input'
+import Grow from './components/grid/g-row'
+import Gcol from './components/grid/g-col'
+import Gcontainer from './components/layout/g-container'
+import Gheader from './components/layout/g-header'
+import Gmain from './components/layout/g-main'
+import Gfooter from './components/layout/g-footer'
+import Gaside from './components/layout/g-aside'
 import plugin from './plugin'
-import Gtab from './g-tab'
-import GtabHeader from './g-tab-header'
-import GtabContent from './g-tab-content'
-import GtabHeaderItem from './tab-header-item'
-import GtabContentItem from './tab-content-item'
-
+import Gtab from './components/tabs/g-tab'
+import GtabHeader from './components/tabs/g-tab-header'
+import GtabContent from './components/tabs/g-tab-content'
+import GtabHeaderItem from './components/tabs/tab-header-item'
+import GtabContentItem from './components/tabs/tab-content-item'
+import GCheckBox from './components/checkbox/g-checkbox'
 // components 下面的的组件
 import Gpopover from './components/popover/g-popover'
 import GCascader from './components/cascader/g-cascader'
@@ -65,6 +65,7 @@ Vue.component('g-cascader', GCascader)
 Vue.component('g-carousel', GCarousel)
 Vue.component('g-carouse-item'.GCarouselItem)
 
+Vue.component('g-ckeckbox', GCheckBox)
 //css
 import './asset/css/reset.css'
 import './asset/css/common.css'

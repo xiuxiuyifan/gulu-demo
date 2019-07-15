@@ -1,4 +1,4 @@
-import Gtoast from './g-toast'
+import Gtoast from './components/toast/g-toast'
 
 let toast // 记录当前页面是否存在toast
 /*eslint spaced-comment:0*/

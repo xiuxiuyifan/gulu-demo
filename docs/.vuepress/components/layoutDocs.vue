@@ -77,11 +77,11 @@
 
 <script>
   import GIcon from '../../../src/components/icon/icon'
-  import GContainer from '../../../src/g-container'
-  import GFooter from '../../../src/g-footer'
-  import GHeader from '../../../src/g-header'
-  import GMain from '../../../src/g-main'
-  import GAside from '../../../src/g-aside'
+  import GContainer from '../../../src/components/layout/g-container'
+  import GFooter from '../../../src/components/layout/g-footer'
+  import GHeader from '../../../src/components/layout/g-header'
+  import GMain from '../../../src/components/layout/g-main'
+  import GAside from '../../../src/components/layout/g-aside'
 
   export default {
     name: 'containerDocs',

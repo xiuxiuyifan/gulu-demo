@@ -1,3 +1,5 @@
+/**/
+$theme: #00adb5;
 $button-height: 32px;
 $font-size: 14px;
 $button-bg: white;
@@ -6,6 +8,8 @@ $border-radius: 4px;
 $color: #333;
 $border-color: #999;
 $border-color-hover: #666;
+
+
 @keyframes spin {
   0% {
     transform: rotate(0);

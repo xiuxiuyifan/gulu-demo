@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { arrIndexSum } from './common'
+  import { arrIndexSum } from '../../common'
 
 export default {
   name: 'g-tab-header',

@@ -22,23 +22,26 @@
     <!--      </g-collapse-item>-->
     <!--    </g-collapse>-->
     <!--    result:  {{selectedCollapse}}-->
-    <g-cascader
-      :after-get-data="getNextLevelData"
-      :load-data="true"
-      :options.sync="options"
-      :selected.sync="selectData">
-    </g-cascader>
+    <!--    <g-cascader-->
+    <!--      :after-get-data="getNextLevelData"-->
+    <!--      :load-data="true"-->
+    <!--      :options.sync="options"-->
+    <!--      :selected.sync="selectData">-->
+    <!--    </g-cascader>-->
+
+
     <!--    <div>下面的东西</div>-->
-    <div>
-      <g-carousel :selected.sync="selected">
-        <g-carousel-item :key="index" v-for="(item,index) in imgArr">
-          <img :src="item" alt class="carousel-img"/>
-          <!--          {{index}}-->
-        </g-carousel-item>
-      </g-carousel>
-      <div>{{selected}}</div>
-    </div>
-    <GTransition></GTransition>
+    <!--    <div>-->
+    <!--      <g-carousel :selected.sync="selected">-->
+    <!--        <g-carousel-item :key="index" v-for="(item,index) in imgArr">-->
+    <!--          <img :src="item" alt class="carousel-img"/>-->
+    <!--          &lt;!&ndash;          {{index}}&ndash;&gt;-->
+    <!--        </g-carousel-item>-->
+    <!--      </g-carousel>-->
+    <!--      <div>{{selected}}</div>-->
+    <!--    </div>-->
+    <!--    <GTransition></GTransition>-->
+    <g-checkbox :checked.sync="checked"></g-checkbox>
   </div>
 </template>
 
@@ -52,6 +55,8 @@
   //     callBack(result)
   //   },3000)
   // }
+
+  import GCheckbox from './components/checkbox/g-checkbox'
 
   const nextLevelData = node => {
     return new Promise((resolve, reject) => {
@@ -83,7 +88,7 @@
 
   export default {
     name: 'demo',
-    components: { GCarouselItem, GPropover, GTransition },
+    components: { GCheckbox, GCarouselItem, GPropover, GTransition },
     data () {
       return {
         imgArr: [
@@ -95,6 +100,7 @@
         selectedCollapse: ['1'],
         selectData: [],
         selected: 0,
+        checked: false,
         options: this.getOptions(),
         // options: [
         //   { 'id': 1, 'name': '北京', 'isLeaves': true },
