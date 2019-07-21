@@ -19,6 +19,7 @@ import GtabContent from './components/tabs/g-tab-content'
 import GtabHeaderItem from './components/tabs/tab-header-item'
 import GtabContentItem from './components/tabs/tab-content-item'
 import GCheckBox from './components/checkbox/g-checkbox'
+import GCheckBoxGroup from './components/checkbox/g-checkbox-group'
 // components 下面的的组件
 import Gpopover from './components/popover/g-popover'
 import GCascader from './components/cascader/g-cascader'
@@ -66,9 +67,11 @@ Vue.component('g-carousel', GCarousel)
 Vue.component('g-carouse-item'.GCarouselItem)
 
 Vue.component('g-ckeckbox', GCheckBox)
+Vue.component('g-checkbox-group', GCheckBoxGroup)
 //css
 import './asset/css/reset.css'
 import './asset/css/common.css'
+
 new Vue({
-  render: h => h(App)
+  render: h => h(App),
 }).$mount('#app')

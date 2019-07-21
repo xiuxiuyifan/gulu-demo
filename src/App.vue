@@ -41,7 +41,14 @@
     <!--      <div>{{selected}}</div>-->
     <!--    </div>-->
     <!--    <GTransition></GTransition>-->
-    <g-checkbox :checked.sync="checked"></g-checkbox>
+    <g-button @click="checkboxChange">fdasjfl</g-button>
+    <g-checkbox @change="checkboxChange">单选</g-checkbox>
+    <div>
+      <g-checkbox :checked.sync="checked" check-all contant-checkbox-group="1">全选</g-checkbox>
+      <g-checkbox-group :default-selected="defaultOption" :plain-option="plainOption"
+                        contant-checkbox-group="1"></g-checkbox-group>
+    </div>
+    <!--    <g-checkbox-group :plain></g-checkbox-group>-->
   </div>
 </template>
 
@@ -102,6 +109,8 @@
         selected: 0,
         checked: false,
         options: this.getOptions(),
+        plainOption: ['香蕉', '苹果', '桃子', '荔枝'],
+        defaultOption: ['香蕉', '苹果'],
         // options: [
         //   { 'id': 1, 'name': '北京', 'isLeaves': true },
         //   { 'id': 2, 'name': '天津', 'isLeaves': true },
@@ -203,6 +212,9 @@
           .catch(error => {
             console.log(error)
           })
+      },
+      checkboxChange (e) {
+        console.log('fjdaksfhkas')
       },
     },
   }

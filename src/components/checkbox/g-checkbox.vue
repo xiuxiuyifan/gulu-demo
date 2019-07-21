@@ -1,18 +1,23 @@
 <template>
-  <div class="g-checkbox">
-    <label class="g-checkbox-label">
-      <span class="g-checkbox-wrapper">
-        <input @change="onChange($event)" class="g-checkbox-checkbox" type="checkbox">
-        <transition name="checked">
-          <span class="correct" v-show="checked"></span>
-        </transition>
-      </span>
-      <span class="g-checkbox-desc">描述</span>
-    </label>
-  </div>
+  <!--  <div :class="{'disabled-checkbox': disabled}" @click="$emit('click')" class="g-checkbox">-->
+  <!--    <label class="g-checkbox-label">-->
+  <!--      <span class="g-checkbox-wrapper">-->
+  <!--        <input :class="{'disabled-checkbox': disabled}" :disabled="disabled"-->
+  <!--               class="g-checkbox-checkbox" type="checkbox">-->
+  <!--        <transition name="checked">-->
+  <!--          <span :class="checkAll && checkAll ? 'check-all': 'check-no'" class="correct" v-show="checked"></span>-->
+  <!--        </transition>-->
+  <!--      </span>-->
+  <!--      <span :class="{'disabled-checkbox': disabled}" class="g-checkbox-desc">-->
+  <!--        <slot></slot>-->
+  <!--      </span>-->
+  <!--    </label>-->
+  <!--  </div>-->
+  <input @click="$emit('click')" value="您好">
 </template>
 
 <script>
+  import eventBus from '../../asset/js/eventbus'
   /*
   *     1.选中和不选中
   *     2.禁用
@@ -31,21 +36,65 @@
         type: Boolean,
         default: false,
       },
+      //不可用
+      disabled: {
+        type: Boolean,
+        default: false,
+      },
+      //全选的时候样式与其他平时选中的状态不同
+      checkAll: {
+        type: Boolean,
+        default: false,
+      },
+      //关联的checkboxgroup
+      contantCheckboxGroup: {
+        type: String,
+      },
     },
     data () {
       return {}
     },
+    mounted () {
+      if (this.checkAll) {
+        if (!this.contantCheckboxGroup) {
+          console.error('全选的时候必须有contantCheckboxGroup参数')
+        } else {
+          eventBus.$on('xxx', (value) => {
+            console.log(value)
+          })
+        }
+      }
+    },
     methods: {
-      onChange (e) {
-        console.log(e.target.checked)
-        this.beforeChecked && this.beforeChecked()
-        this.$emit('update:checked', e.target.checked)
-      },
+      // onChange (e) {
+      //   this.onChange(e)
+      // let checked = e.target.checked
+      // console.log("是否选中"+ checked)
+      // let data = ''
+      // if (this.checkAll && checked === true) {
+      //   data = 'all'
+      // } else if (this.checkAll && checked === false) {
+      //   data = 'noall'
+      // } else if (!this.checkAll && checked === true) {
+      //   data = this.$slots.default[0].text.trim()
+      //   console.log(data)
+      // } else if (!this.checkAll && checked === false) {
+      //   data = ''
+      //   console.log(data)
+      // }
+      // eventBus.$emit(this.contantCheckboxGroup, data)
+      // this.beforeChecked && this.beforeChecked()
+      // this.$emit('update:checked', checked)
+      // },
     },
   }
 </script>
 
 <style lang="scss" scoped>
+  .disabled-checkbox {
+    cursor: not-allowed !important;
+  }
+
   .g-checkbox {
     .checked-enter, .checked-leave-to {
       opacity: 0;
@@ -114,6 +163,23 @@
             top: 50%;
             left: 50%;
             transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          }
+        }
+
+        .check-all {
+          background: #ffffff;
+
+          &:after {
+            content: "";
+            display: table;
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            left: 50%;
+            top: 50%;
+            background: $theme;
+            border: 0;
+            transform: translateX(-50%) translateY(-50%);
           }
         }
       }
