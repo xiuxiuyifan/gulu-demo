@@ -4,7 +4,7 @@
       <h2>项目概览</h2>
     </div>
     <p>文件目录</p>
-    <div class="component-wrapper">
+    <div class="component-wrapper" v-highlight>
       <div class="component-wrapper-demo">
         <pre><code>{{str}}</code></pre>
       </div>

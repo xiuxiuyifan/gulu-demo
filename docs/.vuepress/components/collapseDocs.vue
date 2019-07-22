@@ -17,7 +17,7 @@
           <g-collapse-item name="3" title="少羽">
             项氏一族
           </g-collapse-item>
-          <g-collapse-item name="4" title="月儿">
+          <g-collapse-item name="4" title="虞姬">
             虞姬
           </g-collapse-item>
         </g-collapse>
@@ -51,7 +51,7 @@
           <g-collapse-item name="3" title="少羽">
             项氏一族
           </g-collapse-item>
-          <g-collapse-item name="4" title="月儿">
+          <g-collapse-item name="4" title="虞姬">
             虞姬
           </g-collapse-item>
         </g-collapse>
