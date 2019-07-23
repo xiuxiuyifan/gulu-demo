@@ -28,6 +28,7 @@ module.exports = {
           '/views/guluDocs/popover.md',
           '/views/guluDocs/tabs.md',
           '/views/guluDocs/toast.md',
+          '/views/guluDocs/cascader.md',
           '/views/guluDocs/carousel.md',
           '/views/guluDocs/checkBox.md',
           '/views/guluDocs/menu.md',

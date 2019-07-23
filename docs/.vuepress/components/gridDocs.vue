@@ -232,33 +232,6 @@
             version: '',
           },
         ],
-        columns: [
-          {
-            title: '参数',
-            dataIndex: 'params',
-            key: 'params',
-          },
-          {
-            title: '说明',
-            dataIndex: 'description',
-            key: 'description',
-          },
-          {
-            title: '类型',
-            dataIndex: 'type',
-            key: 'type',
-          },
-          {
-            title: '默认值',
-            dataIndex: 'default',
-            key: 'default',
-          },
-          {
-            title: '版本',
-            dataIndex: 'version',
-            key: 'version',
-          },
-        ],
       }
     },
   }
