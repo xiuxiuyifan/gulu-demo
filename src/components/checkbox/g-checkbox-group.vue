@@ -1,8 +1,7 @@
 <template>
   <div class="g-checkbox-group">
-    <g-checkbox :checked.sync="selectedArr[index]" :contantCheckboxGroup="contantCheckboxGroup"
-                :key="index+new Date().getTime()"
-                v-for="(item , index) in plainOption">{{item}}
+    <g-checkbox :key="index+new Date().getTime()"
+                @change="$emit('change')" v-for="(item , index) in plainOption">{{item}}
     </g-checkbox>
   </div>
 </template>
@@ -27,43 +26,22 @@
         type: Array,
         default: () => [],
       },
-      contantCheckboxGroup: {
-        type: String,
-      },
     },
     data () {
       return {
         selected: [],
-        plainOptionLength: this.plainOption.length,
-        changeLength: 0,
-        selectedArr: [false, false, false, false],
       }
     },
     mounted () {
-      if (this.contantCheckboxGroup) {
-        eventBus.$on(this.contantCheckboxGroup, (value) => {
-          console.log(value)
-          if (value === 'all') {
-            this.selected = this.plainOption
-          } else if (value === 'noall') {
-            this.selected = []
-          } else {
-            //选中的肯定是在原始数组里面的
-            if (value) {
-              this.$set(this.selected, this.plainOption.indexOf(value), value)
-              this.changeLength++
-              if (this.changeLength === this.plainOptionLength) {
-                console.log(this.selected.length)
-                console.log(this.plainOptionLength)
-                eventBus.$emit('xxx', '全部选中了')
-              }
-            } else {
-              this.selected.splice(this.plainOption.indexOf(value), 1)
-            }
+      //对两组数据进行对比，看默认选中的在不在所有的数据里面
+      for (let i = 0; i < this.plainOption.length; i++) {
+        console.log(this.plainOption[i])
 
-          }
-          console.log(this.selectedArr)
-        })
+        let isChecked = this.defaultSelected.indexOf(this.plainOption[i]) >= 0
+        if (isChecked) {
+          console.log(this.$children[i].checked = true)
+          console.log(i)
+        }
       }
     },
   }

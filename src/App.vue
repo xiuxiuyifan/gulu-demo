@@ -41,14 +41,10 @@
     <!--      <div>{{selected}}</div>-->
     <!--    </div>-->
     <!--    <GTransition></GTransition>-->
-    <g-button @click="checkboxChange">fdasjfl</g-button>
-    <g-checkbox @change="checkboxChange">单选</g-checkbox>
-    <div>
-      <g-checkbox :checked.sync="checked" check-all contant-checkbox-group="1">全选</g-checkbox>
-      <g-checkbox-group :default-selected="defaultOption" :plain-option="plainOption"
-                        contant-checkbox-group="1"></g-checkbox-group>
-    </div>
-    <!--    <g-checkbox-group :plain></g-checkbox-group>-->
+    <g-checkbox :check-all.sync="checkAll" :checkAllAnimation="checkAllAnimation" @change="checkBoxAll">全选
+    </g-checkbox>
+    <g-checkbox-group :default-selected="defaultOption" :plain-option="plainOption"
+                      @change="onChange()"></g-checkbox-group>
   </div>
 </template>
 
@@ -109,6 +105,9 @@
         selected: 0,
         checked: false,
         options: this.getOptions(),
+        //复选框
+        checkAllAnimation: false,
+        checkAll: true,
         plainOption: ['香蕉', '苹果', '桃子', '荔枝'],
         defaultOption: ['香蕉', '苹果'],
         // options: [
@@ -213,8 +212,14 @@
             console.log(error)
           })
       },
-      checkboxChange (e) {
-        console.log('fjdaksfhkas')
+      checkBoxAll (e) {
+        this.checkAll = !this.checkAll
+        console.log(e.target.checked)
+      },
+      onChange () {
+        console.log('您好呀mmp')
+        this.checkAllAnimation = true
+        //在这里判断子节点是否都选中了
       },
     },
   }

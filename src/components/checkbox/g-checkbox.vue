@@ -1,19 +1,19 @@
 <template>
-  <!--  <div :class="{'disabled-checkbox': disabled}" @click="$emit('click')" class="g-checkbox">-->
-  <!--    <label class="g-checkbox-label">-->
-  <!--      <span class="g-checkbox-wrapper">-->
-  <!--        <input :class="{'disabled-checkbox': disabled}" :disabled="disabled"-->
-  <!--               class="g-checkbox-checkbox" type="checkbox">-->
-  <!--        <transition name="checked">-->
-  <!--          <span :class="checkAll && checkAll ? 'check-all': 'check-no'" class="correct" v-show="checked"></span>-->
-  <!--        </transition>-->
-  <!--      </span>-->
-  <!--      <span :class="{'disabled-checkbox': disabled}" class="g-checkbox-desc">-->
-  <!--        <slot></slot>-->
-  <!--      </span>-->
-  <!--    </label>-->
-  <!--  </div>-->
-  <input @click="$emit('click')" value="您好">
+  <div :class="{'disabled-checkbox': disabled}" class="g-checkbox">
+    <label class="g-checkbox-label">
+        <span class="g-checkbox-wrapper">
+          <input :class="{'disabled-checkbox': disabled}" :disabled="disabled" @change="onChange($event)"
+                 class="g-checkbox-checkbox" type="checkbox">
+          <transition name="checked">
+            <span class="correct part-of" v-if="checkAllAnimation"></span>
+            <span :class="{correct: checked}" v-else></span>
+          </transition>
+        </span>
+      <span :class="{'disabled-checkbox': disabled}" class="g-checkbox-desc">
+          <slot></slot>
+        </span>
+    </label>
+  </div>
 </template>
 
 <script>
@@ -24,6 +24,9 @@
   *     3.全选
   *     4.自动选中
   * */
+
+  //第一次对api 的设计有错误导致自己进入一个错的误区
+
   export default {
     name: 'g-checkbox',
     props: {
@@ -31,61 +34,29 @@
       beforeChecked: {
         type: Function,
       },
-      //选择之后的结果
-      checked: {
-        type: Boolean,
-        default: false,
-      },
       //不可用
       disabled: {
         type: Boolean,
         default: false,
       },
-      //全选的时候样式与其他平时选中的状态不同
-      checkAll: {
+      //全选的时候子选项值选中一个值时候出现的状态
+      checkAllAnimation: {
         type: Boolean,
         default: false,
       },
-      //关联的checkboxgroup
-      contantCheckboxGroup: {
-        type: String,
-      },
     },
     data () {
-      return {}
-    },
-    mounted () {
-      if (this.checkAll) {
-        if (!this.contantCheckboxGroup) {
-          console.error('全选的时候必须有contantCheckboxGroup参数')
-        } else {
-          eventBus.$on('xxx', (value) => {
-            console.log(value)
-          })
-        }
+      return {
+        checked: false,
       }
     },
+    mounted () {
+    },
     methods: {
-      // onChange (e) {
-      //   this.onChange(e)
-      // let checked = e.target.checked
-      // console.log("是否选中"+ checked)
-      // let data = ''
-      // if (this.checkAll && checked === true) {
-      //   data = 'all'
-      // } else if (this.checkAll && checked === false) {
-      //   data = 'noall'
-      // } else if (!this.checkAll && checked === true) {
-      //   data = this.$slots.default[0].text.trim()
-      //   console.log(data)
-      // } else if (!this.checkAll && checked === false) {
-      //   data = ''
-      //   console.log(data)
-      // }
-      // eventBus.$emit(this.contantCheckboxGroup, data)
-      // this.beforeChecked && this.beforeChecked()
-      // this.$emit('update:checked', checked)
-      // },
+      onChange (e) {
+        this.checked = e.target.checked
+        this.$emit('change', e)
+      },
     },
   }
 </script>
@@ -166,7 +137,7 @@
           }
         }
 
-        .check-all {
+        .part-of {
           background: #ffffff;
 
           &:after {
