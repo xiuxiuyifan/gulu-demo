@@ -1,12 +1,13 @@
 <template>
   <div :class="{'disabled-checkbox': disabled}" class="g-checkbox">
-    <label class="g-checkbox-label">
+    <label :for="uuid" class="g-checkbox-label">
         <span class="g-checkbox-wrapper">
-          <input :class="{'disabled-checkbox': disabled}" :disabled="disabled" @change="onChange($event)"
+          <input :class="{'disabled-checkbox': disabled}" :disabled="disabled" :id="uuid"
+                 @change="onChange($event)"
                  class="g-checkbox-checkbox" type="checkbox">
           <transition name="checked">
-            <span class="correct part-of" v-if="checkAllAnimation"></span>
-            <span :class="{correct: checked}" v-else></span>
+            <span class="part-of" v-if="checkAllAnimation"></span>
+            <span :class="{correct:checked || checked1}" v-else></span>
           </transition>
         </span>
       <span :class="{'disabled-checkbox': disabled}" class="g-checkbox-desc">
@@ -26,10 +27,14 @@
   * */
 
   //第一次对api 的设计有错误导致自己进入一个错的误区
-
+  const uuidv1 = require('uuid/v1')
   export default {
     name: 'g-checkbox',
     props: {
+      checked: {
+        type: Boolean,
+        default: false,
+      },
       //改变之前
       beforeChecked: {
         type: Function,
@@ -47,15 +52,28 @@
     },
     data () {
       return {
-        checked: false,
+        checked1: false,
+        uuid: uuidv1(),
       }
     },
     mounted () {
     },
     methods: {
+      xxx () {
+        if (this.checkAllAnimation) {
+          return 'part-of'
+        }
+        if (this.checked || this.checked1) {
+          return 'correct'
+        }
+      },
       onChange (e) {
-        this.checked = e.target.checked
-        this.$emit('change', e)
+        console.log('变化了')
+        console.log(e.target.checked)
+        this.$nextTick(() => {
+          this.checked1 = e.target.checked
+          this.$emit('change', e)
+        })
       },
     },
   }
@@ -88,6 +106,7 @@
       display: inline-flex;
       align-items: center;
       vertical-align: top;
+      padding: 2px;
 
       .g-checkbox-wrapper {
         display: inline-flex;

@@ -41,10 +41,10 @@
     <!--      <div>{{selected}}</div>-->
     <!--    </div>-->
     <!--    <GTransition></GTransition>-->
-    <g-checkbox :check-all.sync="checkAll" :checkAllAnimation="checkAllAnimation" @change="checkBoxAll">全选
+    <g-checkbox :checkAllAnimation="checkAllAnimation" :checked="checkAll" @change="checkBoxAll">全选
     </g-checkbox>
     <g-checkbox-group :default-selected="defaultOption" :plain-option="plainOption"
-                      @change="onChange()"></g-checkbox-group>
+                      @change="onChange"></g-checkbox-group>
   </div>
 </template>
 
@@ -107,7 +107,7 @@
         options: this.getOptions(),
         //复选框
         checkAllAnimation: false,
-        checkAll: true,
+        checkAll: false,
         plainOption: ['香蕉', '苹果', '桃子', '荔枝'],
         defaultOption: ['香蕉', '苹果'],
         // options: [
@@ -213,11 +213,14 @@
           })
       },
       checkBoxAll (e) {
+        this.checkAllAnimation = false
+        Object.assign(this, {
+          defaultOption: e.target.checked ? this.plainOption : [],
+        })
         this.checkAll = !this.checkAll
-        console.log(e.target.checked)
       },
-      onChange () {
-        console.log('您好呀mmp')
+      onChange (checkedList) {
+        console.log(checkedList)
         this.checkAllAnimation = true
         //在这里判断子节点是否都选中了
       },

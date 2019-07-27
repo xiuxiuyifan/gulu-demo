@@ -1,7 +1,7 @@
 <template>
   <div class="g-checkbox-group">
     <g-checkbox :key="index+new Date().getTime()"
-                @change="$emit('change')" v-for="(item , index) in plainOption">{{item}}
+                @change="onChange($event)" v-for="(item , index) in plainOption">{{item}}
     </g-checkbox>
   </div>
 </template>
@@ -32,17 +32,48 @@
         selected: [],
       }
     },
+    watch: {
+      defaultSelected: {
+        handler: function (newValue, oldVal) {
+          console.log('有变化  ')
+          console.log(newValue)
+          if (newValue.length > 0) {
+            this.$children.forEach((item, index) => {
+              item.checked1 = true
+            })
+          } else {
+            this.$children.forEach((item, index) => {
+              item.checked1 = false
+            })
+          }
+
+        },
+        deep: true,
+      },
+    },
     mounted () {
       //对两组数据进行对比，看默认选中的在不在所有的数据里面
       for (let i = 0; i < this.plainOption.length; i++) {
-        console.log(this.plainOption[i])
-
         let isChecked = this.defaultSelected.indexOf(this.plainOption[i]) >= 0
         if (isChecked) {
-          console.log(this.$children[i].checked = true)
-          console.log(i)
+          this.$children[i].checked1 = true
         }
       }
+    },
+    methods: {
+      onChange (e) {
+        //每一个变的时候遍历一下自己的儿子如果
+        //都选中
+        //选中一部分
+        //都没有选中
+        let checkedList = []
+        this.$children.forEach((item, index) => {
+          if (item.checked1) {
+            checkedList.push(item.$el.innerText)
+          }
+        })
+        this.$emit('change', checkedList)
+      },
     },
   }
 </script>
