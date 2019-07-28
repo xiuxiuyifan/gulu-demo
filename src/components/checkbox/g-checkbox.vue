@@ -7,7 +7,7 @@
                  class="g-checkbox-checkbox" type="checkbox">
           <transition name="checked">
             <span class="part-of" v-if="checkAllAnimation"></span>
-            <span :class="{correct:checked || checked1}" v-else></span>
+            <span :class="{correct:useChecked || checked}" v-else></span>
           </transition>
         </span>
       <span :class="{'disabled-checkbox': disabled}" class="g-checkbox-desc">
@@ -31,7 +31,7 @@
   export default {
     name: 'g-checkbox',
     props: {
-      checked: {
+      useChecked: {
         type: Boolean,
         default: false,
       },
@@ -52,26 +52,18 @@
     },
     data () {
       return {
-        checked1: false,
+        checked: false,
         uuid: uuidv1(),
       }
     },
     mounted () {
     },
     methods: {
-      xxx () {
-        if (this.checkAllAnimation) {
-          return 'part-of'
-        }
-        if (this.checked || this.checked1) {
-          return 'correct'
-        }
-      },
       onChange (e) {
         console.log('变化了')
         console.log(e.target.checked)
         this.$nextTick(() => {
-          this.checked1 = e.target.checked
+          this.checked = e.target.checked
           this.$emit('change', e)
         })
       },
@@ -177,7 +169,6 @@
       .g-checkbox-desc {
         padding-left: 6px;
         cursor: pointer;
-        user-select: none;
       }
     }
   }

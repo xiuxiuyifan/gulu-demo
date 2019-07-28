@@ -58,7 +58,7 @@
         }
       })
       // 监听通知过来的数据里面有没有自己
-      this.eventBus.$on('update:checked', (arr) => {
+      this.eventBus.$on('update:useChecked', (arr) => {
         console.log(arr)
         if (this.onlyone === true) {
           if (arr.length > 1) {

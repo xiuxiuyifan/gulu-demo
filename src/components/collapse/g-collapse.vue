@@ -48,7 +48,7 @@
       })
 
       // 告诉大家那个被选中了
-      this.eventBus.$emit('update:checked', this.selected)
+      this.eventBus.$emit('update:useChecked', this.selected)
     },
   }
 </script>

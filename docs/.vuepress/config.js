@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Vue-UI组件',
 	themeConfig: {
-		logo: '/2.jfif',
+    logo: '/logo.jfif',
 		nav: [
 			{ text: 'Home', link: '/' },
       { text: 'Github', link: 'https://github.com/xiuxiuyifan/gulu-demo' },

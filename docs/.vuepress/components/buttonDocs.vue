@@ -128,7 +128,8 @@
         <div class="code-content-height">
           <div
             class="code-user-desc"
-          >在button组件外面包一层button-group组件就可以实现按钮组啦，这边icon在左边的时候有点小bug如果没有文字就不给svg添加右边的margin</div>
+          >在button组件外面包一层button-group组件就可以实现按钮组啦，这边icon在左边的时候有点小bug如果没有文字就不给svg添加右边的margin
+          </div>
           <pre><code>{{str3}}</code></pre>
         </div>
       </div>
@@ -185,23 +186,23 @@
   import GButtonGroup from '../../../src/components/button/g-button-group'
   import GButton from '../../../src/components/button/g-button'
   import GIcon from '../../../src/components/icon/icon'
-import mixin from "../mixin";
+  import mixin from '../mixin'
 
-export default {
-  name: "buttonDocs",
-  mixins: [mixin],
-  components: {
-    "g-button": GButton,
-    "g-icon": GIcon,
-    "g-button-group": GButtonGroup
-  },
-  data() {
-    return {
-      //组件里面用到的状态
-      lodding: false,
-      lodding1: false,
-      lodding2: false,
-      str: `
+  export default {
+    name: 'buttonDocs',
+    mixins: [mixin],
+    components: {
+      'g-button': GButton,
+      'g-icon': GIcon,
+      'g-button-group': GButtonGroup,
+    },
+    data () {
+      return {
+        //组件里面用到的状态
+        lodding: false,
+        lodding1: false,
+        lodding2: false,
+        str: `
 <div>
   <g-button>默认按钮</g-button>
   <g-button type="primary">主要按钮</g-button>
@@ -211,23 +212,24 @@ export default {
   <g-button type="danger">危险按钮</g-button>
 </div>
 <div style="margin: 20px 0">
-  <g-button>朴素按钮</g-button>
-  <g-button type="primary">主要按钮</g-button>
-  <g-button type="success">成功按钮</g-button>
-  <g-button type="info">信息按钮</g-button>
-  <g-button type="warning">警告按钮</g-button>
-  <g-button type="danger">危险按钮</g-button>
+  <g-button plain>朴素按钮</g-button>
+  <g-button plain type="primary">主要按钮</g-button>
+  <g-button plain type="success">成功按钮</g-button>
+  <g-button plain type="info">信息按钮</g-button>
+  <g-button plain type="warning">警告按钮</g-button>
+  <g-button plain type="danger">危险按钮</g-button>
 </div>
 <div style="margin: 20px 0">
-  <g-button>圆形按钮</g-button>
-  <g-button type="primary">主要按钮</g-button>
-  <g-button type="success">成功按钮</g-button>
-  <g-button type="info">信息按钮</g-button>
-  <g-button type="warning">警告按钮</g-button>
-  <g-button type="danger">危险按钮</g-button>
-</div>`.trim(),
-      str1: `<g-button disabled>禁用按钮</g-button>`,
-      str2: `
+  <g-button round>圆形按钮</g-button>
+  <g-button round type="primary">主要按钮</g-button>
+  <g-button round type="success">成功按钮</g-button>
+  <g-button round type="info">信息按钮</g-button>
+  <g-button round type="warning">警告按钮</g-button>
+  <g-button round type="danger">危险按钮</g-button>
+</div>
+        `.trim(),
+        str1: `<g-button disabled>禁用按钮</g-button>`,
+        str2: `
 <div>
   <g-button>默认按钮</g-button>
   <g-button type="primary" icon="setting" position="right">主要按钮</g-button>
@@ -252,7 +254,7 @@ export default {
   <g-button round type="warning" icon="information">警告按钮</g-button>
   <g-button round type="danger" icon="error">危险按钮</g-button>
 </div>`.trim(),
-      str3: `
+        str3: `
 <g-button>默认按钮</g-button>
 <g-button-group>
   <g-button icon="left">上一页</g-button>
@@ -263,17 +265,17 @@ export default {
   <g-button icon="help"></g-button>
   <g-button icon="download"></g-button>
 </g-button-group>`.trim(),
-      str4: `
+        str4: `
 <g-button :lodding="true">默认按钮</g-button>
 <g-button type="primary" :lodding="lodding" @click="lodding = !lodding">点我加载</g-button>`.trim(),
-      str5: `<g-button ripples>涟漪按钮</g-button>`
-    };
+        str5: `<g-button ripples>涟漪按钮</g-button>`,
+      }
+    },
   }
-};
 </script>
 <style>
 </style>
 <style lang="scss" scoped>
-.button-docs {
-}
+  .button-docs {
+  }
 </style>

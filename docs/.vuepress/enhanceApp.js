@@ -2,7 +2,9 @@ import './public/index.scss'
 import Vue from 'vue'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/tomorrow.css'
+import Toast from '../../src/plugin'
 
+Vue.use(Toast)
 Vue.directive('highlight', function (el) {
   let blocks = el.querySelectorAll('pre code')
   blocks.forEach((block) => {

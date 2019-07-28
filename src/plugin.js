@@ -1,5 +1,5 @@
 import Gtoast from './components/toast/g-toast'
-
+import GIcon from './components/icon/icon'
 let toast // 记录当前页面是否存在toast
 /*eslint spaced-comment:0*/
 export default {
@@ -30,6 +30,9 @@ export default {
       console.log('我是插件里面的东西')
       let constructor = Vue.extend(Gtoast)
       let vm = new constructor({
+        components: {
+          GIcon,
+        },
         propsData: options
       })
       vm.$on('close', (value) => {

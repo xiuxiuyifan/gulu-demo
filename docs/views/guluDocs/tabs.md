@@ -1,3 +1,6 @@
 ---
-title: "tabs--(标签页)"
+title: "tabs--(选项卡)"
 ---
+<ClientOnly>
+  <tabsDocs/>
+</ClientOnly>

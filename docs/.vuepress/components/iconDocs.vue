@@ -8,7 +8,7 @@
     <div class="component-wrapper">
       <div class="component-wrapper-demo">
         <div class="icon-box-wrapper">
-          <div :class="item.classes" class="icon-wrapper" v-for="(item,index) in iconArr" :key="index">
+          <div :class="item.classes" :key="index" class="icon-wrapper" v-for="(item,index) in iconArr">
             <g-icon :icon="item.icon"></g-icon>
             <span class="desc">{{item.icon}}</span>
           </div>
@@ -31,19 +31,21 @@
 
 
     <h3>attributes</h3>
-    <p>组件参数说明后期扩展</p>
+    <g-table :data-table="dataTable" :columns="columns"></g-table>
   </div>
 </template>
 
 <script>
   import GIcon from '../../../src/components/icon/icon'
   import mixin from '../mixin'
+  import GTable from '../../../src/components/table/g-table'
 
   export default {
     name: 'g-icon-docs',
     mixins: [mixin],
     components: {
       GIcon,
+      GTable,
     },
     data () {
       return {
@@ -144,6 +146,16 @@
           },
         ],
         str: `<g-icon icon="setting"></g-icon>`,
+        dataTable: [
+          {
+            id: '1',
+            params: 'icon',
+            description: '传入你想要展示的icon的名字',
+            type: 'string',
+            default: '-',
+            version: '',
+          },
+        ],
       }
     },
     methods: {},
@@ -167,6 +179,7 @@
     .jd {
       color: #f10215;
     }
+
     .icon-box-wrapper {
       display: flex;
       flex-wrap: wrap;

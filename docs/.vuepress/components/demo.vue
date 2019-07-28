@@ -8,7 +8,7 @@
       <div class="component-wrapper-demo">
         组件展示位置
       </div>
-      <div class="code-content" style="height: 0;">
+      <div class="code-content" style="height: 0;" v-highlight>
         <div class="code-content-height">
           <div class="code-user-desc">
             组件描述说明
@@ -16,8 +16,8 @@
           <pre><code>{{str}}</code></pre>
         </div>
       </div>
-      <div class="lock-code" @click="showCode(0)" ref="xxx">
-        <g-icon class="icon-down" :icon="isShow[0] === false ? 'codedown' : 'codeup'"></g-icon>
+      <div @click="showCode(0)" class="lock-code" ref="xxx">
+        <g-icon :icon="isShow[0] === false ? 'codedown' : 'codeup'" class="icon-down"></g-icon>
         <span class="lock-code-word">{{isShow[0] === false ? '显示代码' : '隐藏代码'}}</span>
       </div>
     </div>
@@ -31,11 +31,27 @@
 <script>
   import GIcon from '../../../src/components/icon/icon'
   import mixin from '../mixin'
+
   export default {
     name: 'demo',
     mixins: [mixin],
     components: {
       GIcon,
+    },
+    data () {
+      return {
+        str: ``,
+        dataTable: [
+          {
+            id: '1',
+            params: 'message',
+            description: '提示消息要显示的内容',
+            type: 'string',
+            default: '-',
+            version: '',
+          },
+        ],
+      }
     },
   }
 </script>

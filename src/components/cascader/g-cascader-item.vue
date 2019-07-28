@@ -42,9 +42,13 @@
 <script>
   import http from '../../http'
   import db from '../../db'
+  import GIcon from '../icon/icon'
 
 export default {
   name: "g-cascader-item",
+  components: {
+    GIcon,
+  },
   props: {
     item: {
       type: Array

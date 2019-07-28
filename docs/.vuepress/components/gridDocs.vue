@@ -231,6 +231,14 @@
             default: '-',
             version: '',
           },
+          {
+            id: '8',
+            params: 'gutter',
+            description: '间隙row的子元素中间的间隔',
+            type: 'number',
+            default: '-',
+            version: '',
+          },
         ],
       }
     },

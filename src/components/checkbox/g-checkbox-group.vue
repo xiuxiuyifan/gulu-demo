@@ -39,11 +39,11 @@
           console.log(newValue)
           if (newValue.length > 0) {
             this.$children.forEach((item, index) => {
-              item.checked1 = true
+              item.checked = true
             })
           } else {
             this.$children.forEach((item, index) => {
-              item.checked1 = false
+              item.checked = false
             })
           }
 
@@ -56,7 +56,7 @@
       for (let i = 0; i < this.plainOption.length; i++) {
         let isChecked = this.defaultSelected.indexOf(this.plainOption[i]) >= 0
         if (isChecked) {
-          this.$children[i].checked1 = true
+          this.$children[i].checked = true
         }
       }
     },
@@ -68,7 +68,7 @@
         //都没有选中
         let checkedList = []
         this.$children.forEach((item, index) => {
-          if (item.checked1) {
+          if (item.checked) {
             checkedList.push(item.$el.innerText)
           }
         })
