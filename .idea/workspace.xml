@@ -4,36 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/docs/.vuepress/components/gridDocs.vue" line="99" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="更新lodash 版本">
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/tabsDocs.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/components/toastDocs.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/checkbox.spec.js" afterDir="false" />
+    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="checbox还得用单向数据流的方式重写一遍">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/buttonDocs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/buttonDocs.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/cascaderDocs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/cascaderDocs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/demo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/demo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/gridDocs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/gridDocs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/iconDocs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/iconDocs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/enhanceApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/enhanceApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/views/guluDocs/tabs.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/views/guluDocs/tabs.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/views/guluDocs/toast.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/views/guluDocs/toast.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cascader/g-cascader-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cascader/g-cascader-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkbox/g-checkbox-group.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/g-checkbox-group.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkbox/g-checkbox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/g-checkbox.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/collapse/g-collapse-Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collapse/g-collapse-Item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/collapse/g-collapse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collapse/g-collapse.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tabs/g-tab-content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/g-tab-content.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tabs/g-tab-header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/g-tab-header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tabs/g-tab.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/g-tab.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tabs/tab-content-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/tab-content-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tabs/tab-header-item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/tab-header-item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cascader/g-cascader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cascader/g-cascader.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,10 +26,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/toastDocs.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-124">
-              <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+            <state relative-caret-position="465">
+              <caret line="43" selection-start-line="43" selection-end-line="44" />
               <folding>
-                <element signature="e#902#955#0" expanded="true" />
+                <element signature="e#1144#1197#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,10 +38,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/cascaderDocs.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1279">
-              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="-566">
+              <caret line="108" column="17" lean-forward="true" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
               <folding>
-                <element signature="e#842#895#0" expanded="true" />
+                <element signature="e#1789#1842#0" expanded="true" />
+                <element signature="e#2058#2690#0" />
+                <element signature="e#1674#1880#0" />
               </folding>
             </state>
           </provider>
@@ -76,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/cascader/g-cascader-item.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="48" column="15" lean-forward="true" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+            <state relative-caret-position="751">
+              <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
               <folding>
                 <element signature="e#1174#1203#0" expanded="true" />
               </folding>
@@ -85,20 +61,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            <state relative-caret-position="85">
+              <caret line="184" column="6" selection-start-line="184" selection-start-column="6" selection-end-line="201" selection-end-column="8" />
+              <folding>
+                <element signature="e#2949#2970#0" expanded="true" />
+                <element signature="e#3811#7446#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/cascader/g-cascader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="122" column="26" selection-start-line="122" selection-start-column="26" selection-end-line="122" selection-end-column="26" />
+            <state relative-caret-position="178">
+              <caret line="159" column="26" selection-start-line="159" selection-start-column="26" selection-end-line="159" selection-end-column="26" />
+              <folding>
+                <element signature="e#663#708#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/toast/g-toast.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="1643">
               <caret line="53" column="16" lean-forward="true" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
             </state>
           </provider>
@@ -115,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/plugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1023">
+            <state relative-caret-position="992">
               <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
@@ -127,13 +110,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/tabsDocs.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="224" column="12" lean-forward="true" selection-start-line="217" selection-start-column="10" selection-end-line="224" selection-end-column="12" />
+            <state relative-caret-position="513">
+              <caret line="254" column="3" lean-forward="true" selection-start-line="254" selection-start-column="3" selection-end-line="256" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#5221#5274#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,11 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/demo.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="1085">
               <caret line="36" column="20" lean-forward="true" selection-end-line="61" />
-              <folding>
-                <element signature="e#802#855#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -172,10 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>new Vue</find>
-      <find>Vue</find>
-      <find>lodash.template@^4</find>
-      <find>vue/types</find>
       <find>font-size</find>
       <find>g-checkbox-checkbox</find>
       <find>g-checkbox-desc</find>
@@ -197,11 +171,15 @@
       <find>beforChange</find>
       <find>str</find>
       <find>btnMsg</find>
-      <find>getNextLevelData</find>
       <find>selectData</find>
-      <find>options</find>
-      <find>isShow</find>
+      <find>icon</find>
+      <find>cascaderDocs</find>
+      <find>nextLevelData</find>
       <find>getOptions</find>
+      <find>getNextLevelData</find>
+      <find>options</find>
+      <find>down-wrapper</find>
+      <find>isShow</find>
     </findStrings>
     <replaceStrings>
       <replace>el</replace>
@@ -236,7 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/views/guluDocs/datepicker.md" />
         <option value="$PROJECT_DIR$/docs/views/guluDocs/tree.md" />
         <option value="$PROJECT_DIR$/docs/.vuepress/components/treeDocs.vue" />
         <option value="$PROJECT_DIR$/docs/views/guluDocs/notification.md" />
@@ -284,9 +261,10 @@
         <option value="$PROJECT_DIR$/docs/.vuepress/components/demo.vue" />
         <option value="$PROJECT_DIR$/docs/.vuepress/components/toastDocs.vue" />
         <option value="$PROJECT_DIR$/docs/.vuepress/config.js" />
-        <option value="$PROJECT_DIR$/docs/.vuepress/components/cascaderDocs.vue" />
         <option value="$PROJECT_DIR$/src/components/cascader/g-cascader-item.vue" />
         <option value="$PROJECT_DIR$/src/App.vue" />
+        <option value="$PROJECT_DIR$/docs/.vuepress/components/cascaderDocs.vue" />
+        <option value="$PROJECT_DIR$/src/components/cascader/g-cascader.vue" />
       </list>
     </option>
   </component>
@@ -323,7 +301,6 @@
       <foldersAlwaysOnTop value="false" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,6 +355,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -571,14 +549,8 @@
       <workItem from="1563886890699" duration="6859000" />
       <workItem from="1563968580527" duration="8545000" />
       <workItem from="1564058158461" duration="9852000" />
-      <workItem from="1564204255234" duration="20500000" />
-    </task>
-    <task id="LOCAL-00020" summary="更改dist文件引用路径">
-      <created>1553100348306</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1553100348306</updated>
+      <workItem from="1564204255234" duration="20644000" />
+      <workItem from="1564412089326" duration="3108000" />
     </task>
     <task id="LOCAL-00021" summary="更改dist文件引用路径2">
       <created>1553100513138</created>
@@ -916,11 +888,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564205320668</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="checbox还得用单向数据流的方式重写一遍">
+      <created>1564329637110</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1564329637110</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="717950000" />
+    <option name="totallyTimeSpent" value="721202000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -954,7 +933,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Project" order="3" sideWeight="0.49945116" visible="true" weight="0.3781603" />
+      <window_info active="true" anchor="right" id="Project" order="3" sideWeight="0.49945116" visible="true" weight="0.30984402" />
       <window_info anchor="right" id="Nativescript Palette" order="4" />
       <window_info anchor="right" x="0" y="0" width="434" height="896" id="文档" order="5" sideWeight="0.50054884" side_tool="true" weight="0.19152361" />
     </layout>
@@ -965,7 +944,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="安装本ui库的步骤的编写" />
     <MESSAGE value="移除了eslint 看看github上面还有危险提示吗" />
     <MESSAGE value="修改首页样式让其交互方面更加符合常人的习惯" />
     <MESSAGE value="发布了yarn 版本的包和npm包" />
@@ -990,7 +968,8 @@
     <MESSAGE value="添加checkbox组件并完成单选框参数" />
     <MESSAGE value="重新整理checkbox组件，推翻一开始的设计选中的单个的时候通过事件的方式获取value，一般情况下考虑多个值" />
     <MESSAGE value="更新lodash 版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新lodash 版本" />
+    <MESSAGE value="checbox还得用单向数据流的方式重写一遍" />
+    <option name="LAST_COMMIT_MESSAGE" value="checbox还得用单向数据流的方式重写一遍" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1112,13 +1091,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc" />
     <entry file="file://$PROJECT_DIR$/karma.conf.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -1334,26 +1307,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/tabsDocs.vue">
+    <entry file="file://$PROJECT_DIR$/docs/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/toast/g-toast.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="224" column="12" lean-forward="true" selection-start-line="217" selection-start-column="10" selection-end-line="224" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#5221#5274#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1643">
+          <caret line="53" column="16" lean-forward="true" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1023">
+        <state relative-caret-position="992">
           <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/demo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1085">
+          <caret line="36" column="20" lean-forward="true" selection-end-line="61" />
         </state>
       </provider>
     </entry>
@@ -1364,55 +1346,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/demo.vue">
+    <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/toastDocs.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="36" column="20" lean-forward="true" selection-end-line="61" />
+        <state relative-caret-position="465">
+          <caret line="43" selection-start-line="43" selection-end-line="44" />
           <folding>
-            <element signature="e#802#855#0" expanded="true" />
+            <element signature="e#1144#1197#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/toast/g-toast.vue">
+    <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/tabsDocs.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="53" column="16" lean-forward="true" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        <state relative-caret-position="513">
+          <caret line="254" column="3" lean-forward="true" selection-start-line="254" selection-start-column="3" selection-end-line="256" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/toastDocs.vue">
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-124">
-          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state relative-caret-position="85">
+          <caret line="184" column="6" selection-start-line="184" selection-start-column="6" selection-end-line="201" selection-end-column="8" />
           <folding>
-            <element signature="e#902#955#0" expanded="true" />
+            <element signature="e#2949#2970#0" expanded="true" />
+            <element signature="e#3811#7446#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/.vuepress/components/cascaderDocs.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1279">
-          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="-566">
+          <caret line="108" column="17" lean-forward="true" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
           <folding>
-            <element signature="e#842#895#0" expanded="true" />
+            <element signature="e#1789#1842#0" expanded="true" />
+            <element signature="e#2058#2690#0" />
+            <element signature="e#1674#1880#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cascader/g-cascader-item.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="48" column="15" lean-forward="true" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+        <state relative-caret-position="751">
+          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
           <folding>
             <element signature="e#1174#1203#0" expanded="true" />
           </folding>
@@ -1421,15 +1402,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cascader/g-cascader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="122" column="26" selection-start-line="122" selection-start-column="26" selection-end-line="122" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        <state relative-caret-position="178">
+          <caret line="159" column="26" selection-start-line="159" selection-start-column="26" selection-end-line="159" selection-end-column="26" />
+          <folding>
+            <element signature="e#663#708#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -10,12 +10,6 @@
           :options.sync="options"
           :selected.sync="selectData">
         </g-cascader>
-        <!--          <g-cascader-->
-        <!--            :after-get-data="getNextLevelData"-->
-        <!--            :load-data="true"-->
-        <!--            :options.sync="options"-->
-        <!--            :selected.sync="selectData">-->
-        <!--          </g-cascader>-->
       </div>
       <div class="code-content" style="height: 0;" v-highlight>
         <div class="code-content-height">
@@ -32,6 +26,30 @@
     </div>
 
 
+    <h3>动态的级联选择器组件</h3>
+    <p>异步的根据上一次的id获取下一级的数据</p>
+    <div class="component-wrapper">
+      <div class="component-wrapper-demo">
+        <g-cascader
+          :after-get-data="getNextLevelData"
+          :load-data="true"
+          :options.sync="options1"
+          :selected.sync="selectData1">
+        </g-cascader>
+      </div>
+      <div class="code-content" style="height: 0;" v-highlight>
+        <div class="code-content-height">
+          <div class="code-user-desc">
+            组件描述说明
+          </div>
+          <pre><code>{{str}}</code></pre>
+        </div>
+      </div>
+      <div @click="showCode(1)" class="lock-code" ref="xxx">
+        <g-icon :icon="isShow[1] === false ? 'codedown' : 'codeup'" class="icon-down"></g-icon>
+        <span class="lock-code-word">{{isShow[1] === false ? '显示代码' : '隐藏代码'}}</span>
+      </div>
+    </div>
     <h3>attributes</h3>
     <p>组件参数说明后期扩展</p>
   </div>
@@ -42,10 +60,34 @@
   import mixin from '../mixin'
   import GCascader from '../../../src/components/cascader/g-cascader'
   import GCascaderItem from '../../../src/components/cascader/g-cascader-item'
+  import db from '../../../src/db'
 
+  const nextLevelData = node => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        let isLeaves = false
+        let result = []
+        //再去数据库查询一下看当前的这个id 有没有子节点
+        for (let i = 0; i < db.length; i++) {
+          //找到当前的
+          if (node.id === db[i].parent_id) {
+            //再去数据库查询一下看当前的这个id 有没有子节点
+            for (let j = 0; j < db.length; j++) {
+              if (db[i].id === db[j].parent_id) {
+                isLeaves = true
+                break
+              }
+            }
+            result.push({ id: db[i].id, name: db[i].name, isLeaves })
+          }
+        }
+        resolve(result)
+      }, 30)
+    })
+  }
   export default {
     name: 'cascaderDocs',
-    mixin: [mixin],
+    mixins: [mixin],
     components: {
       GIcon,
       GCascader,
@@ -134,12 +176,51 @@
           { 'id': 34, 'name': '澳门', 'isLeaves': true },
           { 'id': 35, 'name': '海外', 'isLeaves': true },
         ],
+        options1: this.getOptions(),
         selectData: [],
+        selectData1: [],
       }
+    },
+    methods: {
+      getOptions () {
+        let arr = []
+        let isLeaves = false
+        for (let i = 0; i < db.length; i++) {
+          //找到当前的
+          if (0 === db[i].parent_id) {
+            //再去数据库查询一下看当前的这个id 有没有子节点
+            for (let j = 0; j < db.length; j++) {
+              if (db[i].id === db[j].parent_id) {
+                isLeaves = true
+                break
+              }
+            }
+            arr.push({ id: db[i].id, name: db[i].name, isLeaves })
+          }
+        }
+        return arr
+      },
+      //告诉用户当前
+      getNextLevelData (node, callBack) {
+        //
+        nextLevelData(node)
+          .then(result => {
+            //框架主动帮用户把当前节点的子节点插入在这一级的children下面
+            callBack(result)
+          })
+          .catch(error => {
+            console.log(error)
+          })
+      },
     },
   }
 </script>
-
+<style type="text/css">
+  .cascaderDocs * {
+    box-sizing: border-box;
+  }
+</style>
 <style lang="scss" scoped>
-
+  .cascaderDocs {
+  }
 </style>
