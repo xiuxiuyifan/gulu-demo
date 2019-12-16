@@ -32,12 +32,12 @@
 
     <!--    <div>下面的东西</div>-->
     <!--    <div>-->
-    <!--      <g-carousel :selected.sync="selected">-->
-    <!--        <g-carousel-item :key="index" v-for="(item,index) in imgArr">-->
-    <!--          <img :src="item" alt class="carousel-img"/>-->
-    <!--          &lt;!&ndash;          {{index}}&ndash;&gt;-->
-    <!--        </g-carousel-item>-->
-    <!--      </g-carousel>-->
+<!--          <g-carousel :selected.sync="selected">-->
+<!--            <g-carousel-item :key="index" v-for="(item,index) in imgArr">-->
+<!--              <img :src="item" alt class="carousel-img"/>-->
+<!--              &lt;!&ndash;          {{index}}&ndash;&gt;-->
+<!--            </g-carousel-item>-->
+<!--          </g-carousel>-->
     <!--      <div>{{selected}}</div>-->
     <!--    </div>-->
     <!--    <GTransition></GTransition>-->

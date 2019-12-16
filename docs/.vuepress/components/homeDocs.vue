@@ -6,46 +6,46 @@
       <div class="content">
 
       </div>
-      <div style="text-align: center">
-        <div class="box" :class="{'click-after':isClick}" @click="clickBox">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-      <div style="text-align: center">
-        <div class="box" :class="{'click-after':isClick}" @click="clickBox">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-      <div style="text-align: center">
-        <div class="box" :class="{'click-after':isClick}" @click="clickBox">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-      <div style="text-align: center">
-        <div class="box" :class="{'click-after':isClick}" @click="clickBox">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
+<!--      <div style="text-align: center">-->
+<!--        <div :class="{'click-after':isClick}" @click="clickBox" class="box">-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div style="text-align: center">-->
+<!--        <div :class="{'click-after':isClick}" @click="clickBox" class="box">-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div style="text-align: center">-->
+<!--        <div :class="{'click-after':isClick}" @click="clickBox" class="box">-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div style="text-align: center">-->
+<!--        <div :class="{'click-after':isClick}" @click="clickBox" class="box">-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--          <div></div>-->
+<!--        </div>-->
+<!--      </div>-->
       <p>待开发，换肤功能...</p>
       <p>--version 0.1.4(开发测试版)</p>
       <div class="result">
@@ -118,7 +118,7 @@
 <style lang="scss" scoped>
   .homeDocs {
     position: relative;
-    @keyframes move {
+    /*@keyframes move {
       0% {
         transform: rotateX(0deg) rotateY(0deg);
       }
@@ -133,7 +133,7 @@
       100% {
         transform: rotateX(-12deg) rotateY(360deg);
       }
-    }
+    }*/
     .box-wrapper {
       .box {
         margin-top: 50px;
