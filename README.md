@@ -1,5 +1,5 @@
 # xue-vue-ui
-[项目地址]("https://wangfan.store/"):https://wangfan.store
+[项目地址]("https://wangfan.store/z-ui-docs")
 
 ##### 这是一个web Pc端的UI组件库，是为了更好地学习vue.js框架，以便于在工作中更好地编写组件化代码，便于提高自己的编码水平，在学习中产生了兴趣，想自己试着实现一些平时常用的组件，就尝试了开发一套Ui组件。
 

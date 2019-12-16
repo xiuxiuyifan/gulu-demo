@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Vue-UI组件',
+  base: "z-ui-docs",
   head: [
     ['script', { src: '//at.alicdn.com/t/font_729974_f6yvr2dempu.js' }],
     [
