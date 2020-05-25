@@ -2,28 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="添加cascader组件的文档">
-      <change afterPath="$PROJECT_DIR$/src/components/upload/g-upload.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/carouselDocs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/carouselDocs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/cascaderDocs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/cascaderDocs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/components/homeDocs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/components/homeDocs.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/icon/icon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icon/icon.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/svg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="gulu-demo" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -32,68 +16,6 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>uuid</find>
-      <find>lodash</find>
-      <find>checkAllAnimation</find>
-      <find>cursor</find>
-      <find>checked1</find>
-      <find>onChange</find>
-      <find>reporters</find>
-      <find>checkAll</find>
-      <find>useChecked</find>
-      <find>beforChange</find>
-      <find>btnMsg</find>
-      <find>selectData</find>
-      <find>icon</find>
-      <find>cascaderDocs</find>
-      <find>nextLevelData</find>
-      <find>options</find>
-      <find>isShow</find>
-      <find>down-wrapper</find>
-      <find>str</find>
-      <find>str1</find>
-      <find>getNextLevelData</find>
-      <find>options1</find>
-      <find>getOptions</find>
-      <find>selected</find>
-      <find>window</find>
-      <find>&quot;svg&quot;</find>
-      <find>window</find>
-      <find>s</find>
-      <find>document</find>
-      <find>定制</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>el</replace>
-      <replace>${dy / -1 + 'deg')</replace>
-      <replace>6</replace>
-      <replace />
-      <replace>class=&quot;col-border&quot;</replace>
-      <replace>g-header-item</replace>
-      <replace>tab-header-item</replace>
-      <replace>tab-content-item</replace>
-      <replace>tabChangePosition</replace>
-      <replace>tabChangePositiontabChangePosition</replace>
-      <replace>g-button</replace>
-      <replace>options</replace>
-      <replace>click-after</replace>
-      <replace>&amp;</replace>
-      <replace>lable</replace>
-      <replace>selected</replace>
-      <replace>label</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>C:\Users\code\gulu-demo</dir>
-      <dir>C:\Users\code\gulu-demo\src</dir>
-      <dir>C:\Users\code\gulu-demo\docs</dir>
-      <dir>C:\Users\code\vue\gulu-demo\src\components\tabs</dir>
-      <dir>C:\Users\code\vue\gulu-demo\docs\.vuepress</dir>
-      <dir>C:\Users\code\vue\gulu-demo\src</dir>
-      <dir>C:\Users\code\vue\gulu-demo\docs</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -120,12 +42,18 @@
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="vcs&#9;FILE&#9;file://C:/Users/code/gulu-demo/.idea/vcs.xml&#10;reformat&#9;ACTION&#9;ReformatWithPrettierAction" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../js/mvc/serve" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -153,18 +81,6 @@
       <recent name="C:\Users\code\vue\gulu-demo\src\components\input" />
       <recent name="C:\Users\code\vue\gulu-demo\src\components\layout" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name=".eslintrc.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file=".eslintrc.js" working-dir="$PROJECT_DIR$">
@@ -321,6 +237,7 @@
       <workItem from="1566218656981" duration="825000" />
       <workItem from="1566219550913" duration="100000" />
       <workItem from="1567934398980" duration="52000" />
+      <workItem from="1590384674121" duration="48000" />
     </task>
     <task id="LOCAL-00022" summary="默认更改列表">
       <created>1557852084625</created>
@@ -678,20 +595,19 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -723,6 +639,12 @@
     <MESSAGE value="添加cascader组件的文档" />
     <option name="LAST_COMMIT_MESSAGE" value="添加cascader组件的文档" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2902" y="103" width="596" height="536" key="find.popup" timestamp="1590384710241">
+      <screen x="1920" y="-349" width="2560" height="1440" />
+    </state>
+    <state x="2902" y="103" width="596" height="536" key="find.popup/0.0.1920.1080/1920.-349.2560.1440@1920.-349.2560.1440" timestamp="1590384710241" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

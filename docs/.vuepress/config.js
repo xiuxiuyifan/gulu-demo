@@ -1,8 +1,8 @@
 module.exports = {
   title: 'Vue-UI组件',
-  base: "/z-ui-docs/",
-  head: [  
-    ['script', { src: 'https://wangfan.store/z-ui-docs/svg.js' }],
+  //base: "/z-ui-docs/",
+  head: [
+    ['script', { src: '/svg.js' }],
     [
       'meta',
       {

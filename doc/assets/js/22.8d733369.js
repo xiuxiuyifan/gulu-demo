@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[22],{475:function(t,e,n){"use strict";n.r(e);var s={name:"g-form"},a=n(1),c=Object(a.a)(s,function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"g-form"})},[],!1,null,"57f6dc1f",null);e.default=c.exports}}]);
