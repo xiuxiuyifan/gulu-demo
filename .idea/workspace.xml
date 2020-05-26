@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="添加文档" />
+    <list default="true" id="be18a8ad-052b-45b4-a4e1-09e82ad2aaf4" name="默认更改列表" comment="更改位置" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -235,14 +235,7 @@
       <workItem from="1566218656981" duration="825000" />
       <workItem from="1566219550913" duration="100000" />
       <workItem from="1567934398980" duration="52000" />
-      <workItem from="1590384674121" duration="679000" />
-    </task>
-    <task id="LOCAL-00023" summary="将popover组建的内容放在body的下面 ，防止用户添加overflow属性并计算出正确的位置">
-      <created>1557937633631</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1557937633631</updated>
+      <workItem from="1590384674121" duration="939000" />
     </task>
     <task id="LOCAL-00024" summary="支持四个方位，并且让popover 在上下显示的时候都居中处理">
       <created>1558264019909</created>
@@ -580,7 +573,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590384904060</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="更改位置">
+      <created>1590385384279</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1590385384279</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TodoView">
@@ -610,7 +610,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="发布了yarn 版本的包和npm包" />
     <MESSAGE value="项目概览这里添加开发目录说明" />
     <MESSAGE value="修改按钮组的left bug 发现button-group组件里面最后一个按钮图标的时候图标不自动出现在右边，待修改" />
     <MESSAGE value="将测试框架改为karma 可以用来测试css样式的问题" />
@@ -635,18 +634,19 @@
     <MESSAGE value="checbox还得用单向数据流的方式重写一遍" />
     <MESSAGE value="添加cascader组件的文档" />
     <MESSAGE value="添加文档" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加文档" />
+    <MESSAGE value="更改位置" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改位置" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2798" y="-64" key="CommitChangelistDialog2" timestamp="1590384891302">
+    <state x="2798" y="-64" key="CommitChangelistDialog2" timestamp="1590385372726">
       <screen x="1920" y="-349" width="2560" height="1440" />
     </state>
-    <state x="2798" y="-64" key="CommitChangelistDialog2/0.0.1920.1080/1920.-349.2560.1440@1920.-349.2560.1440" timestamp="1590384891302" />
-    <state x="2792" y="104" key="Vcs.Push.Dialog.v2" timestamp="1590384945230">
+    <state x="2798" y="-64" key="CommitChangelistDialog2/0.0.1920.1080/1920.-349.2560.1440@1920.-349.2560.1440" timestamp="1590385372726" />
+    <state x="2792" y="104" key="Vcs.Push.Dialog.v2" timestamp="1590385392421">
       <screen x="1920" y="-349" width="2560" height="1440" />
     </state>
-    <state x="2792" y="104" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.-349.2560.1440@1920.-349.2560.1440" timestamp="1590384945230" />
+    <state x="2792" y="104" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.-349.2560.1440@1920.-349.2560.1440" timestamp="1590385392421" />
     <state x="2902" y="103" width="596" height="536" key="find.popup" timestamp="1590384710241">
       <screen x="1920" y="-349" width="2560" height="1440" />
     </state>
